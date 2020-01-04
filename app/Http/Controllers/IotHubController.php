@@ -33,7 +33,7 @@ class IotHubController extends Controller
         $cover = "";
         if ($request->hasFile('cover')) {
             $cover = time() . '.' . $request->cover->extension();
-            $request->cover->storeAs('img/post/', $cover);
+            $request->cover->storeAs('img/iothub/', $cover);
             $cover .= '?n=' . time();
         }
         // description
@@ -59,9 +59,9 @@ class IotHubController extends Controller
         $IotHubModel = new IotHub();
         $result = $IotHubModel->insertIotHub($dataInsert);
         if ($result > 0) {
-            return redirect()->route('adgetListNews')->with('success', 'Thêm thành công!');
+            return redirect()->route('adgetListIotHub')->with('success', 'Thêm thành công!');
         } else {
-            return redirect()->route('adgetListNews')->with('error', 'Thêm thất bại!');
+            return redirect()->route('adgetListIotHub')->with('error', 'Thêm thất bại!');
         }
 
     }
@@ -79,7 +79,7 @@ class IotHubController extends Controller
             $this->data['news'] = $IotHub;
             return view('admin.iothub_edit', $this->data);
         } else {
-            return redirect()->route('adgetListNews');
+            return redirect()->route('adgetListIotHub');
         }
 
     }
@@ -100,7 +100,7 @@ class IotHubController extends Controller
         $cover = "";
         if ($request->hasFile('cover')) {
             $cover = time() . '.' . $request->cover->extension();
-            $request->cover->storeAs('img/post/', $cover);
+            $request->cover->storeAs('img/iothub/', $cover);
             $cover .= '?n=' . time();
         }
         // description
@@ -128,9 +128,9 @@ class IotHubController extends Controller
         $IotHubModel = new IotHub();
         $result = $IotHubModel->updateIotHub($id, $dataUpdate);
         if ($result > 0) {
-            return redirect()->route('adgetEditNews', ['id' => $id])->with('success', 'Cập nhật thành công!');
+            return redirect()->route('adgetEditIotHub', ['id' => $id])->with('success', 'Cập nhật thành công!');
         } else {
-            return redirect()->route('adgetEditNews', ['id' => $id])->with('error', 'Cập nhật thất bại!');
+            return redirect()->route('adgetEditIotHub', ['id' => $id])->with('error', 'Cập nhật thất bại!');
         }
 
     }
@@ -158,9 +158,9 @@ class IotHubController extends Controller
         $result = $IotHubModel->deleteIotHub($id);
 
         if ($result > 0) {
-            return redirect()->route('adgetListNews')->with('success', 'Xóa thành công!');
+            return redirect()->route('adgetListIotHub')->with('success', 'Xóa thành công!');
         } else {
-            return redirect()->route('adgetListNews')->with('error', 'Xóa thất bại!');
+            return redirect()->route('adgetListIotHub')->with('error', 'Xóa thất bại!');
         }
     }
 

@@ -1,6 +1,6 @@
 @extends('admin.layout')
 
-@section('add_iothub_active', 'active')
+@section('add_app_active', 'active')
 
 @section('content')
 
@@ -15,7 +15,7 @@
             <h2 class="h2 bold"><a href="javascript:void(0)">Tạo bài viết mới</a></h2>
           </div>
           <div id="create-box" class="show create-box card-body">
-            <form action="{{route('adpostAddIotHub')}}" method="POST" id="create-new" class="form-create" enctype='multipart/form-data'>
+            <form action="{{route('adpostAddApplications')}}" method="POST" id="create-new" class="form-create" enctype='multipart/form-data'>
               {{ csrf_field() }}
               <div class="form-group row">
                 <label class="col-sm-2 form-control-label">Tên bài viết:</label>

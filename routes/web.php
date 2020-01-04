@@ -38,6 +38,20 @@ Route::middleware(['runall'])->group(function () {
             Route::post('/iot-edit/{id}', 'IotHubController@postEditIotHub')->name('adpostEditIotHub');
             Route::get('/iot', 'IotHubController@getListIotHub')->name('adgetListIotHub');
             Route::get('/iot-del/{id}', 'IotHubController@getDelIotHub')->name('adgetDelIotHub');
+            // Press Resources
+            Route::get('/press-add', 'PressResourceController@getAddPressResource')->name('adgetAddPressResource');
+            Route::post('/press-add', 'PressResourceController@postAddPressResource')->name('adpostAddPressResource');
+            Route::get('/press-edit/{id}', 'PressResourceController@getEditPressResource')->name('adgetEditPressResource');
+            Route::post('/press-edit/{id}', 'PressResourceController@postEditPressResource')->name('adpostEditPressResource');
+            Route::get('/press', 'PressResourceController@getListPressResource')->name('adgetListPressResource');
+            Route::get('/press-del/{id}', 'PressResourceController@getDelPressResource')->name('adgetDelPressResource');
+            // Applications
+            Route::get('/app-add', 'ApplicationsController@getAddApplication')->name('adgetAddApplications');
+            Route::post('/app-add', 'ApplicationsController@postAddApplication')->name('adpostAddApplications');
+            Route::get('/app-edit/{id}', 'ApplicationsController@getEditIotApplication')->name('adgetEditApplications');
+            Route::post('/app-edit/{id}', 'ApplicationsController@postEditIotApplication')->name('adpostEditApplications');
+            Route::get('/app', 'ApplicationsController@getListApplication')->name('adgetListApplications');
+            Route::get('/app-del/{id}', 'ApplicationsController@getDelApplication')->name('adgetDelApplications');
         });
 
     });

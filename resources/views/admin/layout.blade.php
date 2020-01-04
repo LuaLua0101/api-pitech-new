@@ -64,13 +64,12 @@
             <!-- Sidebar Header    -->
             <div class="sidenav-header d-flex align-items-center justify-content-center">
                 <!-- User Info-->
-                <div class="sidenav-header-inner text-center"><img src="/admin/img/admin-avar.jpg" alt="person"
-                        class="img-fluid rounded-circle">
-                    <h2 class="h5">Administrator</h2><span>{{ Auth::user()->name }}</span>
+                <div class="sidenav-header-inner text-center">
+                    <h2 class="h5">Pitech</h2><span>{{ Auth::user()->name }}</span>
                 </div>
                 <!-- Small Brand information, appears on minimized sidebar-->
-                <div class="sidenav-header-logo"><a href="index.html" class="brand-small text-center">
-                        <strong>B</strong><strong class="text-primary">D</strong></a></div>
+                <div class="sidenav-header-logo"><a href="{{route('adgetHome')}}" class="brand-small text-center">
+                        <strong>NAD</strong></a></div>
             </div>
             <!-- Sidebar Navigation Menus-->
             @include('admin.sidebar')
@@ -84,7 +83,7 @@
                     <div class="navbar-holder d-flex align-items-center justify-content-between">
                         <div class="navbar-header"><a id="toggle-btn" href="#" class="menu-btn"><i class="icon-bars">
                                 </i></a><a href="{{route('adgetHome')}}" class="navbar-brand">
-                                <div class="brand-text d-none d-md-inline-block"><span>Admin</span><strong
+                                <div class="brand-text d-none d-md-inline-block"><strong
                                         class="text-primary">Dashboard</strong></div>
                             </a></div>
                         <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">

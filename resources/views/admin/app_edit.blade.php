@@ -1,6 +1,6 @@
 @extends('admin.layout')
 
-@section('list_iothub_active', 'active')
+@section('list_app_active', 'active')
 
 @section('content')
 
@@ -15,7 +15,7 @@
                         <h2 class="h2 bold"><a href="javascript:void(0)">Chỉnh sửa bài viết</a></h2>
                     </div>
                     <div id="create-box" class="show create-box card-body">
-                        <form action="{{route('adpostEditIotHub', ['id' => $news->id])}}" method="POST" id="create-new"
+                        <form action="{{route('adpostEditApplications', ['id' => $news->id])}}" method="POST" id="create-new"
                             class="form-create" enctype='multipart/form-data'>
                             {{ csrf_field() }}
                             <div class="form-group row">
@@ -41,7 +41,7 @@
                                         </div>
                                     </div>
                                     <img id="file-show" @if($news->cover != "")
-                                    src="{{asset('/public/img/iothub/' .$news->cover)}}" @else class="hidden" @endif >
+                                    src="{{asset('/public/img/Applications/' .$news->cover)}}" @else class="hidden" @endif >
                                 </div>
                             </div>
                             <div class="line"></div>

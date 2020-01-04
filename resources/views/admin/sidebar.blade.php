@@ -1,5 +1,4 @@
 <div class="main-menu">
-    <h5 class="sidenav-heading">Main</h5>
     <ul id="side-main-menu" class="side-menu list-unstyled">
         <li class="@yield('home_active')"><a href="{{route('adgetHome')}}"><i class="icon-home"></i>Home</a></li>
         <li class="@yield('list_user_active')"><a href="{{ route('adgetListUser') }}"><i class="icon icon-user"></i>Danh
@@ -30,10 +29,21 @@
                 <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <i class="icon icon-user"></i> Press Resources</a>
                 <ul class="collapse list-unstyled" id="pageSubmenu3">
-                    <li class="@yield('add_press_active')"><a href="{{ route('adgetAddNews') }}">
+                    <li class="@yield('add_press_active')"><a href="{{ route('adgetAddPressResource') }}">
                         <i class="icon-form"></i>Thêm mới</a></li>
                     <li class="@yield('list_press_active')">
-                        <a href="{{ route('adgetListNews') }}"><i class="icon icon-list"></i>Danh
+                        <a href="{{ route('adgetListPressResource') }}"><i class="icon icon-list"></i>Danh
+                        sách</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#pageSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="icon icon-user"></i> Applications</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu4">
+                    <li class="@yield('add_app_active')"><a href="{{ route('adgetAddApplications') }}">
+                        <i class="icon-form"></i>Thêm mới</a></li>
+                    <li class="@yield('list_app_active')">
+                        <a href="{{ route('adgetListApplications') }}"><i class="icon icon-list"></i>Danh
                         sách</a></li>
                 </ul>
             </li>

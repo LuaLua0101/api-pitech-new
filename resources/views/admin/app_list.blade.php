@@ -1,6 +1,6 @@
 @extends('admin.layout')
 
-@section('list_iothub_active', 'active')
+@section('list_app_active', 'active')
 
 @section('content')
 <section class="mt-30px mb-30px">
@@ -17,8 +17,8 @@
               <ul>
                 @foreach($newss as $item)
                 <li class="d-flex justify-content-between align-items-center bt-line">
-                  <div class="left-col title text-primary"><a href="{{route('adgetEditIotHub', ['id' => $item->id])}}">{{$item->title}}</a></div>
-                  <div class="right-col text-right"><a class="btn delete-btn" href="{{route('adgetDelIotHub', ['id' => $item->id])}}" onclick="return confirm('Bạn có chắc chắn xóa bài viết này?');"><i class="icon icon-close"></i></a></div>
+                  <div class="left-col title text-primary"><a href="{{route('adgetEditApplications', ['id' => $item->id])}}">{{$item->title}}</a></div>
+                  <div class="right-col text-right"><a class="btn delete-btn" href="{{route('adgetDelApplications', ['id' => $item->id])}}" onclick="return confirm('Bạn có chắc chắn xóa bài viết này?');"><i class="icon icon-close"></i></a></div>
                 </li>
                 @endforeach
               </ul>
