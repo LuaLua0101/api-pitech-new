@@ -191,7 +191,7 @@ class AdminController extends Controller
     public function getAddTeachMeSeries()
     {
 
-        return view('admin.news_add', $this->data);
+        return view('admin.teachme_add', $this->data);
     }
 
     /**
@@ -255,7 +255,7 @@ class AdminController extends Controller
 
         if ($TeachMeSeries) {
             $this->data['news'] = $TeachMeSeries;
-            return view('admin.news_edit', $this->data);
+            return view('admin.teachme_edit', $this->data);
         } else {
             return redirect()->route('adgetListNews');
         }
@@ -323,7 +323,7 @@ class AdminController extends Controller
         $TeachMeSeriess = $TeachMeSeriesModel->getListTeachMeSeries();
         $this->data['newss'] = $TeachMeSeriess;
 
-        return view('admin.news_list', $this->data);
+        return view('admin.teachme_list', $this->data);
     }
 
     /**
