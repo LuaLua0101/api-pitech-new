@@ -1,10 +1,10 @@
 <?php
 Route::middleware(['runall'])->group(function () {
-    Route::get('/', 'AdminController@index')->name('home');
+    Route::get('/', 'AdminController@getLogin')->name('home');
 
     Auth::routes();
 
-    Route::get('/home', 'AdminController@index')->name('home');
+    Route::get('/home', 'AdminController@getLogin')->name('home');
 
     // Admin ***************************************
     Route::prefix('/ad')->group(function () {
@@ -48,8 +48,8 @@ Route::middleware(['runall'])->group(function () {
             // Applications
             Route::get('/app-add', 'ApplicationsController@getAddApplication')->name('adgetAddApplications');
             Route::post('/app-add', 'ApplicationsController@postAddApplication')->name('adpostAddApplications');
-            Route::get('/app-edit/{id}', 'ApplicationsController@getEditIotApplication')->name('adgetEditApplications');
-            Route::post('/app-edit/{id}', 'ApplicationsController@postEditIotApplication')->name('adpostEditApplications');
+            Route::get('/app-edit/{id}', 'ApplicationsController@getEditApplication')->name('adgetEditApplications');
+            Route::post('/app-edit/{id}', 'ApplicationsController@postEditApplication')->name('adpostEditApplications');
             Route::get('/app', 'ApplicationsController@getListApplication')->name('adgetListApplications');
             Route::get('/app-del/{id}', 'ApplicationsController@getDelApplication')->name('adgetDelApplications');
         });

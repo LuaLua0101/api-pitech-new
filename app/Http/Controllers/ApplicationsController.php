@@ -21,38 +21,16 @@ class ApplicationsController extends Controller
      */
     public function postAddApplication(Request $request)
     {
-
-        // title
-        $title = $request->input('title');
-        if (!$title) {
-            $title = "Application " . time();
-        }
-
-        // coverFile
-        $coverFile = $request->file('cover');
-        $cover = "";
-        if ($request->hasFile('cover')) {
-            $cover = time() . '.' . $request->cover->extension();
-            $request->cover->storeAs('img/application/', $cover);
-            $cover .= '?n=' . time();
-        }
-        // description
-        $description = $request->input('description');
-        if (!$description) {
-            $description = "";
-        }
-        // content
-        $content = $request->input('content');
-        if (!$content) {
-            $content = "";
-        }
-
         $dataInsert = [
-            'title' => $title,
-            'cover' => $cover,
-            'short_desc' => $description,
-            'content' => $content,
-            'created_at' => date('Y-m-d H:i:s'),
+            'title' => $request->title,
+            'desc' => $request->description,
+            'detail' => $request->content,
+            'feature1_title' => $request->title1,
+            'feature1_desc' => $request->description1,
+            'feature2_title' => $request->title2,
+            'feature2_desc' => $request->description2,
+            'feature3_title' => $request->title3,
+            'feature3_desc' => $request->description3,
             'updated_at' => date('Y-m-d H:i:s'),
         ];
 
@@ -89,41 +67,18 @@ class ApplicationsController extends Controller
      */
     public function postEditApplication($id, Request $request)
     {
-
-        // title
-        $title = $request->input('title');
-        if (!$title) {
-            $title = "Application " . time();
-        }
-        // coverFile
-        $coverFile = $request->file('cover');
-        $cover = "";
-        if ($request->hasFile('cover')) {
-            $cover = time() . '.' . $request->cover->extension();
-            $request->cover->storeAs('img/application/', $cover);
-            $cover .= '?n=' . time();
-        }
-        // description
-        $description = $request->input('description');
-        if (!$description) {
-            $description = "";
-        }
-        // content
-        $content = $request->input('content');
-        if (!$content) {
-            $content = "";
-        }
-
         $dataUpdate = [
-            'title' => $title,
-            'short_desc' => $description,
-            'content' => $content,
+            'title' => $request->title,
+            'desc' => $request->description,
+            'detail' => $request->content,
+            'feature1_title' => $request->title1,
+            'feature1_desc' => $request->description1,
+            'feature2_title' => $request->title2,
+            'feature2_desc' => $request->description2,
+            'feature3_title' => $request->title3,
+            'feature3_desc' => $request->description3,
             'updated_at' => date('Y-m-d H:i:s'),
         ];
-
-        if ($cover != "") {
-            $dataUpdate['cover'] = $cover;
-        }
 
         $ApplicationModel = new Application();
         $result = $ApplicationModel->updateApplication($id, $dataUpdate);

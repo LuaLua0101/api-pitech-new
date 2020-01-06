@@ -10,7 +10,7 @@
         <!-- Recent Updates Widget          -->
         <div id="delete-page" class="card">
           <div id="delete-header" class="card-header d-flex justify-content-between align-items-center">
-            <h2 class="h2 bold"><a href="javascript:void(0)">Danh sách bài viết</a></h2>
+            <h2 class="h2 bold"><a href="javascript:void(0)">Danh sách Application</a></h2>
           </div>
           <div id="delete-box" class="show delete-box card-body">
             <div class="delete-form">

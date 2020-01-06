@@ -19,48 +19,25 @@
                             class="form-create" enctype='multipart/form-data'>
                             {{ csrf_field() }}
                             <div class="form-group row">
-                                <label class="col-sm-2 form-control-label">Tên bài viết:</label>
+                                <label class="col-sm-2 form-control-label">Tiêu đề chính:</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" id="form-title" name="title" required=""
                                         value="{{$news->title}}">
                                 </div>
                             </div>
-                            <div class="line"></div>
                             <div class="form-group row">
-                                <label class="col-sm-2 form-control-label">Hình đại diện:</label>
-                                <div class="col-sm-10">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text">Upload</span>
-                                        </div>
-                                        <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="form-avatar" name="cover">
-                                            <label class="custom-file-label" for="form-avatar">@if($news->cover != "")
-                                                {{substr($news->cover,0,strpos($news->cover,'?'))}} @else Choose file
-                                                @endif </label>
-                                        </div>
-                                    </div>
-                                    <img id="file-show" @if($news->cover != "")
-                                    src="{{asset('/public/img/Applications/' .$news->cover)}}" @else class="hidden" @endif >
-                                </div>
-                            </div>
-                            <div class="line"></div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 form-control-label">Mô tả:</label>
+                                <label class="col-sm-2 form-control-label">Mô tả chính:</label>
                                 <div class="col-sm-10">
                                     <textarea id="form-description-txt" class="text-content form-control"
-                                        name="description">{{$news->description}}</textarea>
+                                        name="description">{{$news->desc}}</textarea>
                                 </div>
                             </div>
-                            <div class="line"></div>
-
                             <div class="content-post">
-
                                 <div class="form-group row">
-                                    <label class="col-sm-2 form-control-label">Nội dung:</label>
+                                    <label class="col-sm-2 form-control-label">Nội dung chi tiết:</label>
                                     <div class="col-sm-10">
                                         <textarea id="form-content-txt" class="text-content form-control"
-                                            name="content">{!! $news->content !!}</textarea>
+                                            name="content">{!! $news->detail !!}</textarea>
                                     </div>
                                     <script>
                                     CKEDITOR.replace( 'form-content-txt', {
@@ -71,7 +48,50 @@
                                     </script>
                                 </div>
                             </div>
-
+                            <div class="line"></div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 form-control-label">Tiêu đề tính năng 1:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="form-title" name="title1" 
+                                        value="{{$news->feature1_title}}">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 form-control-label">Mô tả tính năng 1:</label>
+                                <div class="col-sm-10">
+                                    <textarea id="form-description-txt" class="text-content form-control"
+                                        name="description1">{{$news->feature1_desc}}</textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 form-control-label">Tiêu đề tính năng 2:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="form-title" name="title2" 
+                                        value="{{$news->feature2_title}}">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 form-control-label">Mô tả tính năng 2:</label>
+                                <div class="col-sm-10">
+                                    <textarea id="form-description-txt" class="text-content form-control"
+                                        name="description2">{{$news->feature2_desc}}</textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 form-control-label">Tiêu đề tính năng 3:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="form-title" name="title3"
+                                        value="{{$news->feature3_title}}">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 form-control-label">Mô tả tính năng 3:</label>
+                                <div class="col-sm-10">
+                                    <textarea id="form-description-txt" class="text-content form-control"
+                                        name="description3">{{$news->feature3_desc}}</textarea>
+                                </div>
+                            </div>
+                            <div class="line"></div>
                             <div class="form-group bold">
                                 <input type="reset" value="RESET" class="btn btn-secondary"> <input type="submit"
                                     value="CẬP NHẬT" class="btn btn-primary">
