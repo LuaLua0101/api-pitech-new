@@ -52,6 +52,39 @@ Route::middleware(['runall'])->group(function () {
             Route::post('/app-edit/{id}', 'ApplicationsController@postEditApplication')->name('adpostEditApplications');
             Route::get('/app', 'ApplicationsController@getListApplication')->name('adgetListApplications');
             Route::get('/app-del/{id}', 'ApplicationsController@getDelApplication')->name('adgetDelApplications');
+             // RelatedProduct
+             Route::get('/related-product-edit/{id}', 'RelatedProductController@getEditRelatedProduct')->name('adgetEditRelatedProduct');
+             Route::post('/related-product-edit/{id}', 'RelatedProductController@postEditRelatedProduct')->name('adpostEditRelatedProduct');
+             Route::get('/related-product', 'RelatedProductController@getListRelatedProduct')->name('adgetListRelatedProduct');
+             Route::get('/related-product-del/{id}', 'RelatedProductController@getDelRelatedProduct')->name('adgetDelRelatedProduct');
+             // Manual Type
+            Route::get('/manual-type-add', 'ManualTypeController@getAddManualType')->name('adgetAddManualType');
+            Route::post('/manual-type-add', 'ManualTypeController@postAddManualType')->name('adpostAddManualType');
+            Route::get('/manual-type-edit/{id}', 'ManualTypeController@getEditManualType')->name('adgetEditManualType');
+            Route::post('/manual-type-edit/{id}', 'ManualTypeController@postEditManualType')->name('adpostEditManualType');
+            Route::get('/manual-type', 'ManualTypeController@getListManualType')->name('adgetListManualType');
+            Route::get('/manual-type-del/{id}', 'ManualTypeController@getDelManualType')->name('adgetDelManualType');
+              // Manual
+              Route::get('/manual-add', 'ManualController@getAddManual')->name('adgetAddManual');
+              Route::post('/manual-add', 'ManualController@postAddManual')->name('adpostAddManual');
+              Route::get('/manual-edit/{id}', 'ManualController@getEditManual')->name('adgetEditManual');
+              Route::post('/manual-edit/{id}', 'ManualController@postEditManual')->name('adpostEditManual');
+              Route::get('/manual', 'ManualController@getListManual')->name('adgetListManual');
+              Route::get('/manual-del/{id}', 'ManualController@getDelManual')->name('adgetDelManual');
+                // Building The Futures
+                Route::get('/building-add', 'BuildingController@getAddBuilding')->name('adgetAddBuilding');
+                Route::post('/building-add', 'BuildingController@postAddBuilding')->name('adpostAddBuilding');
+                Route::get('/building-edit/{id}', 'BuildingController@getEditBuilding')->name('adgetEditBuilding');
+                Route::post('/building-edit/{id}', 'BuildingController@postEditBuilding')->name('adpostEditBuilding');
+                Route::get('/building', 'BuildingController@getListBuilding')->name('adgetListBuilding');
+                Route::get('/building-del/{id}', 'BuildingController@getDelBuilding')->name('adgetDelBuilding');
+                  // Careers
+              Route::get('/career-add', 'CareerController@getAddCareer')->name('adgetAddCareer');
+              Route::post('/career-add', 'CareerController@postAddCareer')->name('adpostAddCareer');
+              Route::get('/career-edit/{id}', 'CareerController@getEditCareer')->name('adgetEditCareer');
+              Route::post('/career-edit/{id}', 'CareerController@postEditCareer')->name('adpostEditCareer');
+              Route::get('/career', 'CareerController@getListCareer')->name('adgetListCareer');
+              Route::get('/career-del/{id}', 'CareerController@getDelCareer')->name('adgetDelCareer');
         });
 
     });
