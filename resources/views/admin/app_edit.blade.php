@@ -19,6 +19,13 @@
                             class="form-create" enctype='multipart/form-data'>
                             {{ csrf_field() }}
                             <div class="form-group row">
+                                <label class="col-sm-2 form-control-label">Version:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="form-title" name="version" required=""
+                                        value="{{$news->version}}">
+                                </div>
+                            </div>
+                            <div class="form-group row">
                                 <label class="col-sm-2 form-control-label">Tiêu đề chính:</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" id="form-title" name="title" required=""

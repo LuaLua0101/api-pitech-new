@@ -22,6 +22,7 @@ class ApplicationsController extends Controller
     public function postAddApplication(Request $request)
     {
         $dataInsert = [
+            'version' => $request->version,
             'title' => $request->title,
             'desc' => $request->description,
             'detail' => $request->content,
@@ -68,6 +69,7 @@ class ApplicationsController extends Controller
     public function postEditApplication($id, Request $request)
     {
         $dataUpdate = [
+            'version' => $request->version,
             'title' => $request->title,
             'desc' => $request->description,
             'detail' => $request->content,

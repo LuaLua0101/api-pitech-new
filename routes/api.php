@@ -13,10 +13,12 @@ Route::group(['prefix' => 'teach-me-series'], function () {
 
 Route::group(['prefix' => 'iot-hub'], function () {
     Route::post('', 'HomeController@getIotHub');
+    Route::post('/detail', 'HomeController@getIotHubDetail');
 });
 
 Route::group(['prefix' => 'press-resources'], function () {
     Route::post('', 'HomeController@getPressResource');
+    Route::post('/detail', 'HomeController@getPressResourceDetail');
 });
 
 Route::group(['prefix' => 'applications'], function () {
@@ -24,7 +26,15 @@ Route::group(['prefix' => 'applications'], function () {
 });
 
 Route::group(['prefix' => 'careers'], function () {
-    Route::get('', 'HomeController@getCareers');
+    Route::get('/{lang}', 'HomeController@getCareers');
+});
+
+Route::group(['prefix' => 'related-products'], function () {
+    Route::get('/{lang}', 'HomeController@getRelatedProducts');
+});
+
+Route::group(['prefix' => 'buildings'], function () {
+    Route::get('/{lang}', 'HomeController@getBuildings');
 });
 
 Route::group(['prefix' => 'manuals'], function () {

@@ -1,17 +1,17 @@
 <?php
 namespace App\Http\Controllers;
 
-use App\Models\Banner;
-use App\Models\IotHub;
-use App\Models\ManualType;
-use App\Models\Manual;
 use App\Models\Application;
 use App\Models\ApplicationPinned;
+use App\Models\Banner;
+use App\Models\IotHub;
+use App\Models\Manual;
+use App\Models\ManualType;
 use App\Models\PressResource;
 use App\Models\TeachMeSeries;
 use DB;
-use Response;
 use Illuminate\Http\Request;
+use Response;
 
 class HomeController extends Controller
 {
@@ -22,7 +22,8 @@ class HomeController extends Controller
         $teachmepinned = DB::table('teach-me-series')->leftjoin('teach-me-series-pinned', 'teach-me-series.id', '=', 'teach-me-series-pinned.pinned_id')->first();
         $iothub = IotHub::orderBy('id', 'desc')->take(3)->get();
         $iotpinned = DB::table('iot-hub')->leftjoin('iot-hub-pinned', 'iot-hub.id', '=', 'iot-hub-pinned.pinned_id')->first();
-        return response()->json(['teachmepinned' => $teachmepinned, 'teachme' => $teachme, 'banner' => $banner, 'iothub' => $iothub, 'iotpinned' => $iotpinned], 200);
+        $app_pinned = ApplicationPinned::latest()->first();
+        return response()->json(['teachmepinned' => $teachmepinned, 'teachme' => $teachme, 'banner' => $banner, 'iothub' => $iothub, 'iotpinned' => $iotpinned, 'app_pinned' => $app_pinned], 200);
     }
 
     public function getTeachMeSeries(Request $request)
@@ -31,7 +32,7 @@ class HomeController extends Controller
         $page = $request->page ? $request->page : 0;
         $teachme = TeachMeSeries::orderBy('id', 'desc')->skip($page)->take(6)->get();
         $teachmepinned = DB::table('teach-me-series')->leftjoin('teach-me-series-pinned', 'teach-me-series.id', '=', 'teach-me-series-pinned.pinned_id')->first();
-        return response()->json(['teachmepinned' => $teachmepinned, 'teachme' => $teachme,'banner' => $banner], 200);
+        return response()->json(['teachmepinned' => $teachmepinned, 'teachme' => $teachme, 'banner' => $banner], 200);
     }
 
     public function getIotHub(Request $request)
@@ -54,29 +55,56 @@ class HomeController extends Controller
         $app = Application::latest()->first();
         $related_3_apps = Application::orderBy('id', 'desc')->take(4)->get();
         $app_pinned = ApplicationPinned::latest()->first();
-        return response()->json(['application' => $app, 'app_pinned' => $app_pinned, 'related'=>$related_3_apps], 200);
+        return response()->json(['application' => $app, 'app_pinned' => $app_pinned, 'related' => $related_3_apps], 200);
     }
 
-    public function getCareers()
+    public function getCareers($lang = 'vi')
     {
         $banner = Banner::where('type', 2)->first();
-        $careers = DB::table('careers')->leftjoin('career_details', 'careers.id', '=', 'career_details.career_id')->get();
+        $careers = DB::table('careers')->where('lang', $lang)->orderBy('seq', 'asc')->get();
         return response()->json(['banner' => $banner, 'careers' => $careers], 200);
+    }
+
+    public function getBuildings($lang = 'vi')
+    {
+        $banner = Banner::where('type', 2)->first();
+        $buildings = DB::table('building_the_futures')->where('lang', $lang)->orderBy('seq', 'asc')->get();
+        return response()->json(['banner' => $banner, 'buildings' => $buildings], 200);
+    }
+
+    public function getRelatedProducts($lang = 'vi')
+    {
+        $banner = Banner::where('type', 2)->first();
+        $products = DB::table('related-products')->where('lang', $lang)->get();
+        return response()->json(['banner' => $banner, 'products' => $products], 200);
     }
 
     public function getManuals()
     {
         $banner = Banner::where('type', 2)->first();
         $manuals = ManualType::orderBy('id', 'asc')->get();
-        foreach($manuals as $item) {
+        foreach ($manuals as $item) {
             $list = Manual::where('type_id', $item->id)->orderBy('id', 'asc')->get();
-            $item->list= $list;
+            $item->list = $list;
         }
         return response()->json(['banner' => $banner, 'manuals' => $manuals], 200);
     }
 
-     public function getTeachMeSerieDetail(Request $request)  {
+    public function getTeachMeSerieDetail(Request $request)
+    {
         $detail = TeachMeSeries::where('id', $request->id)->first();
         return response()->json($detail, 200);
-     }
+    }
+
+    public function getPressResourceDetail(Request $request)
+    {
+        $detail = PressResource::where('id', $request->id)->first();
+        return response()->json($detail, 200);
+    }
+
+    public function getIotHubDetail(Request $request)
+    {
+        $detail = IotHub::where('id', $request->id)->first();
+        return response()->json($detail, 200);
+    }
 }
