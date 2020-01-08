@@ -23,7 +23,9 @@ class HomeController extends Controller
         $iothub = IotHub::orderBy('id', 'desc')->take(3)->get();
         $iotpinned = DB::table('iot-hub')->leftjoin('iot-hub-pinned', 'iot-hub.id', '=', 'iot-hub-pinned.pinned_id')->first();
         $app_pinned = ApplicationPinned::latest()->first();
-        return response()->json(['teachmepinned' => $teachmepinned, 'teachme' => $teachme, 'banner' => $banner, 'iothub' => $iothub, 'iotpinned' => $iotpinned, 'app_pinned' => $app_pinned], 200);
+        return response()->json(['teachmepinned' => $teachmepinned, 'teachme' => $teachme, 'banner' => $banner, 'iothub' => $iothub, 'iotpinned' => $iotpinned, 'app_pinned' => $app_pinned], 200, [
+            'Access-Control-Allow-Origin' => 'http://localhost:3000',
+        ]);
     }
 
     public function getTeachMeSeries(Request $request)

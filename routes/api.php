@@ -2,9 +2,7 @@
 Route::post('login', 'ApiController@login');
 Route::get('logout', 'ApiController@logout');
 
-Route::group(['prefix' => 'home'], function () {
-    Route::get('', 'HomeController@getHome');
-});
+Route::get('/home', 'HomeController@getHome');
 
 Route::group(['prefix' => 'teach-me-series'], function () {
     Route::post('', 'HomeController@getTeachMeSeries');

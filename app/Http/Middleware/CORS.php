@@ -1,10 +1,13 @@
 <?php
 # File: app\Http\Middleware\CORS.php
-# Create file with below code in above location. And at the end of the file there are other instructions also. 
-# Please check. 
+# Create file with below code in above location. And at the end of the file there are other instructions also.
+# Please check.
 namespace App\Http\Middleware;
+
 use Closure;
-class CORS {
+
+class CORS
+{
     /**
      * Handle an incoming request.
      *
@@ -12,22 +15,17 @@ class CORS {
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next) {
-//        return $next($request);
-        header("Access-Control-Allow-Origin: *");
-        // ALLOW OPTIONS METHOD
-        $headers = [
-            'Access-Control-Allow-Methods' => 'POST, GET, OPTIONS, PUT, DELETE',
-            'Access-Control-Allow-Headers' => 'Content-Type, X-Auth-Token, Origin, Authorization'
-        ];
-        if ($request->getMethod() == "OPTIONS") {
-            // The client-side application can set only headers allowed in Access-Control-Allow-Headers
-            return \Response::make('OK', 200, $headers);
+    public function handle($request, Closure $next)
+    {
+        if ($request->isMethod('OPTIONS')) {
+            $response = Response::make();
+        } else {
+            $response = $next($request);
         }
-        $response = $next($request);
-        foreach ($headers as $key => $value)
-            $response->header($key, $value);
-        return $response;
+        return $response
+            ->header('Access-Control-Allow-Origin', '*')
+            ->header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')
+            ->header('Access-Control-Allow-Headers', 'Content-Type, Accept, Authorization, X-Requested-With, Application');
     }
 }
 # File::  app\Http\Kernel.php
