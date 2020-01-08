@@ -2,7 +2,7 @@
 Route::post('login', 'ApiController@login');
 Route::get('logout', 'ApiController@logout');
 
-Route::get('/home', 'HomeController@getHome');
+Route::get('/home', 'HomeController@getHome')->middleware('cors');;
 
 Route::group(['prefix' => 'teach-me-series'], function () {
     Route::post('', 'HomeController@getTeachMeSeries');

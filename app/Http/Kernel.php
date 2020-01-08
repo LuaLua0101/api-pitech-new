@@ -18,7 +18,7 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
-        \App\Http\Middleware\CORS::class
+        \Fruitcake\Cors\HandleCors::class
     ];
 
     /**
@@ -59,6 +59,6 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'runall' => \App\Http\Middleware\RunAll::class,
         'check_admin' => \App\Http\Middleware\CheckAdmin::class,
-        'cors' => \App\Http\Middleware\CORS::class
+        'cors' =>   \Fruitcake\Cors\HandleCors::class
     ];
 }

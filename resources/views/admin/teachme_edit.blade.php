@@ -49,7 +49,7 @@
                                 <label class="col-sm-2 form-control-label">Mô tả:</label>
                                 <div class="col-sm-10">
                                     <textarea id="form-description-txt" class="text-content form-control"
-                                        name="description">{{$news->description}}</textarea>
+                                        name="description">{{$news->short_desc}}</textarea>
                                 </div>
                             </div>
                             <div class="line"></div>
