@@ -7,6 +7,7 @@ Route::get('/home', 'HomeController@getHome')->middleware('cors');;
 Route::group(['prefix' => 'teach-me-series'], function () {
     Route::post('', 'HomeController@getTeachMeSeries');
     Route::post('/detail', 'HomeController@getTeachMeSerieDetail');
+    Route::post('/add-comment', 'HomeController@addTeachmeComment');
 });
 
 Route::group(['prefix' => 'iot-hub'], function () {

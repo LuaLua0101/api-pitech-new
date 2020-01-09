@@ -8,10 +8,12 @@ use App\Models\IotHub;
 use App\Models\Manual;
 use App\Models\ManualType;
 use App\Models\PressResource;
+use App\Models\TeachmeComment;
 use App\Models\TeachMeSeries;
 use DB;
 use Illuminate\Http\Request;
 use Response;
+use Mail;
 
 class HomeController extends Controller
 {
@@ -108,5 +110,26 @@ class HomeController extends Controller
     {
         $detail = IotHub::where('id', $request->id)->first();
         return response()->json($detail, 200);
+    }
+
+    public function addTeachmeComment(Request $request)
+    {
+        $data = new TeachmeComment;
+        $data->name = $request->name;
+        $data->email = $request->email;
+        $data->content = $request->content;
+        $data->parent_id = $request->parent_id;
+        $data->save();
+
+        $to_name = $request->name;
+        $to_email = $request->email;
+        $data = array('name' =>  $request->name, 'content' => $request->content,'email' => $request->email);
+        Mail::send('emails.mail', $data, function ($message) use ($to_name, $to_email) {
+            $message->to($to_email, $to_name)
+                ->subject('Pitech');
+            $message->from('ihtgodev@gmail.com', 'Test Mail');
+        });
+
+        return response()->json($data, 200);
     }
 }
