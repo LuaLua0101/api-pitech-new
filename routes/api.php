@@ -2,7 +2,7 @@
 Route::post('login', 'ApiController@login');
 Route::get('logout', 'ApiController@logout');
 
-Route::get('/home', 'HomeController@getHome')->middleware('cors');;
+Route::get('/home', 'HomeController@getHome')->middleware('cors');
 
 Route::group(['prefix' => 'teach-me-series'], function () {
     Route::post('', 'HomeController@getTeachMeSeries');
@@ -13,6 +13,7 @@ Route::group(['prefix' => 'teach-me-series'], function () {
 Route::group(['prefix' => 'iot-hub'], function () {
     Route::post('', 'HomeController@getIotHub');
     Route::post('/detail', 'HomeController@getIotHubDetail');
+    Route::post('/add-comment', 'HomeController@addIotHubComment');
 });
 
 Route::group(['prefix' => 'press-resources'], function () {

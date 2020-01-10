@@ -56,28 +56,6 @@
                         sách</a></li>
                 </ul>
             </li>
-            <!-- <li>
-                <a href="#pageSubmenu6" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                    <i class="icon icon-user"></i> Manual Types</a>
-                <ul class="collapse list-unstyled" id="pageSubmenu6">
-                    <li class="@yield('add_manualtype_active')"><a href="{{ route('adgetAddManualType') }}">
-                        <i class="icon-form"></i>Thêm mới</a></li>
-                    <li class="@yield('list_manualtype_active')">
-                        <a href="{{ route('adgetListManualType') }}"><i class="icon icon-list"></i>Danh
-                        sách</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#pageSubmenu7" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                    <i class="icon icon-user"></i> Manuals</a>
-                <ul class="collapse list-unstyled" id="pageSubmenu7">
-                    <li class="@yield('add_manual_active')"><a href="{{ route('adgetAddManual') }}">
-                        <i class="icon-form"></i>Thêm mới</a></li>
-                    <li class="@yield('list_manual_active')">
-                        <a href="{{ route('adgetListManual') }}"><i class="icon icon-list"></i>Danh
-                        sách</a></li>
-                </ul>
-            </li> -->
             <li>
                 <a href="#pageSubmenu8" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <i class="icon icon-user"></i> Building The Futures</a>
@@ -97,6 +75,15 @@
                         <i class="icon-form"></i>Thêm mới</a></li>
                     <li class="@yield('list_career_active')">
                         <a href="{{ route('adgetListCareer') }}"><i class="icon icon-list"></i>Danh
+                        sách</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#pageSubmenu10" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="icon icon-user"></i> Banners</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu10">
+                    <li class="@yield('list_banner_active')">
+                        <a href="{{ route('adgetListBanner') }}"><i class="icon icon-list"></i>Danh
                         sách</a></li>
                 </ul>
             </li>

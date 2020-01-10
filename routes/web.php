@@ -87,6 +87,12 @@ Route::middleware(['runall'])->group(function () {
             Route::post('/career-edit/{id}', 'CareerController@postEditCareer')->name('adpostEditCareer');
             Route::get('/career', 'CareerController@getListCareer')->name('adgetListCareer');
             Route::get('/career-del/{id}', 'CareerController@getDelCareer')->name('adgetDelCareer');
+            // Banners
+            Route::get('/banner-edit/{id}', 'BannerController@getEditBanner')->name('adgetEditBanner');
+            Route::post('/banner-edit/{id}', 'BannerController@postEditBanner')->name('adpostEditBanner');
+            Route::get('/banner', 'BannerController@getListBanner')->name('adgetListBanner');
+            Route::get('/banner-del/{id}', 'BannerController@getDelBanner')->name('adgetDelBanner');
+
         });
 
     });
