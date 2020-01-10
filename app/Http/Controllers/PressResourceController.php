@@ -41,17 +41,12 @@ class PressResourceController extends Controller
         if (!$description) {
             $description = "";
         }
-        // content
-        $content = $request->input('content');
-        if (!$content) {
-            $content = "";
-        }
 
         $dataInsert = [
             'title' => $title,
             'cover' => $cover,
             'short_desc' => $description,
-            'content' => $content,
+            'url' => $request->url,
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ];
@@ -108,16 +103,13 @@ class PressResourceController extends Controller
         if (!$description) {
             $description = "";
         }
-        // content
-        $content = $request->input('content');
-        if (!$content) {
-            $content = "";
-        }
 
         $dataUpdate = [
             'title' => $title,
             'short_desc' => $description,
-            'content' => $content,
+            'url' => $request->url,
+            'view_count' => $request->view_count,
+            'share_count' => $request->share_count,
             'updated_at' => date('Y-m-d H:i:s'),
         ];
 

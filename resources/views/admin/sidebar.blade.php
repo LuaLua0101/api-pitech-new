@@ -56,7 +56,7 @@
                         sách</a></li>
                 </ul>
             </li>
-            <li>
+            <!-- <li>
                 <a href="#pageSubmenu6" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <i class="icon icon-user"></i> Manual Types</a>
                 <ul class="collapse list-unstyled" id="pageSubmenu6">
@@ -77,7 +77,7 @@
                         <a href="{{ route('adgetListManual') }}"><i class="icon icon-list"></i>Danh
                         sách</a></li>
                 </ul>
-            </li>
+            </li> -->
             <li>
                 <a href="#pageSubmenu8" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <i class="icon icon-user"></i> Building The Futures</a>

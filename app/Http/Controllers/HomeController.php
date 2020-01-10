@@ -12,11 +12,14 @@ use App\Models\TeachmeComment;
 use App\Models\TeachMeSeries;
 use DB;
 use Illuminate\Http\Request;
-use Response;
 use Mail;
+use Response;
 
 class HomeController extends Controller
 {
+    public function index()
+    {}
+
     public function getHome()
     {
         $banner = Banner::where('type', 1)->first();
@@ -123,7 +126,7 @@ class HomeController extends Controller
 
         $to_name = $request->name;
         $to_email = $request->email;
-        $data = array('name' =>  $request->name, 'content' => $request->content,'email' => $request->email);
+        $data = array('name' => $request->name, 'content' => $request->content, 'email' => $request->email);
         Mail::send('emails.mail', $data, function ($message) use ($to_name, $to_email) {
             $message->to($to_email, $to_name)
                 ->subject('Pitech');

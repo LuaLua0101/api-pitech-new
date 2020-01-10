@@ -21,6 +21,30 @@ class ApplicationsController extends Controller
      */
     public function postAddApplication(Request $request)
     {
+        // coverFile1
+        $coverFile1 = $request->file('cover1');
+        $cover1 = "";
+        if ($request->hasFile('cover1')) {
+            $cover1 = 'img1-' . time() . '.' . $request->cover1->extension();
+            $request->cover1->storeAs('img/applications/', $cover1);
+            $cover1 .= '?n=' . time();
+        }
+        // coverFile2
+        $coverFile2 = $request->file('cover2');
+        $cover2 = "";
+        if ($request->hasFile('cover2')) {
+            $cover2 = 'img2-' . time() . '.' . $request->cover2->extension();
+            $request->cover2->storeAs('img/applications/', $cover2);
+            $cover2 .= '?n=' . time();
+        }
+        // coverFile3
+        $coverFile3 = $request->file('cover3');
+        $cover3 = "";
+        if ($request->hasFile('cover3')) {
+            $cover3 = 'img3-' . time() . '.' . $request->cover3->extension();
+            $request->cover3->storeAs('img/applications/', $cover3);
+            $cover3 .= '?n=' . time();
+        }
         $dataInsert = [
             'version' => $request->version,
             'title' => $request->title,
@@ -32,6 +56,10 @@ class ApplicationsController extends Controller
             'feature2_desc' => $request->description2,
             'feature3_title' => $request->title3,
             'feature3_desc' => $request->description3,
+
+            'feature1_cover' => $cover1,
+            'feature2_cover' => $cover2,
+            'feature3_cover' => $cover3,
             'updated_at' => date('Y-m-d H:i:s'),
         ];
 
@@ -68,6 +96,31 @@ class ApplicationsController extends Controller
      */
     public function postEditApplication($id, Request $request)
     {
+        // coverFile1
+        $coverFile1 = $request->file('cover1');
+        $cover1 = "";
+        if ($request->hasFile('cover1')) {
+            $cover1 = 'img1-' . time() . '.' . $request->cover1->extension();
+            $request->cover1->storeAs('img/applications/', $cover1);
+            $cover1 .= '?n=' . time();
+        }
+        // coverFile2
+        $coverFile2 = $request->file('cover2');
+        $cover2 = "";
+        if ($request->hasFile('cover2')) {
+            $cover2 = 'img2-' . time() . '.' . $request->cover2->extension();
+            $request->cover2->storeAs('img/applications/', $cover2);
+            $cover2 .= '?n=' . time();
+        }
+        // coverFile3
+        $coverFile3 = $request->file('cover3');
+        $cover3 = "";
+        if ($request->hasFile('cover3')) {
+            $cover3 = 'img3-' . time() . '.' . $request->cover3->extension();
+            $request->cover3->storeAs('img/applications/', $cover3);
+            $cover3 .= '?n=' . time();
+        }
+
         $dataUpdate = [
             'version' => $request->version,
             'title' => $request->title,
@@ -81,6 +134,16 @@ class ApplicationsController extends Controller
             'feature3_desc' => $request->description3,
             'updated_at' => date('Y-m-d H:i:s'),
         ];
+
+        if ($cover1 != "") {
+            $dataUpdate['feature1_cover'] = $cover1;
+        }
+        if ($cover2 != "") {
+            $dataUpdate['feature2_cover'] = $cover2;
+        }
+        if ($cover3 != "") {
+            $dataUpdate['feature3_cover'] = $cover3;
+        }
 
         $ApplicationModel = new Application();
         $result = $ApplicationModel->updateApplication($id, $dataUpdate);

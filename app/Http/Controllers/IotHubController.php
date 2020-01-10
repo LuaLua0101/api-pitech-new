@@ -118,6 +118,8 @@ class IotHubController extends Controller
             'title' => $title,
             'short_desc' => $description,
             'content' => $content,
+            'view_count' => $request->view_count,
+            'share_count' => $request->share_count,
             'updated_at' => date('Y-m-d H:i:s'),
         ];
 

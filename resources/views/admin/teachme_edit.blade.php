@@ -71,7 +71,20 @@
                                     </script>
                                 </div>
                             </div>
-
+                            <div class="form-group row">
+                                <label class="col-sm-2 form-control-label">Số lượt xem:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="form-title" name="view_count" required=""
+                                        value="{{$news->view_count}}">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 form-control-label">Số lượt share:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="form-title" name="share_count" required=""
+                                        value="{{$news->share_count}}">
+                                </div>
+                            </div>
                             <div class="form-group bold">
                                 <input type="reset" value="RESET" class="btn btn-secondary"> <input type="submit"
                                     value="CẬP NHẬT" class="btn btn-primary">

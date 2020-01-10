@@ -47,25 +47,12 @@
                   </div>
                 </div>
               <div class="line"></div>
-
-              <div class="content-post">
-                
-                <div class="form-group row">
-                  <label class="col-sm-2 form-control-label">Nội dung:</label>
-                  <div class="col-sm-10">
-                    <textarea id="form-content-txt" class="text-content form-control" name="content"></textarea>
-                  </div>
-                  <script>
-                    
-                    CKEDITOR.replace( 'form-content-txt', {
-                      language: 'en',
-                      filebrowserUploadUrl: '{!! route('uploadImage', ['_token' => csrf_token() ]) !!}',
-                      filebrowserUploadMethod: 'form'
-                    } );
-                </script>
+              <div class="form-group row">
+                <label class="col-sm-2 form-control-label">URL bài viết:</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="form-title" name="url" required="">
                 </div>
               </div>
-
               <div class="form-group bold">       
                 <input type="reset" value="RESET" class="btn btn-secondary"> <input type="submit" value="TẠO MỚI" class="btn btn-primary">
               </div>
