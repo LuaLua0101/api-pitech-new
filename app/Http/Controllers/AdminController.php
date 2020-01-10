@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Config;
 use App\Models\TeachMeSeries;
+use App\Models\TeachMeSeriesPinned;
 use App\Product;
 use App\User;
 use Illuminate\Http\Request;
@@ -255,6 +256,7 @@ class AdminController extends Controller
 
         if ($TeachMeSeries) {
             $this->data['news'] = $TeachMeSeries;
+
             return view('admin.teachme_edit', $this->data);
         } else {
             return redirect()->route('adgetListNews');
@@ -320,11 +322,10 @@ class AdminController extends Controller
      */
     public function getListTeachMeSeries()
     {
-
         $TeachMeSeriesModel = new TeachMeSeries();
         $TeachMeSeriess = $TeachMeSeriesModel->getListTeachMeSeries();
         $this->data['newss'] = $TeachMeSeriess;
-
+        $this->data['news_pinned'] = TeachMeSeriesPinned::first();
         return view('admin.teachme_list', $this->data);
     }
 
@@ -333,7 +334,6 @@ class AdminController extends Controller
      */
     public function getDelTeachMeSeries($id)
     {
-
         $TeachMeSeriesModel = new TeachMeSeries();
         $result = $TeachMeSeriesModel->deleteTeachMeSeries($id);
 
@@ -341,6 +341,23 @@ class AdminController extends Controller
             return redirect()->route('adgetListNews')->with('success', 'Xóa thành công!');
         } else {
             return redirect()->route('adgetListNews')->with('error', 'Xóa thất bại!');
+        }
+    }
+
+    /**
+     * Pin TeachMeSeries
+     */
+    public function getPinTeachMeSeries($id)
+    {
+
+        TeachMeSeriesPinned::truncate();
+        $p = new TeachMeSeriesPinned;
+        $p->pinned_id = $id;
+        $p->save();
+        if ($p) {
+            return redirect()->route('adgetListNews')->with('success', 'Ghim thành công!');
+        } else {
+            return redirect()->route('adgetListNews')->with('error', 'Ghim thất bại!');
         }
     }
 

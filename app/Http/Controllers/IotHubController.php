@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\IotHub;
+use App\Models\IotHubPinned;
 use Illuminate\Http\Request;
 
 class IotHubController extends Controller
@@ -146,7 +147,7 @@ class IotHubController extends Controller
         $IotHubModel = new IotHub();
         $IotHubs = $IotHubModel->getListIotHub();
         $this->data['newss'] = $IotHubs;
-
+        $this->data['news_pinned'] = IotHubPinned::first();
         return view('admin.iothub_list', $this->data);
     }
 
@@ -163,6 +164,23 @@ class IotHubController extends Controller
             return redirect()->route('adgetListIotHub')->with('success', 'Xóa thành công!');
         } else {
             return redirect()->route('adgetListIotHub')->with('error', 'Xóa thất bại!');
+        }
+    }
+
+    /**
+     * Pin Iot Hub
+     */
+    public function getPinIotHub($id)
+    {
+
+        IotHubPinned::truncate();
+        $p = new IotHubPinned;
+        $p->pinned_id = $id;
+        $p->save();
+        if ($p) {
+            return redirect()->route('adgetListIotHub')->with('success', 'Ghim thành công!');
+        } else {
+            return redirect()->route('adgetListIotHub')->with('error', 'Ghim thất bại!');
         }
     }
 
