@@ -1,10 +1,10 @@
 <?php
 Route::middleware(['runall'])->group(function () {
-    Route::get('/', 'AdminController@getLogin')->name('home');
+    Route::get('/', 'AdminController@index')->name('home');
 
     Auth::routes();
 
-    Route::get('/home', 'AdminController@getLogin')->name('home');
+    Route::get('/home', 'AdminController@index')->name('home');
 
     // Admin ***************************************
     Route::prefix('/ad')->group(function () {
