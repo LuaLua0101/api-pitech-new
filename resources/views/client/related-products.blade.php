@@ -290,4 +290,83 @@
         </div>
     </section>
     <!-- Carousel  -->
+     <link rel="stylesheet" href="{{ asset('public/assets/css/vendor/slick.css')}}">
+    <script src="{{asset('public/assets/js/vendor/slick.min.js')}}"></script>
+    <script>
+        $(function () {
+             $('.slider-for-1').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: true,
+                asNavFor: '.slider-nav'
+            });
+            $('.slider-nav-1').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                asNavFor: '.slider-for-1',
+                dots: false,
+                arrows: true,
+                focusOnSelect: true,
+                centerMode: true,
+                centerPadding: '40px',
+                responsive: [{
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: true,
+                            centerMode: true,
+                            centerPadding: '0px',
+                            slidesToShow: 3
+                        }
+                    }
+                ]
+            });
+            
+            $('.slider-for-2').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: true,
+                asNavFor: '.slider-nav'
+            });
+            $('.slider-nav-2').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                asNavFor: '.slider-for-2',
+                dots: false,
+                arrows: true,
+                focusOnSelect: true,
+                centerMode: true,
+                centerPadding: '40px',
+                responsive: [{
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: true,
+                            centerMode: true,
+                            centerPadding: '0px',
+                            slidesToShow: 3
+                        }
+                    }
+                ]
+            });
+        }); 
+    </script>
 @endsection

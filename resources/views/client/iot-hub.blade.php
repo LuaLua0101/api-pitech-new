@@ -29,7 +29,8 @@
               <div class="img-box">
                 <img class="img-fluid"  src="{{asset('public/img/iothub/' . $iothubpinned->cover)}}"
                   alt="feature article">
-                <img class="play-btn" src="{{asset('public/assets/images/mobile/icons/icn-play.png')}}" alt="play">
+                   @if($iothubpinned->video_url)
+                <img class="play-btn" src="{{asset('public/assets/images/mobile/icons/icn-play.png')}}" alt="play">@endif
               </div>
             </a>
           </div>
@@ -54,7 +55,8 @@
                 <div class="feature-img col-5 col-md-5 col-lg-12 col-xl-12 pl-0 img-box">
                   <div class="img-box">
                     <img  src="{{asset('public/img/iothub/' . $item->cover)}}" class="img-fluid w-100" alt="article">
-                    <img class="play-btn" src="{{asset('public/assets/images/mobile/icons/icn-play.png')}}" alt="play">
+                    @if($item->video_url)
+                    <img class="play-btn" src="{{asset('public/assets/images/mobile/icons/icn-play.png')}}" alt="play">@endif
                   </div>
                 </div>
                 <div class="article-info col-7 col-md-7 col-lg-12 col-xl-12 px-0">
@@ -124,8 +126,7 @@
                                         + '<img class="img-fluid thumbnail"'
                                             + 'src="./public/img/post/' + item['cover']
                                             + '" alt="article">'
-                                        + '<img class="play-btn" src="./assets/images/mobile/icons/icn-play.png"'
-                                            + 'alt="play">'
+                                        + item['video_url'] && '<img class="play-btn" src="./assets/images/mobile/icons/icn-play.png" alt="play">'
                                     + '</div>'
                                 + '</div>'
                                 + '<div class="col-12 col-xl-12 right-block">'

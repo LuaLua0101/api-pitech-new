@@ -8,11 +8,14 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
+    <meta property="og:title" content="title here" />
+<meta property="og:image" content="image url here" />
+<meta property="og:type" content="website" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
   <link rel="stylesheet" href="{{ asset('public/assets/css/vendor/bootstrap.min.css')}}">
   <link rel="stylesheet" href="{{ asset('public/assets/fonts/fonts.css')}}">
   <link rel="stylesheet" href="{{ asset('public/assets/css/main.css')}}">
-  <link rel="stylesheet" href="{{ asset('public/assets/css/vendor/slick.css')}}">
+ 
     <link rel="stylesheet" href="{{ asset('public/assets/css/vendor/slick-theme.css')}}">
   <script src="{{ asset('public/admin/vendor/jquery/jquery.min.js')}}"></script>
 </head>
@@ -25,7 +28,7 @@
       <div class="container ">
         <nav class="navbar px-0 navbar-expand-md ">
   
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="{{ route('home') }}">
             <h1 class="mb-0">
               <img src="{{ asset('public/assets/images/mobile/logo_head.png')}}" alt="logo">
             </h1>
@@ -108,16 +111,18 @@
               <a class="dropdown-item" href="{{ route('Applications') }}">Application</a>
               <a class="dropdown-item" href="{{ route('PressResources') }}s">Press resources</a>
               <a class="dropdown-item" href="{{ route('Careers') }}">Career</a>
-              {{-- <a class="dropdown-item" href="#">Manuals</a> --}}
             </div>
           </li>
+           @if(session('lang') == 'en')
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('change2Vi') }}">VI</a>
+          </li>
+          @else
+           <li class="nav-item">
+            <a class="nav-link" href="{{ route('change2En') }}">EN</a>
+          </li>
+          @endif
         </ul>
-        <form class="mt-2 mb-4 my-lg-0 search-mobile">
-          <input class="form-control mr-sm-2" type="text">
-          <button class="btn my-2 my-sm-0" type="submit">
-            <img src="./assets/images/mobile/icons/icn-search.png" alt="search">
-          </button>
-        </form>
       </nav>
 
     </div>
@@ -173,7 +178,7 @@
           <ul class="pl-0">
             <li>
               <div class="address d-flex align-items-center ">
-                <img class="contact-icn" src="./assets/images/mobile/icons/icn-map.png" alt="address">
+                <img class="contact-icn" src="{{ asset('public/assets/images/mobile/icons/icn-map.png')}}" alt="address">
                 <p class="text-white mb-0">
                   <span>
                     94 Nguyễn Du, Phường 7,
@@ -187,7 +192,7 @@
             </li>
             <li>
               <div class="email d-flex align-items-center mb-15px">
-                <img class="contact-icn" src="./assets/images/mobile/icons/icn-mail.png" alt="email">
+                <img class="contact-icn" src="{{ asset('public/assets/images/mobile/icons/icn-mail.png')}}" alt="email">
                 <p class="text-white mb-0 d-md-none">
                   <span>
                     contact@pitech.asia
@@ -202,7 +207,7 @@
             </li>
             <li class="d-lg-none">
               <div class="phone  d-flex align-items-center  ">
-                <img class="contact-icn" src="./assets/images/mobile/icons/icn-phone.png" alt="email">
+                <img class="contact-icn" src="{{ asset('public/assets/images/mobile/icons/icn-phone.png')}}" alt="email">
                 <p class="text-white mb-0">
                   <span>
                     1900 633 430
@@ -259,11 +264,9 @@
   
   <script src="{{ asset('public/assets/js/vendor/popper.min.js')}}"></script>
   <script src="{{ asset('public/assets/js/vendor/bootstrap.min.js')}}"></script>
-     <script src="{{asset('public/assets/js/vendor/slick.min.js')}}"></script>
   <script src="{{ asset('public/assets/js/custom.js')}}"></script>
   <script src="{{ asset('public/assets/js/moment.js')}}"></script>
    <script src="{{asset('public/assets/js/vendor/jquery.youtube-background.js')}}"></script>
- 
     <script>
         $(function () {
             $('[data-youtube]').youtube_background({
@@ -294,80 +297,6 @@
                   alert('Gửi bình luận thành công');
                 }
               });
-            });
-
-             $('.slider-for-1').slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: false,
-                fade: true,
-                asNavFor: '.slider-nav'
-            });
-            $('.slider-nav-1').slick({
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                asNavFor: '.slider-for-1',
-                dots: false,
-                arrows: true,
-                focusOnSelect: true,
-                centerMode: true,
-                centerPadding: '40px',
-                responsive: [{
-                        breakpoint: 768,
-                        settings: {
-                            arrows: false,
-                            centerMode: true,
-                            centerPadding: '40px',
-                            slidesToShow: 3
-                        }
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: {
-                            arrows: true,
-                            centerMode: true,
-                            centerPadding: '0px',
-                            slidesToShow: 3
-                        }
-                    }
-                ]
-            });
-            
-            $('.slider-for-2').slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: false,
-                fade: true,
-                asNavFor: '.slider-nav'
-            });
-            $('.slider-nav-2').slick({
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                asNavFor: '.slider-for-2',
-                dots: false,
-                arrows: true,
-                focusOnSelect: true,
-                centerMode: true,
-                centerPadding: '40px',
-                responsive: [{
-                        breakpoint: 768,
-                        settings: {
-                            arrows: false,
-                            centerMode: true,
-                            centerPadding: '40px',
-                            slidesToShow: 3
-                        }
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: {
-                            arrows: true,
-                            centerMode: true,
-                            centerPadding: '0px',
-                            slidesToShow: 3
-                        }
-                    }
-                ]
             });
         }); 
     </script>

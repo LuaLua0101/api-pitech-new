@@ -3,10 +3,11 @@
 @section('iothub', 'active')
 
 @section('content')
- <div class="article-breadcum breadcum video-background">
+@if($data->video_url)
+    <div class="article-breadcum breadcum video-background">
         <!-- Integrate with Youtube video and plugin   -->
         {{-- <div class="overlay-player-top overlay-player"></div> --}}
-        <div id="ytbg" data-youtube="https://www.youtube.com/watch?v=fggw9sOtuzs"></div>
+        <div id="ytbg" data-youtube="{{$data->video_url}}"></div>
         {{-- <div class="overlay-player-bottom  overlay-player"></div> --}}
         
         <!-- Text  -->
@@ -29,6 +30,28 @@
 
         </div>
     </div>
+@else
+<div class="article-breadcum breadcum">
+        <div class="overlay-bg"></div>
+        <div class="article-breadcum-text">
+            <div class="container text-center ">
+                <div class="row">
+                    <div class="col-12 col-lg-12 col-xl-12">
+                        <!-- As number of words in laptop & mobile is different so 2 tags of h2 here  -->
+                        <h2 class="breadcum-title d-lg-none">{{$data->title}}</h2>
+                        <h2 class="breadcum-title d-none d-lg-block">
+                                {{$data->title}}
+                        </h2>
+                        <p class="article-desc d-lg-none">
+                           {{$data->short_desc}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+@endif
     <!-- Main article  -->
     <section class="main-article">
         <div class="container">

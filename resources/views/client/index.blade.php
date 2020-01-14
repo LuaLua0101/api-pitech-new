@@ -70,7 +70,7 @@
                 <article class="article-box">
                     <div class="row mx-0 article-detail align-items-center ">
                         <div class="col-md-6 col-xl-6 left-block pl-0">
-                            <a href="#" target="_blank" rel="noopener noreferrer">
+                            <a href="#"  rel="noopener noreferrer">
                                 <div class="img-box">
                                     <img src="{{asset('public/img/post/' . $teachmepinned->cover)}}" alt="feature article">
                                     @if($teachmepinned->video_url)
@@ -92,7 +92,7 @@
                             <p>
                                 {{ $teachmepinned->short_desc}}
                             </p>
-                            <a href="{{route('teachMeDetail', ['id' => $teachmepinned->pinned_id])}}" class="text-capitalize d-none d-sm-block learn-more" target="_blank" rel="noopener noreferrer">{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</a>
+                            <a href="{{route('teachMeDetail', ['id' => $teachmepinned->pinned_id])}}" class="text-capitalize d-none d-sm-block learn-more"  rel="noopener noreferrer">{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</a>
                         </div>
                     </div>
                 </article>
@@ -133,7 +133,7 @@
                                 </div>
                             </div>
                             <div class="col-12 col-xl-5 right-block">
-                                <a href="{{route('teachMeDetail', ['id' => $teachme[0]->id])}}" target="_blank" rel="noopener noreferrer">
+                                <a href="{{route('teachMeDetail', ['id' => $teachme[0]->id])}}"  rel="noopener noreferrer">
                                     <h3 class="text-black">{{$teachme[0]->title}}</h3>
                                     <p>
                                         {{$teachme[0]->short_desc}}
@@ -185,7 +185,7 @@
                                 </div>
                             </div>
                             <div class="col-12 col-xl-5 right-block">
-                                <a href="{{route('teachMeDetail', ['id' => $teachme[1]->id])}}" target="_blank" rel="noopener noreferrer">
+                                <a href="{{route('teachMeDetail', ['id' => $teachme[1]->id])}}"  rel="noopener noreferrer">
                                    <h3 class="text-black">{{$teachme[1]->title}}</h3>
                                     <p>
                                         {{$teachme[1]->short_desc}}
@@ -239,7 +239,7 @@
                                 </div>
                             </div>
                             <div class="col-12 col-xl-5 right-block">
-                                <a href="{{route('teachMeDetail', ['id' => $teachme[2]->id])}}" target="_blank" rel="noopener noreferrer">
+                                <a href="{{route('teachMeDetail', ['id' => $teachme[2]->id])}}"  rel="noopener noreferrer">
                                     <h3 class="text-black">{{$teachme[2]->title}}</h3>
                                     <p>
                                         {{$teachme[2]->short_desc}}
@@ -291,7 +291,7 @@
                                 </div>
                             </div>
                             <div class="col-12 col-xl-5 right-block">
-                                <a href="{{route('teachMeDetail', ['id' => $teachme[3]->id])}}" target="_blank" rel="noopener noreferrer">
+                                <a href="{{route('teachMeDetail', ['id' => $teachme[3]->id])}}"  rel="noopener noreferrer">
                                    <h3 class="text-black">{{$teachme[3]->title}}</h3>
                                     <p>
                                         {{$teachme[3]->short_desc}}
@@ -343,7 +343,7 @@
                                 </div>
                             </div>
                             <div class="col-12 col-xl-5 right-block">
-                                <a href="{{route('teachMeDetail', ['id' => $teachme[4]->id])}}" target="_blank" rel="noopener noreferrer">
+                                <a href="{{route('teachMeDetail', ['id' => $teachme[4]->id])}}"  rel="noopener noreferrer">
                                     <h3 class="text-black">{{$teachme[4]->title}}</h3>
                                     <p>
                                         {{$teachme[4]->short_desc}}
@@ -396,7 +396,7 @@
                                 </div>
                             </div>
                             <div class="col-12 col-xl-5 right-block">
-                                <a href="{{route('teachMeDetail', ['id' => $teachme[5]->id])}}" target="_blank" rel="noopener noreferrer">
+                                <a href="{{route('teachMeDetail', ['id' => $teachme[5]->id])}}"  rel="noopener noreferrer">
                                     <h3 class="text-black">{{$teachme[5]->title}}</h3>
                                     <p>
                                         {{$teachme[5]->short_desc}}
@@ -472,7 +472,7 @@
                     </div>
                     <!-- Feature img, title, description -->
                     <div class="article-detail">
-                        <a href="{{route('iotHubDetail', ['id' => $iotpinned->pinned_id])}}" target="_blank" rel="noopener noreferrer">
+                        <a href="{{route('iotHubDetail', ['id' => $iotpinned->pinned_id])}}"  rel="noopener noreferrer">
                             <div class="img-box">
                                 <img class="img-fluid thumbnail" src="{{asset('public/img/iothub/' . $iotpinned->cover)}}" alt="article">
                                   @if($iotpinned->video_url)
@@ -501,7 +501,7 @@
                  @foreach($iothub as $item)
                 <div class="col-12 col-md-12 col-lg-12 col-xl-12 ">
                     <article class="article-box-2 article-box mb-0 pt-0">
-                        <a href="{{route('iotHubDetail', ['id' => $item->id])}}" target="_blank" rel="noopener noreferrer">
+                        <a href="{{route('iotHubDetail', ['id' => $item->id])}}"  rel="noopener noreferrer">
                             <!-- Title visible on mobile  -->
                             <h3 class="d-block d-md-none">{{$item->title}}</h3>
 
