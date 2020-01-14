@@ -2,18 +2,65 @@
 
 namespace App\Http\Controllers;
 
+use App;
 use App\Config;
+use App\Models\Banner;
+use App\Models\IotHub;
 use App\Models\TeachMeSeries;
 use App\Models\TeachMeSeriesPinned;
 use App\Product;
 use App\User;
+use DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Session;
 
 class AdminController extends Controller
 {
     public function index()
-    {return view('client.index');}
+    {
+        $lang = session('lang') ? session('lang') : 'en';
+        $banner1 = Banner::where('type', 'home')->where('lang', $lang)->first();
+        $banner2 = Banner::where('type', 'new_update')->where('lang', $lang)->first();
+        $teachme = TeachMeSeries::orderBy('id', 'desc')->take(6)->get();
+        $teachmepinned = DB::table('teach-me-series')
+            ->leftjoin('teach-me-series-pinned', 'teach-me-series.id', '=', 'teach-me-series-pinned.pinned_id')
+            ->first();
+        $iothub = IotHub::orderBy('id', 'desc')->take(3)->get();
+        $iotpinned = DB::table('iot-hub')->leftjoin('iot-hub-pinned', 'iot-hub.id', '=', 'iot-hub-pinned.pinned_id')->first();
+
+        return view('client.index',
+            ['teachmepinned' => $teachmepinned,
+                'teachme' => $teachme,
+                'banner_home' => $banner1,
+                'banner_app' => $banner2,
+                'iothub' => $iothub,
+                'iotpinned' => $iotpinned]);
+    }
+
+    public function teachMeIndex()
+    {
+        $lang = session('lang') ? session('lang') : 'en';
+        $banner = Banner::where('type', 'teach_me')->where('lang', $lang)->first();
+        $teachme = TeachMeSeries::orderBy('id', 'desc')->take(6)->get();
+        $teachmepinned = DB::table('teach-me-series')
+            ->leftjoin('teach-me-series-pinned', 'teach-me-series.id', '=', 'teach-me-series-pinned.pinned_id')->first();
+        return view('client.teach-me-series', ['teachmepinned' => $teachmepinned, 'teachme' => $teachme, 'banner' => $banner]);
+    }
+
+    public function teachMeLoadMore($skip)
+    {
+        $teachme = TeachMeSeries::orderBy('id', 'desc')->skip($skip)->take(6)->get();
+        return response()->json($teachme, 200);
+    }
+
+    public function teachMeDetail($id)
+    {
+        $detail = TeachMeSeries::where('id', $id)->first();
+        $detail->view_count = $detail->view_count + 1;
+        $detail->save();
+        return view('client.teach-me-detail', ['data' => $detail]);
+    }
 
     /**
      * Get login page
@@ -228,6 +275,7 @@ class AdminController extends Controller
 
         $dataInsert = [
             'title' => $title,
+            'video_url' => $request->video_url,
             'cover' => $cover,
             'short_desc' => $description,
             'content' => $content,
@@ -250,7 +298,6 @@ class AdminController extends Controller
      */
     public function getEditTeachMeSeries($id)
     {
-
         $TeachMeSeriesModel = new TeachMeSeries();
         $TeachMeSeries = $TeachMeSeriesModel->getTeachMeSeriesById($id);
 
@@ -296,6 +343,7 @@ class AdminController extends Controller
 
         $dataUpdate = [
             'title' => $title,
+            'video_url' => $request->video_url,
             'short_desc' => $description,
             'content' => $content,
             'view_count' => $request->view_count,
@@ -361,4 +409,17 @@ class AdminController extends Controller
         }
     }
 
+    public function change2En()
+    {
+        session(['lang' => 'en']);
+        // App::setLocale(session('lang'));
+        return redirect()->back();
+    }
+
+    public function change2Vi()
+    {
+        session(['lang' => 'vi']);
+        // App::setLocale(session('lang'));
+        return redirect()->back();
+    }
 }

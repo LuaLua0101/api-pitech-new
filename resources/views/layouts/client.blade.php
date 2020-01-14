@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Admin page</title>
+    <title>Pitech</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -12,6 +12,9 @@
   <link rel="stylesheet" href="{{ asset('public/assets/css/vendor/bootstrap.min.css')}}">
   <link rel="stylesheet" href="{{ asset('public/assets/fonts/fonts.css')}}">
   <link rel="stylesheet" href="{{ asset('public/assets/css/main.css')}}">
+  <link rel="stylesheet" href="{{ asset('public/assets/css/vendor/slick.css')}}">
+    <link rel="stylesheet" href="{{ asset('public/assets/css/vendor/slick-theme.css')}}">
+  <script src="{{ asset('public/admin/vendor/jquery/jquery.min.js')}}"></script>
 </head>
 
 <body>
@@ -39,28 +42,37 @@
             <div class="d-flex">
               <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                 <li class="nav-item dash-link @yield('index')">
-                  <a class="nav-link px-0" href="#">Home</a>
+                  <a class="nav-link px-0" href="{{ route('home') }}">Home</a>
                 </li>
                 <li class="nav-item dash-link @yield('teachme')">
-                  <a class="nav-link px-0" href="#">Teach me series</a>
+                  <a class="nav-link px-0" href="{{ route('teachMeIndex') }}">Teach me series</a>
                 </li>
                 <li class="nav-item dash-link @yield('building')">
-                  <a class="nav-link px-0" href="#">Building the future</a>
+                  <a class="nav-link px-0" href="{{ route('BuildingFuture') }}">Building the future</a>
                 </li>
                 <li class="nav-item dash-link @yield('iothub')">
-                  <a class="nav-link px-0" href="#">IOT Hub</a>
+                  <a class="nav-link px-0" href="{{ route('IotHub') }}">IOT Hub</a>
                 </li>
                 <li class="nav-item dropdown d-flex align-items-center">
                   <a class="nav-link dropdown-toggle d-flex" href="#" id="exploreLaptop" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">Explore</a>
+                    aria-haspopup="true" aria-expanded="false">Explorer</a>
                   <div class="dropdown-menu" aria-labelledby="exploreLaptop">
-                    <a class="dropdown-item" href="#">Related product</a>
-                    <a class="dropdown-item" href="#">Application</a>
-                    <a class="dropdown-item" href="#">Press resources</a>
-                    <a class="dropdown-item" href="#">Career</a>
+                    <a class="dropdown-item" href="{{ route('RelatedProducts') }}">Related product</a>
+                    <a class="dropdown-item" href="{{ route('Applications') }}">Application</a>
+                    <a class="dropdown-item" href="{{ route('PressResources') }}">Press resources</a>
+                    <a class="dropdown-item" href="{{ route('Careers') }}">Career</a>
                     {{-- <a class="dropdown-item" href="#">Manuals</a> --}}
                   </div>
                 </li>
+                @if(session('lang') == 'en')
+                <li class="nav-item dash-link">
+                  <a class="nav-link px-0" href="{{ route('change2Vi') }}">VI</a>
+                </li>
+                @else
+                <li class="nav-item dash-link">
+                  <a class="nav-link px-0" href="{{ route('change2En') }}">EN</a>
+                </li>
+                @endif
               </ul>
             </div>
           </div>
@@ -74,29 +86,29 @@
       <nav class="collapse navbar-collapse" id="collapsibleNavMobile">
         <ul class="navbar-nav ml-auto mt-2 mt-lg-0 text-center">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home</span></a>
+            <a class="nav-link" href="{{ route('home') }}">Home</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Teach me series</a>
+            <a class="nav-link" href="{{ route('teachMeIndex') }}">Teach me series</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Building the future</a>
+            <a class="nav-link" href="{{ route('BuildingFuture') }}">Building the future</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">IOT Hub</a>
+            <a class="nav-link" href="{{ route('IotHub') }}">IOT Hub</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle d-flex align-items-center justify-content-center" href="#"
               id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Explore
+              Explorer
 
             </a>
             <div class="dropdown-menu border-0 text-center" aria-labelledby="dropdownId">
-              <a class="dropdown-item" href="#">Related product</a>
-              <a class="dropdown-item" href="#">Application</a>
-              <a class="dropdown-item" href="#">Press resources</a>
-              <a class="dropdown-item" href="#">Career</a>
-              <a class="dropdown-item" href="#">Manuals</a>
+              <a class="dropdown-item" href="{{ route('RelatedProducts') }}">Related product</a>
+              <a class="dropdown-item" href="{{ route('Applications') }}">Application</a>
+              <a class="dropdown-item" href="{{ route('PressResources') }}s">Press resources</a>
+              <a class="dropdown-item" href="{{ route('Careers') }}">Career</a>
+              {{-- <a class="dropdown-item" href="#">Manuals</a> --}}
             </div>
           </li>
         </ul>
@@ -130,22 +142,22 @@
           <h4 class="text-uppercase d-none d-lg-block font-weight-bold text-white">Menu</h4>
           <ul class="px-0">
             <li>
-              <a href="#" class="text-uppercase">
+              <a href="{{ route('home') }}" class="text-uppercase">
                 Home
               </a>
             </li>
             <li>
-              <a href="#" class="text-uppercase">
+              <a href="{{ route('teachMeIndex') }}" class="text-uppercase">
                 Teach me series
               </a>
             </li>
             <li>
-              <a href="#" class="text-uppercase">
+              <a href="{{ route('BuildingFuture') }}" class="text-uppercase">
                 Building the future
               </a>
             </li>
             <li>
-              <a href="#" class="text-uppercase">
+              <a href="{{ route('IotHub') }}" class="text-uppercase">
                 IOT Hub
               </a>
             </li>
@@ -157,7 +169,7 @@
           </ul>
         </div>
         <div class="col-12 col-md-12 col-lg-3 col-xl-3  pl-0 contact">
-          <h4 class="text-uppercase d-none d-lg-block font-weight-bold text-white">Văn phòng công ty</h4>
+          <h4 class="text-uppercase d-none d-lg-block font-weight-bold text-white">{{session('lang') == 'en' ? 'Address' : 'Văn phòng công ty'}}</h4>
           <ul class="pl-0">
             <li>
               <div class="address d-flex align-items-center ">
@@ -206,7 +218,7 @@
         <div class="col-12 col-md-12 col-lg-3 col-xl-3 pr-0 ">
           <!-- social network  -->
           <div class="social-network">
-            <h4 class="text-uppercase d-none d-lg-block font-weight-bold text-white">Contact</h4>
+            <h4 class="text-uppercase d-none d-lg-block font-weight-bold text-white">{{session('lang') == 'en' ? 'Contact' : 'Liên hệ'}}</h4>
             <!-- List network on mobile  -->
             <ul class="px-0 d-block d-lg-none">
               <li class="d-inline-block "><a href="#" target="_blank"  class="d-inline-block d-lg-none">
@@ -244,10 +256,121 @@
     </div>
   </div>
   <!-- End footer  -->
-  <script src="{{ asset('public/assets/js/vendor/jquery-3.2.1.slim.min.js')}}"></script>
+  
   <script src="{{ asset('public/assets/js/vendor/popper.min.js')}}"></script>
   <script src="{{ asset('public/assets/js/vendor/bootstrap.min.js')}}"></script>
+     <script src="{{asset('public/assets/js/vendor/slick.min.js')}}"></script>
   <script src="{{ asset('public/assets/js/custom.js')}}"></script>
+  <script src="{{ asset('public/assets/js/moment.js')}}"></script>
+   <script src="{{asset('public/assets/js/vendor/jquery.youtube-background.js')}}"></script>
+ 
+    <script>
+        $(function () {
+            $('[data-youtube]').youtube_background({
+                mobile: true,
+            });
+
+            $('#teachMeForm').on('submit', function (e) {
+              e.preventDefault();
+
+              $.ajax({
+                type: 'post',
+                url: "{{route('teachMeComment', ['id' => 1])}}",
+                data: $('#teachMeForm').serialize(),
+                success: function () {
+                  alert('Gửi bình luận thành công');
+                }
+              });
+            });
+
+            $('#iotHubForm').on('submit', function (e) {
+              e.preventDefault();
+
+              $.ajax({
+                type: 'post',
+                url: "{{route('addIotComment', ['id' => 1])}}",
+                data: $('#iotHubForm').serialize(),
+                success: function () {
+                  alert('Gửi bình luận thành công');
+                }
+              });
+            });
+
+             $('.slider-for-1').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: true,
+                asNavFor: '.slider-nav'
+            });
+            $('.slider-nav-1').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                asNavFor: '.slider-for-1',
+                dots: false,
+                arrows: true,
+                focusOnSelect: true,
+                centerMode: true,
+                centerPadding: '40px',
+                responsive: [{
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: true,
+                            centerMode: true,
+                            centerPadding: '0px',
+                            slidesToShow: 3
+                        }
+                    }
+                ]
+            });
+            
+            $('.slider-for-2').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: true,
+                asNavFor: '.slider-nav'
+            });
+            $('.slider-nav-2').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                asNavFor: '.slider-for-2',
+                dots: false,
+                arrows: true,
+                focusOnSelect: true,
+                centerMode: true,
+                centerPadding: '40px',
+                responsive: [{
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: true,
+                            centerMode: true,
+                            centerPadding: '0px',
+                            slidesToShow: 3
+                        }
+                    }
+                ]
+            });
+        }); 
+    </script>
 </body>
 
 </html>

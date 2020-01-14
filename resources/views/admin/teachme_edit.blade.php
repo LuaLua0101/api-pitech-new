@@ -25,6 +25,13 @@
                                         value="{{$news->title}}">
                                 </div>
                             </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 form-control-label">Đường dẫn video:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="video_url" name="video_url" 
+                                        value="{{$news->video_url}}">
+                                </div>
+                            </div>
                             <div class="line"></div>
                             <div class="form-group row">
                                 <label class="col-sm-2 form-control-label">Hình đại diện:</label>

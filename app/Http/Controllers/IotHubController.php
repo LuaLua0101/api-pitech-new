@@ -2,12 +2,37 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Banner;
 use App\Models\IotHub;
 use App\Models\IotHubPinned;
+use DB;
 use Illuminate\Http\Request;
 
 class IotHubController extends Controller
 {
+    public function index()
+    {
+        $lang = session('lang') ? session('lang') : 'en';
+        $banner = Banner::where('type', 'iothub')->where('lang', $lang)->first();
+        $iothub = IotHub::orderBy('id', 'desc')->take(6)->get();
+        $iothubpinned = DB::table('iot-hub')->leftjoin('iot-hub-pinned', 'iot-hub.id', '=', 'iot-hub-pinned.pinned_id')->first();
+        return view('client.iot-hub', ['iothubpinned' => $iothubpinned, 'iothub' => $iothub, 'banner' => $banner]);
+    }
+
+    public function iotHubDetail($id)
+    {
+        $detail = IotHub::where('id', $id)->first();
+        $detail->view_count = $detail->view_count + 1;
+        $detail->save();
+        return view('client.iot-hub-detail', ['data' => $detail]);
+    }
+
+    public function iotHubLoadMore($skip)
+    {
+        $iothub = IotHub::orderBy('id', 'desc')->skip($skip)->take(6)->get();
+        return response()->json($iothub, 200);
+    }
+
     /**
      * Get add IotHub page
      */
@@ -50,6 +75,7 @@ class IotHubController extends Controller
 
         $dataInsert = [
             'title' => $title,
+            'video_url' => $request->video_url,
             'cover' => $cover,
             'short_desc' => $description,
             'content' => $content,
@@ -117,6 +143,7 @@ class IotHubController extends Controller
 
         $dataUpdate = [
             'title' => $title,
+            'video_url' => $request->video_url,
             'short_desc' => $description,
             'content' => $content,
             'view_count' => $request->view_count,

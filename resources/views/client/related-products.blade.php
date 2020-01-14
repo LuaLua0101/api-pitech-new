@@ -1,0 +1,293 @@
+@extends('layouts.client')
+
+@section('index', 'active')
+
+@section('content')
+<!-- Bread cum  -->
+    <section class="breadcum related-products-breadcum">
+        <div class="container text-center">
+            <h2 class="breadcum-title">Related products</h2>
+            <p>
+                {{$banner->content}}
+            </p>
+        </div>
+    </section>
+    <!-- Carousel  MOBILE -->
+    <section class="d-block d-md-none d-lg-none features-mobile">
+        <div class="container">
+            <div class="slider-nav slider-nav-1">
+                <div class="text-center slider-nav-item-mobile">
+                    <img class="mx-auto" src="{{asset('public/assets/images/laptop/carousel/carousel-fox.png')}}" alt="fox">
+                </div>
+                <div class="text-center slider-nav-item-mobile">
+                    <img class="mx-auto" src="{{asset('public/assets/images/laptop/carousel/carousel-rhino.png')}}" alt="fox">
+                </div>
+                <div class="text-center slider-nav-item-mobile">
+                    <img class="mx-auto" src="{{asset('public/assets/images/laptop/carousel/carousel-ox.png')}}" alt="fox">
+                </div>
+                <div class="text-center slider-nav-item-mobile">
+                    <img class="mx-auto" src="{{asset('public/assets/images/laptop/carousel/carousel-bird-2.png')}}" alt="fox">
+                </div>
+            </div>
+            <div class="slider-for slider-for-1">
+                <div class="item-caption text-center">
+                    <h3 class="font-weight-bold">{{$products[0]->name}}</h3>
+                    <p>
+                        {{$products[0]->desc}}
+                    </p>
+                    <a href={{$products[0]->url}} target="_blank"  class="learn-more d-flex align-items-center justify-content-center">
+                        <span>{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</span>
+                        <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}" alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>
+                    </a>
+                </div>
+                <div class="item-caption text-center">
+                    <h3 class="font-weight-bold">{{$products[1]->name}}</h3>
+                    <p>
+                     {{$products[1]->desc}}
+                    </p>
+                    <a href={{$products[1]->url}} target="_blank"  class="learn-more d-flex align-items-center justify-content-center">
+                        <span>{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</span>
+                        <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}" alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>
+                    </a>
+                </div>
+                <div class="item-caption text-center">
+                    <h3 class="font-weight-bold">{{$products[2]->name}}</h3>
+                    <p>
+                        {{$products[2]->desc}}
+                    </p>
+                      <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}...</span>
+                    {{-- <a href={{$products[2]->url}}  target="_blank" class="learn-more d-flex align-items-center justify-content-center">
+                        <span>{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</span>
+                        <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}" alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>
+                    </a> --}}
+                </div>
+                <div class="item-caption text-center">
+                    <h3 class="font-weight-bold">{{$products[3]->name}}</h3>
+                    <p>
+                      {{$products[3]->desc}}
+                    </p>
+                     <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}...</span>
+                    {{-- <a href={{$products[3]->url}} target="_blank"  class="learn-more d-flex align-items-center justify-content-center">
+                        <span>{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</span>
+                        <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}" alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>
+                    </a> --}}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- End section  -->
+    <div class="container">
+        <hr class="breadcum-line w-100">
+    </div>
+    <!-- Carousel mobile 2  -->
+    <section class="d-block d-md-none d-lg-none features-mobile">
+        <div class="container">
+            <div class="slider-nav slider-nav-2">
+                <div class="text-center slider-nav-item-mobile">
+                    <img class="mx-auto" src="{{asset('public/assets/images/laptop/carousel/carousel-bear.png')}}" alt="fox">
+                </div>
+                <div class="text-center slider-nav-item-mobile">
+                    <img class="mx-auto" src="{{asset('public/assets/images/laptop/carousel/deer-116px.png')}}" alt="fox">
+                </div>
+                <div class="text-center slider-nav-item-mobile">
+                    <img class="mx-auto" src="{{asset('public/assets/images/laptop/carousel/carousel-peacock.png')}}" alt="fox">
+                </div>
+                <div class="text-center slider-nav-item-mobile">
+                    <img class="mx-auto" src="{{asset('public/assets/images/laptop/carousel/carousel-bird.png')}}" alt="fox">
+                </div>
+            </div>
+            <div class="slider-for slider-for-2">
+                <div class="item-caption text-center">
+                    <h3 class="font-weight-bold">{{$products[4]->name}}</h3>
+                    <p>
+                        {{$products[4]->desc}}
+                    </p>
+                     <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}...</span>
+                    {{-- <a href={{$products[0]->url}}  target="_blank" class="learn-more d-flex align-items-center justify-content-center">
+                        <span>{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</span>
+                        <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}" alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>
+                    </a> --}}
+                </div>
+                <div class="item-caption text-center">
+                    <h3 class="font-weight-bold">{{$products[5]->name}}</h3>
+                    <p>
+                      {{$products[5]->desc}}
+                    </p>
+                      <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}...</span>
+                    {{-- <a href={{$products[0]->url}} target="_blank"  class="learn-more d-flex align-items-center justify-content-center">
+                        <span>{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</span>
+                        <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}" alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>
+                    </a> --}}
+                </div>
+                <div class="item-caption text-center">
+                    <h3 class="font-weight-bold">{{$products[6]->name}}</h3>
+                    <p>
+                      {{$products[6]->desc}}
+                    </p>
+                      <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}...</span>
+                    {{-- <a href={{$products[0]->url}}  target="_blank" class="learn-more d-flex align-items-center justify-content-center">
+                        <span>{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</span>
+                        <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}" alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>
+                    </a> --}}
+                </div>
+                <div class="item-caption text-center">
+                    <h3 class="font-weight-bold">{{$products[7]->name}}</h3>
+                    <p>
+                      {{$products[7]->desc}}
+                    </p>
+                      <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}...</span>
+                    {{-- <a href={{$products[0]->url}}  target="_blank" class="learn-more d-flex align-items-center justify-content-center">
+                        <span>{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</span>
+                        <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}" alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>
+                    </a> --}}
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Features laptop  -->
+    <section class="d-none d-lg-block features">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 text-center block-feature">
+                    <figure>
+                        <img src="{{asset('public/assets/images/laptop/carousel/carousel-fox.png')}}" alt="">
+                    </figure>
+                    <div class="caption">
+                        <h3 class="font-weight-bold">{{$products[0]->name}}</h3>
+                        <p>
+                           {{$products[0]->desc}}
+                        </p>
+                        <a href={{$products[0]->url}}  target="_blank" class="learn-more d-flex align-items-center justify-content-center">
+                            <span>{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</span>
+                            <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}"
+                                    alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>
+                        </a>
+                    </div>
+                </div> 
+
+                <div class="col-xl-3 text-center block-feature">
+                    <figure>
+                        <img src="{{asset('public/assets/images/laptop/carousel/carousel-rhino.png')}}" alt="">
+                    </figure>
+                    <div class="caption">
+                        <h3 class="font-weight-bold">{{$products[1]->name}}</h3>
+                        <p>
+                         {{$products[1]->desc}}
+                        </p>
+                        <a href={{$products[1]->url}} target="_blank"  class="learn-more d-flex align-items-center justify-content-center">
+                            <span>{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</span>
+                            <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}"
+                                    alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-3 text-center block-feature">
+                    <figure>
+                        <img src="{{asset('public/assets/images/laptop/carousel/carousel-ox.png')}}" alt="">
+                    </figure>
+                    <div class="caption">
+                        <h3 class="font-weight-bold">{{$products[2]->name}}</h3>
+                        <p>
+                         {{$products[2]->desc}}
+                        </p>
+                        <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}...</span>
+                        {{-- <a href={{$products[2]->url}} target="_blank" class="learn-more d-flex align-items-center justify-content-center">
+                            <span>{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</span>
+                            <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}"
+                                    alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>
+                        </a> --}}
+                    </div>
+                </div>
+                <div class="col-xl-3 text-center block-feature">
+                    <figure>
+                        <img src="{{asset('public/assets/images/laptop/carousel/carousel-bird-2.png')}}" alt="">
+                    </figure>
+                    <div class="caption">
+                        <h3 class="font-weight-bold">{{$products[3]->name}}</h3>
+                        <p>
+                            {{$products[3]->desc}}
+                        </p>
+                          <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}...</span>
+                            {{-- <a href={{$products[3]->url}} target="_blank" class="learn-more d-flex align-items-center justify-content-center">
+                                <span>{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</span>
+                                <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}"
+                                        alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>
+                            </a> --}}
+                    </div>
+                </div>
+                <div class="col-xl-3 text-center block-feature">
+                    <figure>
+                        <img src="{{asset('public/assets/images/laptop/carousel/carousel-bear.png')}}" alt="">
+                    </figure>
+                    <div class="caption">
+                        <h3 class="font-weight-bold">{{$products[4]->name}}</h3>
+                        <p>
+                            {{$products[4]->desc}}
+                        </p>
+                          <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}...</span>
+                        {{-- <a href={{$products[4]->url}} target="_blank" class="learn-more d-flex align-items-center justify-content-center">
+                            <span>{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</span>
+                            <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}"
+                                    alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>
+                        </a> --}}
+                    </div>
+                </div>
+                <div class="col-xl-3 text-center block-feature">
+                    <figure>
+                        <img src="{{asset('public/assets/images/laptop/carousel/deer-116px.png')}}" alt="">
+                    </figure>
+                    <div class="caption">
+                        <h3 class="font-weight-bold">{{$products[5]->name}}</h3>
+                        <p>
+                          {{$products[5]->desc}}
+                        </p>
+                          <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}...</span>
+                        {{-- <a href={{$products[5]->url}} target="_blank" class="learn-more d-flex align-items-center justify-content-center">
+                            <span>{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</span>
+                            <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}"
+                                    alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>
+                        </a> --}}
+                    </div>
+                </div>
+                <div class="col-xl-3 text-center block-feature">
+                    <figure>
+                        <img src="{{asset('public/assets/images/laptop/carousel/carousel-peacock.png')}}" alt="">
+                    </figure>
+                    <div class="caption">
+                        <h3 class="font-weight-bold">{{$products[6]->name}}</h3>
+                        <p>
+                          {{$products[6]->desc}}
+                        </p>
+                          <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}...</span>
+                        {{-- <a href={{$products[6]->url}} target="_blank" class="learn-more d-flex align-items-center justify-content-center">
+                            <span>{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</span>
+                            <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}"
+                                    alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>
+                        </a> --}}
+                    </div>
+                </div>
+                <div class="col-xl-3 text-center block-feature">
+                        <figure>
+                            <img src="{{asset('public/assets/images/laptop/carousel/carousel-bird.png')}}" alt="">
+                        </figure>
+                        <div class="caption">
+                            <h3 class="font-weight-bold">{{$products[7]->name}}</h3>
+                            <p>
+                               {{$products[7]->desc}}
+                            </p>
+                              <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}...</span>
+                            {{-- <a href= {{$products[7]->url}} target="_blank" class="learn-more d-flex align-items-center justify-content-center">
+                                <span>{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</span>
+                                <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}"
+                                        alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>
+                            </a> --}}
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <!-- Carousel  -->
+@endsection

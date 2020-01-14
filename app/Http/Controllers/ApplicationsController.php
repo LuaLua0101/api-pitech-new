@@ -3,10 +3,25 @@
 namespace App\Http\Controllers;
 
 use App\Models\Application;
+use App\Models\Banner;
 use Illuminate\Http\Request;
 
 class ApplicationsController extends Controller
 {
+    public function index()
+    {
+        $lang = session('lang') ? session('lang') : 'en';
+        $banner1 = Banner::where('type', 'new_update')->where('lang', $lang)->first();
+        $banner2 = Banner::where('type', 'application')->where('lang', $lang)->first();
+        $app = Application::latest()->first();
+        $related_3_apps = Application::orderBy('id', 'desc')->take(4)->get();
+        return view('client.application', [
+            'application' => $app,
+            'related' => $related_3_apps,
+            'banner_new' => $banner1,
+            'banner_app' => $banner2]);
+    }
+
     /**
      * Get add Application page
      */

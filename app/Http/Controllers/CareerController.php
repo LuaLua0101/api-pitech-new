@@ -2,17 +2,28 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Banner;
 use App\Models\Career;
+use DB;
 use Illuminate\Http\Request;
+use Session;
 
 class CareerController extends Controller
 {
+    public function index()
+    {
+        $lang = session('lang') ? session('lang') : 'en';
+        $banner = Banner::where('type', 'career')->where('lang', $lang)->first();
+        $careers = DB::table('careers')->where('lang', $lang)->orderBy('seq', 'asc')->get();
+        return view('client.career', ['banner' => $banner, 'careers' => $careers]);
+    }
+
     /**
      * Get add Career page
      */
     public function getAddCareer()
     {
-            return view('admin.career_add');
+        return view('admin.career_add');
     }
 
     /**

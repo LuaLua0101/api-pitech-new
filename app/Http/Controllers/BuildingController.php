@@ -2,18 +2,28 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Banner;
 use App\Models\Building;
+use DB;
 use Illuminate\Http\Request;
 
 class BuildingController extends Controller
 {
+    public function index()
+    {
+        $lang = session('lang') ? session('lang') : 'en';
+        $banner = Banner::where('type', 'building')->first();
+        $buildings = DB::table('building_the_futures')->where('lang', $lang)->orderBy('seq', 'asc')->get();
+        return view('client.building-future', ['banner' => $banner, 'buildings' => $buildings]);
+    }
+
     /**
      * Get add Building page
      */
     public function getAddBuilding()
     {
-            return view('admin.building_add');
-       
+        return view('admin.building_add');
+
     }
 
     /**

@@ -7,6 +7,18 @@ use Illuminate\Http\Request;
 
 class PressResourceController extends Controller
 {
+    public function index()
+    {
+        $pressResources = PressResource::orderBy('id', 'desc')->take(8)->get();
+        return view('client.press-resources', ['press_resources' => $pressResources]);
+    }
+
+    public function pressLoadMore($skip)
+    {
+        $pressResources = PressResource::orderBy('id', 'desc')->skip($skip)->take(8)->get();
+        return response()->json($pressResources, 200);
+    }
+
     /**
      * Get add PressResource page
      */

@@ -1,10 +1,29 @@
 <?php
 Route::middleware(['runall'])->group(function () {
-    Route::get('/', 'AdminController@index')->name('home');
-
     Auth::routes();
 
-    Route::get('/home', 'AdminController@index')->name('home');
+    Route::get('/vi', 'AdminController@change2Vi')->name('change2Vi');
+    Route::get('/en', 'AdminController@change2En')->name('change2En');
+
+    Route::get('/', 'AdminController@index')->name('home');
+    // Route::get('/home', 'AdminController@index')->name('home');
+    Route::get('/teach-me-series', 'AdminController@teachMeIndex')->name('teachMeIndex');
+    Route::get('/teach-me-serie/{id}', 'AdminController@teachMeDetail')->name('teachMeDetail');
+    Route::post('/teach-me-serie/add-comment/{id}', 'HomeController@addTeachmeComment')->name('teachMeComment');
+    Route::get('/teach-me-loadmore/{skip}', 'AdminController@teachMeLoadMore')->name('teachMeLoadMore');
+
+    Route::get('/iot-hubs', 'IotHubController@index')->name('IotHub');
+    Route::get('/iot-hub/{id}', 'IotHubController@iotHubDetail')->name('iotHubDetail');
+    Route::post('/iot-hub/add-comment/{id}', 'IotHubController@addIotComment')->name('addIotComment');
+    Route::get('/iot-hub-loadmore/{skip}', 'IotHubController@iotHubLoadMore')->name('iotHubLoadMore');
+
+    Route::get('/press-resources', 'PressResourceController@index')->name('PressResources');
+    Route::get('/press-resource-loadmore/{skip}', 'PressResourceController@pressLoadMore')->name('pressLoadMore');
+
+    Route::get('/related-products', 'RelatedProductController@index')->name('RelatedProducts');
+    Route::get('/applications', 'ApplicationsController@index')->name('Applications');
+    Route::get('/careers', 'CareerController@index')->name('Careers');
+    Route::get('/building-the-future', 'BuildingController@index')->name('BuildingFuture');
 
     // Admin ***************************************
     Route::prefix('/ad')->group(function () {
@@ -13,7 +32,6 @@ Route::middleware(['runall'])->group(function () {
         Route::post('/login', 'AdminController@postLogin')->name('adpostLogin');
 
         Route::middleware(['check_admin'])->group(function () {
-
             // Home
             Route::get('/', 'AdminController@getHome')->name('adgetHome');
             Route::post('/config', 'AdminController@updateConfig')->name('adupdateConfig');
@@ -98,7 +116,3 @@ Route::middleware(['runall'])->group(function () {
     });
     // END Admin ***********
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('getHome');
