@@ -27,7 +27,7 @@
                         </p>
                     </div>
                     <div class="col-12 col-xl-6 align-self-center">
-                        <a href="{{route('teachMeDetail', ['id' => $teachmepinned->pinned_id])}}" target="_blank" rel="noopener noreferrer">
+                        <a href="{{route('teachMeDetail', ['id' => $teachmepinned->pinned_id])}}"  rel="noopener noreferrer">
                             <div class="img-box">
                                 <img class="img-fluid" src="{{asset('public/img/post/' . $teachmepinned->cover)}}"
                                     alt="feature article">
@@ -79,7 +79,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12 col-xl-12 right-block">
-                                    <a href="{{route('teachMeDetail', ['id' => $item->id])}}" target="_blank" rel="noopener noreferrer">
+                                    <a href="{{route('teachMeDetail', ['id' => $item->id])}}"  rel="noopener noreferrer">
                                         <h3 class="text-black">{{$item->title}}</h3>
                                         <p>
                                             {{$item->short_desc}}
@@ -153,7 +153,7 @@
                                     + '</div>'
                                 + '</div>'
                                 + '<div class="col-12 col-xl-12 right-block">'
-                                    + '<a href="teach-me-serie/' + item['id']+ '" target="_blank" rel="noopener noreferrer">'
+                                    + '<a href="teach-me-serie/' + item['id']+ '"  rel="noopener noreferrer">'
                                         + '<h3 class="text-black">'+item['title']+ '</h3>'
                                         + '<p>'+item['short_desc']+ '</p>'
                                     + '</a>'

@@ -82,10 +82,15 @@
                     <!-- Sharing  -->
                     <div class="sharing">
                         <!-- Backend implement here  -->
+
                         <div class="sharing-box">
                             <div class="d-none d-lg-block caption">{{session('lang') == 'en' ? 'Share this' : 'Chia sẻ'}}... </div>
-                            <img src="{{asset('public/assets/images/laptop/icn/social-laptop.png')}}" alt="social network">
-                            <!-- <img class="d-lg-none" src="./assets/images/laptop/icn/social-sharing.png" alt="social network"> -->
+                            <a class="fbsharelink" data-shareurl="{{url()->current()}}">
+                                <img src="{{asset('public/assets/images/laptop/icn/icn-fb.png')}}" alt="social network">
+                            </a>
+                            <a href="mailto:contact@pitech.asia">
+                                <img src="{{asset('public/assets/images/laptop/icn/icn-gmail.png')}}" alt="social network">
+                            </a>
                         </div>
                     </div>
                     <!-- // Sharing  -->
@@ -100,18 +105,16 @@
             <div class="caption">{{session('lang') == 'en' ? 'Leave a reply' : 'Để lại bình luận'}}</div>
             <form action="#" id="teachMeForm" name="teachMeForm">
                 {{ csrf_field() }}
+                 <input name="id" id="id" style="display: none" value="{{$data->id}}">
                 <div class="form-group">
-
                     <input type="text" name="name" id="name" class=" custom-input form-control" placeholder="{{session('lang') == 'en' ? 'Name' : 'Họ tên'}}"
                         aria-describedby="helpId">
                 </div>
                 <div class="form-group">
-
                     <input type="text" name="email" id="email" class=" custom-input form-control" placeholder="Email"
                         aria-describedby="helpId">
                 </div>
                 <div class="form-group">
-
                     <textarea class="form-control custom-input " placeholder="{{session('lang') == 'en' ? 'Message' : 'Nội dung'}}" name="content" id="content"
                         rows="3"></textarea>
                 </div>
@@ -119,4 +122,22 @@
             </form>
         </div>
     </section>
+    <script>
+        $(function () {
+$('#teachMeForm').on('submit', function (e) {
+              e.preventDefault();
+
+              $.ajax({
+                type: 'post',
+                url: "{{route('teachMeComment')}}",
+                data: $('#teachMeForm').serialize(),
+                success: function () {
+                  alert('Gửi bình luận thành công');
+                }
+              });
+            });
+        }); 
+
+        
+    </script>
 @endsection

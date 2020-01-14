@@ -121,9 +121,14 @@ class HomeController extends Controller
         $data->name = $request->name;
         $data->email = $request->email;
         $data->content = $request->content;
-        $data->parent_id = $request->parent_id;
+        $data->parent_id = $request->id;
         $data->save();
 
+        $detail = TeachMeSeries::find($request->id);
+        if ($detail) {
+            $detail->chat_count = $detail->chat_count + 1;
+            $detail->save();
+        }
         $to_name = $request->name;
         $to_email = $request->email;
         $data = array('name' => $request->name, 'content' => $request->content, 'email' => $request->email);

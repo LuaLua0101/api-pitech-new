@@ -9,12 +9,12 @@ Route::middleware(['runall'])->group(function () {
     // Route::get('/home', 'AdminController@index')->name('home');
     Route::get('/teach-me-series', 'AdminController@teachMeIndex')->name('teachMeIndex');
     Route::get('/teach-me-serie/{id}', 'AdminController@teachMeDetail')->name('teachMeDetail');
-    Route::post('/teach-me-serie/add-comment/{id}', 'HomeController@addTeachmeComment')->name('teachMeComment');
+    Route::post('/teach-me-serie/add-comment', 'HomeController@addTeachmeComment')->name('teachMeComment');
     Route::get('/teach-me-loadmore/{skip}', 'AdminController@teachMeLoadMore')->name('teachMeLoadMore');
 
     Route::get('/iot-hubs', 'IotHubController@index')->name('IotHub');
     Route::get('/iot-hub/{id}', 'IotHubController@iotHubDetail')->name('iotHubDetail');
-    Route::post('/iot-hub/add-comment/{id}', 'IotHubController@addIotComment')->name('addIotComment');
+    Route::post('/iot-hub/add-comment', 'IotHubController@addIotComment')->name('addIotComment');
     Route::get('/iot-hub-loadmore/{skip}', 'IotHubController@iotHubLoadMore')->name('iotHubLoadMore');
 
     Route::get('/press-resources', 'PressResourceController@index')->name('PressResources');

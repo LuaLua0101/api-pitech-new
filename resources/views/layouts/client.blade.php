@@ -226,21 +226,21 @@
             <h4 class="text-uppercase d-none d-lg-block font-weight-bold text-white">{{session('lang') == 'en' ? 'Contact' : 'Liên hệ'}}</h4>
             <!-- List network on mobile  -->
             <ul class="px-0 d-block d-lg-none">
-              <li class="d-inline-block "><a href="#" target="_blank"  class="d-inline-block d-lg-none">
+              <li class="d-inline-block "><a href="https://www.facebook.com/pitech/" target="_blank"  class="d-inline-block d-lg-none">
                   <img src="{{ asset('public/assets/images/mobile/icons/icn-fb.png')}}" alt="fb">
                 </a></li>
               <li class="d-inline-block">
-                <a href="#" target="_blank"   class="d-lg-none">
+                <a href="https://www.youtube.com/channel/UC7fCBx5nsJQrbu5mU3G1E6Q" target="_blank"   class="d-lg-none">
                   <img src="{{ asset('public/assets/images/mobile/icons/icn-youtube.png')}}" alt="youtube">
                 </a>
               </li>
             </ul>
             <!-- List net work on laptop  -->
             <ul class="px-0 d-none d-lg-block">
-              <li class="d-inline-block"><a href="#" target="_blank">
+              <li class="d-inline-block"><a href="https://www.facebook.com/pitech/" target="_blank">
                 <img src="{{ asset('public/assets/images/laptop/icn/icn-fb.png')}}" alt="facebook">
               </a></li>
-              <li class="d-inline-block"><a href="#" target="_blank">
+              <li class="d-inline-block"><a href="https://www.youtube.com/channel/UC7fCBx5nsJQrbu5mU3G1E6Q" target="_blank">
                 <img src="{{ asset('public/assets/images/laptop/icn/icn-youtube.png')}}" alt="youtube">
               </a></li>
               <li class="d-inline-block">
@@ -273,31 +273,14 @@
                 mobile: true,
             });
 
-            $('#teachMeForm').on('submit', function (e) {
-              e.preventDefault();
+            $('.fbsharelink').click( function() 
+{
+    var shareurl = $(this).data('shareurl');
+    window.open('https://www.facebook.com/sharer/sharer.php?u='+escape(shareurl)+'&t='+document.title, '', 
+    'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
+    return false;
+});
 
-              $.ajax({
-                type: 'post',
-                url: "{{route('teachMeComment', ['id' => 1])}}",
-                data: $('#teachMeForm').serialize(),
-                success: function () {
-                  alert('Gửi bình luận thành công');
-                }
-              });
-            });
-
-            $('#iotHubForm').on('submit', function (e) {
-              e.preventDefault();
-
-              $.ajax({
-                type: 'post',
-                url: "{{route('addIotComment', ['id' => 1])}}",
-                data: $('#iotHubForm').serialize(),
-                success: function () {
-                  alert('Gửi bình luận thành công');
-                }
-              });
-            });
         }); 
     </script>
 </body>

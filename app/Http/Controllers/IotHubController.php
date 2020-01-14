@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Banner;
 use App\Models\IotHub;
+use App\Models\IotHubComment;
 use App\Models\IotHubPinned;
 use DB;
 use Illuminate\Http\Request;
+use Mail;
 
 class IotHubController extends Controller
 {
@@ -31,6 +33,32 @@ class IotHubController extends Controller
     {
         $iothub = IotHub::orderBy('id', 'desc')->skip($skip)->take(6)->get();
         return response()->json($iothub, 200);
+    }
+
+    public function addIotComment(Request $request)
+    {
+        $data = new IotHubComment;
+        $data->name = $request->name;
+        $data->email = $request->email;
+        $data->content = $request->content;
+        $data->parent_id = intval($request->id);
+        $data->save();
+
+        $detail = IotHub::find($data->parent_id);
+        if ($detail) {
+            $detail->chat_count = $detail->chat_count + 1;
+            $detail->save();
+        }
+        $to_name = $request->name;
+        $to_email = $request->email;
+        $data = array('name' => $request->name, 'content' => $request->content, 'email' => $request->email);
+        Mail::send('emails.mail', $data, function ($message) use ($to_name, $to_email) {
+            $message->to('lua.solution@gmail.com', $to_name)
+                ->subject('Pitech');
+            $message->from($to_email, 'Test Mail Teach me series');
+        });
+
+        return response()->json($data, 200);
     }
 
     /**
