@@ -12,7 +12,7 @@ class CareerController extends Controller
 {
     public function index()
     {
-        $lang = session('lang') ? session('lang') : 'en';
+        $lang = session('lang') ? session('lang') : 'vi';
         $banner = Banner::where('type', 'career')->where('lang', $lang)->first();
         $careers = DB::table('careers')->where('lang', $lang)->orderBy('seq', 'asc')->get();
         return view('client.career', ['banner' => $banner, 'careers' => $careers]);

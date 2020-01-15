@@ -10,7 +10,7 @@ class ApplicationsController extends Controller
 {
     public function index()
     {
-        $lang = session('lang') ? session('lang') : 'en';
+        $lang = session('lang') ? session('lang') : 'vi';
         $banner1 = Banner::where('type', 'new_update')->where('lang', $lang)->first();
         $banner2 = Banner::where('type', 'application')->where('lang', $lang)->first();
         $app = Application::latest()->first();

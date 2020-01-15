@@ -19,7 +19,7 @@ class AdminController extends Controller
 {
     public function index()
     {
-        $lang = session('lang') ? session('lang') : 'en';
+        $lang = session('lang') ? session('lang') : 'vi';
         $banner1 = Banner::where('type', 'home')->where('lang', $lang)->first();
         $banner2 = Banner::where('type', 'new_update')->where('lang', $lang)->first();
         $teachme = TeachMeSeries::orderBy('id', 'desc')->take(6)->get();
@@ -40,7 +40,7 @@ class AdminController extends Controller
 
     public function teachMeIndex()
     {
-        $lang = session('lang') ? session('lang') : 'en';
+        $lang = session('lang') ? session('lang') : 'vi';
         $banner = Banner::where('type', 'teach_me')->where('lang', $lang)->first();
         $teachme = TeachMeSeries::orderBy('id', 'desc')->take(6)->get();
         $teachmepinned = DB::table('teach-me-series')

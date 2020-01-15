@@ -14,7 +14,7 @@ class IotHubController extends Controller
 {
     public function index()
     {
-        $lang = session('lang') ? session('lang') : 'en';
+        $lang = session('lang') ? session('lang') : 'vi';
         $banner = Banner::where('type', 'iothub')->where('lang', $lang)->first();
         $iothub = IotHub::orderBy('id', 'desc')->take(6)->get();
         $iothubpinned = DB::table('iot-hub')->leftjoin('iot-hub-pinned', 'iot-hub.id', '=', 'iot-hub-pinned.pinned_id')->first();

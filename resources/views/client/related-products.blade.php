@@ -35,7 +35,7 @@
                     <p>
                         {{$products[0]->desc}}
                     </p>
-                    <a href={{$products[0]->url}} target="_blank"  class="learn-more d-flex align-items-center justify-content-center">
+                    <a href="{{$products[0]->url}}" target="_blank"  class="learn-more d-flex align-items-center justify-content-center">
                         <span>{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</span>
                         <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}" alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>
                     </a>
@@ -45,7 +45,7 @@
                     <p>
                      {{$products[1]->desc}}
                     </p>
-                    <a href={{$products[1]->url}} target="_blank"  class="learn-more d-flex align-items-center justify-content-center">
+                    <a href="{{$products[1]->url}}" target="_blank"  class="learn-more d-flex align-items-center justify-content-center">
                         <span>{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</span>
                         <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}" alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>
                     </a>
@@ -160,7 +160,7 @@
                         <p>
                            {{$products[0]->desc}}
                         </p>
-                        <a href={{$products[0]->url}}  target="_blank" class="learn-more d-flex align-items-center justify-content-center">
+                        <a href="{{$products[0]->url}}"  target="_blank" class="learn-more d-flex align-items-center justify-content-center">
                             <span>{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</span>
                             <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}"
                                     alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>
@@ -177,7 +177,7 @@
                         <p>
                          {{$products[1]->desc}}
                         </p>
-                        <a href={{$products[1]->url}} target="_blank"  class="learn-more d-flex align-items-center justify-content-center">
+                        <a href="{{$products[1]->url}}" target="_blank"  class="learn-more d-flex align-items-center justify-content-center">
                             <span>{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</span>
                             <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}"
                                     alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>

@@ -11,7 +11,7 @@ class RelatedProductController extends Controller
 {
     public function index()
     {
-        $lang = session('lang') ? session('lang') : 'en';
+        $lang = session('lang') ? session('lang') : 'vi';
         $banner = Banner::where('type', 'related_product')->where('lang', $lang)->first();
         $products = DB::table('related-products')->where('lang', $lang)->get();
         return view('client.related-products', ['banner' => $banner, 'products' => $products]);

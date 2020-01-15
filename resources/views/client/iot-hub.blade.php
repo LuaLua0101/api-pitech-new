@@ -25,7 +25,7 @@
             </p>
           </div>
           <div class="col-12 col-xl-6 ">
-            <a href="{{route('iotHubDetail', ['id' => $iothubpinned->pinned_id])}}" target="_blank" rel="noopener noreferrer">
+            <a href="{{route('iotHubDetail', ['id' => $iothubpinned->pinned_id])}}" rel="noopener noreferrer">
               <div class="img-box">
                 <img class="img-fluid"  src="{{asset('public/img/iothub/' . $iothubpinned->cover)}}"
                   alt="feature article">
@@ -46,7 +46,7 @@
         <!-- Item style 2  -->
         <div class="col-12 col-md-12 col-lg-4 col-xl-4 ">
           <article class="article-box-2 article-box mb-15px ">
-            <a href="{{route('iotHubDetail', ['id' => $item->id])}}" target="_blank" rel="noopener noreferrer">
+            <a href="{{route('iotHubDetail', ['id' => $item->id])}}" rel="noopener noreferrer">
               <!-- Title visible on mobile  -->
               <h3 class="d-block d-md-none">{{$item->title}}</h3>
 
@@ -130,7 +130,7 @@
                                     + '</div>'
                                 + '</div>'
                                 + '<div class="col-12 col-xl-12 right-block">'
-                                    + '<a href="teach-me-serie/' + item['id']+ '" target="_blank" rel="noopener noreferrer">'
+                                    + '<a href="teach-me-serie/' + item['id']+ '" rel="noopener noreferrer">'
                                         + '<h3 class="text-black">'+item['title']+ '</h3>'
                                         + '<p>'+item['short_desc']+ '</p>'
                                     + '</a>'

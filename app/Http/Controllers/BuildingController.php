@@ -11,7 +11,7 @@ class BuildingController extends Controller
 {
     public function index()
     {
-        $lang = session('lang') ? session('lang') : 'en';
+        $lang = session('lang') ? session('lang') : 'vi';
         $banner = Banner::where('type', 'building')->first();
         $buildings = DB::table('building_the_futures')->where('lang', $lang)->orderBy('seq', 'asc')->get();
         return view('client.building-future', ['banner' => $banner, 'buildings' => $buildings]);
