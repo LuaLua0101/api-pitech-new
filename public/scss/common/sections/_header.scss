@@ -73,7 +73,9 @@
             color: $black;
           }
         }
-        
+        .dropdown-toggle::after {
+          background-image: url(../images/laptop/icn/icn-arrow-down.png);
+        }
       }
       .dropdown-item{
         &:hover{

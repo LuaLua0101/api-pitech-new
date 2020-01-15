@@ -209,6 +209,9 @@ ul li {
   .header .navbar .nav-item.active a {
     color: #000;
   }
+  .header .navbar .nav-item .dropdown-toggle::after {
+    background-image: url(../images/laptop/icn/icn-arrow-down.png);
+  }
   .header .navbar .dropdown-item:hover {
     color: #0066F9;
   }

@@ -57,7 +57,7 @@
                   <a class="nav-link px-0" href="{{ route('IotHub') }}">IOT Hub</a>
                 </li>
                 <li class="nav-item dropdown d-flex align-items-center">
-                  <a class="nav-link dropdown-toggle d-flex" href="#" id="exploreLaptop" data-toggle="dropdown"
+                  <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="exploreLaptop" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">Explorer</a>
                   <div class="dropdown-menu" aria-labelledby="exploreLaptop">
                     <a class="dropdown-item" href="{{ route('RelatedProducts') }}">Related product</a>
