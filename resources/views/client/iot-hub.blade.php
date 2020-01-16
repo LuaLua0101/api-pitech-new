@@ -18,8 +18,8 @@
       <article class="article-box ">
         <div class="row article-detail">
           <div class="col-12 col-xl-6 align-self-center">
-            <h3 class="d-none d-lg-block text-white text-left">{{ $iothubpinned->title}}</h3>
-
+            <a href="{{route('iotHubDetail', ['id' => $iothubpinned->pinned_id])}}" rel="noopener noreferrer"> <h3 class="d-none d-lg-block text-white text-left">{{ $iothubpinned->title}}</h3>
+</a>
             <p class="text-white">
              {{ $iothubpinned->short_desc}}
             </p>

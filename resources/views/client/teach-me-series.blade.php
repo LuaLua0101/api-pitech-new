@@ -21,7 +21,9 @@
             <article class="article-box ">
                 <div class="row article-detail">
                     <div class="col-12 col-xl-6 align-self-center">
+                     <a href="{{route('teachMeDetail', ['id' => $teachmepinned->pinned_id])}}"  rel="noopener noreferrer">
                         <h3 class="d-none d-lg-block text-white text-left">{{$teachmepinned->title}}</h3>
+                        </a>
                         <p class="text-white">
                             {{$teachmepinned->short_desc}}
                         </p>
