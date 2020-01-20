@@ -3,7 +3,7 @@
 @section('teachme', 'active')
 
 @section('content')
-@if($data->video_url)
+@if($data->video_url && !preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]))
     <div class="article-breadcum breadcum video-background">
         <!-- Integrate with Youtube video and plugin   -->
         {{-- <div class="overlay-player-top overlay-player"></div> --}}

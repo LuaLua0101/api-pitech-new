@@ -95,10 +95,10 @@
                  id="press-load-more" name="press-load-more" 
                 style="cursor: pointer" onClick="pressLoadMore(skip)">
                     <div class="view-more-articles">
-                        <span><b>{{session('lang') == 'en' ? 'View more' : 'Xem thêm'}}</b></span>
-                        <span>
+                        <span><b>{{session('lang') == 'en' ? 'View more' : 'Xem thêm'}} <i class="fa fa-angle-down" style="color: #1261D6"></i></b></span>
+                        <!-- <span>
                             <img src="{{asset('public/assets/images/mobile/icons/icn-arrow-down-techseries.png')}}" alt="next">
-                        </span>
+                        </span> -->
                     </div>
                 </div>
             </div>

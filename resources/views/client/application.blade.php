@@ -110,9 +110,9 @@
                             {{$application->feature3_desc}}
                         </p>
                         <div class="learn-more" style="cursor:pointer; color: #1261D6" onclick="showDetailPane()">
-                            <b><span>{{session('lang') == 'en' ? 'View more' : 'Xem thêm'}}</span></b>
-                            <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-down-blue.png')}}"
-                                    alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>
+                            <b><span>{{session('lang') == 'en' ? 'View more' : 'Xem thêm'}} <i class="fa fa-angle-down" style="color: #1261D6"></i></span></b>
+                            <!-- <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-down-blue.png')}}"
+                                    alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span> -->
                         </div>
                     </div>
                     <!-- Note. Paragraph intro laptop was longer  so this will be display in mobile -->
@@ -126,12 +126,12 @@
                         <p>
                     {{$application->feature3_desc}}
                         </p>
-                        <div class="text-uppercase mx-auto justify-content-center d-flex align-items-center view-more-articles"  style="cursor:pointer;width:120px;height:28px;border: 1px solid #1261D6;border-radius: 15px;padding: 7px 15px 5px;"  onclick="showDetailPane()">
-                            <b><span>{{session('lang') == 'en' ? 'View more' : 'Xem thêm'}}</span></b>
+                        <div class="text-uppercase mx-auto justify-content-center d-flex align-items-center view-more-articles"  style="cursor:pointer;width:45%;border: 1px solid #1261D6;border-radius: 15px;padding: 7px 15px 5px;"  onclick="showDetailPane()">
+                            <b><span>{{session('lang') == 'en' ? 'View more' : 'Xem thêm'}} <i class="fa fa-angle-down" style="color: #1261D6"></i></span></b>
                             
-                            <span style="margin-left:5px">
+                            <!-- <span style="margin-left:5px">
                             <img src="{{asset('public/assets/images/mobile/icons/icn-arrow-down-blue.png')}}"
-                                    alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>
+                                    alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span> -->
                         </div>
 
                         
@@ -154,9 +154,9 @@
                     {!!$application->detail !!}
                         </p>
                         <a href="#" class="learn-more">
-                            <b><span>{{session('lang') == 'en' ? 'View more' : 'Xem thêm'}}</span></b>
-                            <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-down-blue.png')}}"
-                                    alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>
+                            <b><span>{{session('lang') == 'en' ? 'View more' : 'Xem thêm'}} <i class="fa fa-angle-down" style="color: #1261D6"></i></span></b>
+                            <!-- <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-down-blue.png')}}"
+                                    alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span> -->
                         </a>
                     </div>
                 </div>
