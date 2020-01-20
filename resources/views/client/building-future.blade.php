@@ -11,21 +11,26 @@
         </div>
     </section>
    @foreach($buildings as $key => $item)
-     <div class="container">
-            <hr class="breadcum-line w-100"> 
+   @if($key === 0)
+     <div class="container" style="width: 70%">
+            <hr class="breadcum-line w-100" > 
         </div>
+        @else 
+          <div class="container" >
+            <hr class="breadcum-line w-100" > 
+        </div>
+        @endif
       <!-- Section Zoooer -->
       <section class="cqa info-section">
             <div class="container">
                 <div class="{{$key % 2 ? 'row' : 'row reverse-laptop'}}">
                     <div class="col-12 col-md-12 col-lg-7 col-xl-7 info-block">
                         <h3 class="d-none d-lg-block">{{ $item->dep}}</h3>
-                        <h3 class="d-block d-lg-none ">{{ $item->dep}}</h3>
+                        <h3 class="d-block d-lg-none" style="color: #1261D6">{{ $item->dep}}</h3>
                         <h4>
-                               {{ $item->title}}
+                               <b>{{ $item->title}}</b>
                             </h4>
-                            <br/>
-                        <p class="d-none d-lg-block">
+                        <p class="d-lg-block">
                               {{ $item->desc}}
                         </p>
                         {{-- <a href="#" class="learn-more d-none d-lg-block">

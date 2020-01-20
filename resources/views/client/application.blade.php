@@ -35,7 +35,7 @@
             <h2 class="font-weight-bold text-center center-sp-heading mobile-sub-heading">
             {{session('lang') == 'en' ? 'Latest update' : 'Cập nhật mới nhất'}}
             </h2>
-            <p class="d-none d-lg-block text-center sub-title">{{$banner_app->title}}</p>
+            <p class="d-lg-block text-center sub-title">{{$banner_app->title}}</p>
             <!-- 1 ITEM / ROW  -->
             <div class="row update-block">
                 <div class="col-12 col-xl-9">
@@ -109,10 +109,10 @@
                         <p>
                             {{$application->feature3_desc}}
                         </p>
-                        <div class="learn-more" style="cursor:pointer" onclick="showDetailPane()">
-                            <span>{{session('lang') == 'en' ? 'View more' : 'Xem thêm'}}</span>
-                            {{-- <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-down-blue.png')}}"
-                                    alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span> --}}
+                        <div class="learn-more" style="cursor:pointer; color: #1261D6" onclick="showDetailPane()">
+                            <b><span>{{session('lang') == 'en' ? 'View more' : 'Xem thêm'}}</span></b>
+                            <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-down-blue.png')}}"
+                                    alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>
                         </div>
                     </div>
                     <!-- Note. Paragraph intro laptop was longer  so this will be display in mobile -->
@@ -126,12 +126,15 @@
                         <p>
                     {{$application->feature3_desc}}
                         </p>
-                        <div class="learn-more"  style="cursor:pointer"  onclick="showDetailPane()">
-                            <span>{{session('lang') == 'en' ? 'View more' : 'Xem thêm'}}</span>
-                            {{-- <span>
+                        <div class="text-uppercase mx-auto justify-content-center d-flex align-items-center view-more-articles"  style="cursor:pointer;width:120px;height:28px;border: 1px solid #1261D6;border-radius: 15px;padding: 7px 15px 5px;"  onclick="showDetailPane()">
+                            <b><span>{{session('lang') == 'en' ? 'View more' : 'Xem thêm'}}</span></b>
+                            
+                            <span style="margin-left:5px">
                             <img src="{{asset('public/assets/images/mobile/icons/icn-arrow-down-blue.png')}}"
-                                    alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span> --}}
+                                    alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>
                         </div>
+
+                        
                     </div>
                 </div>
             </div>
@@ -151,7 +154,7 @@
                     {!!$application->detail !!}
                         </p>
                         <a href="#" class="learn-more">
-                            <span>{{session('lang') == 'en' ? 'View more' : 'Xem thêm'}}</span>
+                            <b><span>{{session('lang') == 'en' ? 'View more' : 'Xem thêm'}}</span></b>
                             <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-down-blue.png')}}"
                                     alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>
                         </a>
@@ -194,20 +197,20 @@
             <!-- Caption  -->
             @if(!empty($related[1]))
             <div class="caption text-left" id="caption1" name="caption1">
-                <h5>Lorem ipsum dolor sit amet, consec</h5>
-                <p>1</p>
+                <h5>{{$related[1]->title}}</h5>
+                <p>{{$related[1]->desc}}</p>
             </div>
                  @endif
             @if(!empty($related[2]))
              <div class="caption text-left" id="caption2" name="caption2" style="display:none">
-                <h5>Lorem ipsum dolor sit amet, consec</h5>
-                <p>2</p>
+                <h5>{{$related[2]->title}}</h5>
+                <p>{{$related[2]->desc}}</p>
             </div>
                  @endif
             @if(!empty($related[3]))
              <div class="caption text-left" id="caption3" name="caption3" style="display:none">
-                <h5>Lorem ipsum dolor sit amet, consec</h5>
-                <p>3</p>
+                <h5>{{$related[3]->title}}</h5>
+                <p>{{$related[3]->desc}}</p>
             </div>
                  @endif
         </div>

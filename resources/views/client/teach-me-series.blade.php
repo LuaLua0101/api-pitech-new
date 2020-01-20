@@ -42,7 +42,7 @@
             </article>
         </div>
     </section>
-    <!-- Sub articles: 5 on mobiles and {{session('lang') == 'en' ? 'View more' : 'Xem thêm'}}, 12 on laptop (3 articles/row)  -->
+    <!-- Sub articles: 5 on mobiles and 12 on laptop (3 articles/row)  -->
     <section class="teach-series-sub-articles">
         <div class="container">
             <div class="row" id="teachme-show-more" name="teachme-show-more">
@@ -104,11 +104,10 @@
                 <!-- End item  -->
             @endforeach
             </div>
-            <!-- {{session('lang') == 'en' ? 'View more' : 'Xem thêm'}} button -->
             <div class="text-uppercase mx-auto justify-content-center d-flex align-items-center view-more-articles"
             id="teach-me-load-more" name="teach-me-load-more" style="cursor: pointer" onClick="teachmeLoadMore(skip)">
                 <span>
-                    {{session('lang') == 'en' ? 'View more' : 'Xem thêm'}}
+                    <b>{{session('lang') == 'en' ? 'View more' : 'Xem thêm'}}</b>
                 </span>
                 <span>
                     <img src="{{ asset('public/assets/images/mobile/icons/icn-arrow-down-techseries.png')}}" alt="next">

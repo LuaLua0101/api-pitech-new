@@ -57,7 +57,7 @@
                   <a class="nav-link px-0" href="{{ route('IotHub') }}">IOT Hub</a>
                 </li>
                 <li class="nav-item dropdown d-flex align-items-center">
-                  <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="exploreLaptop" data-toggle="dropdown"
+                  <a class="nav-link  d-flex align-items-center" href="#" id="exploreLaptop" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">Explorer</a>
                   <div class="dropdown-menu" aria-labelledby="exploreLaptop">
                     <a class="dropdown-item" href="{{ route('RelatedProducts') }}">Related product</a>
@@ -101,15 +101,14 @@
             <a class="nav-link" href="{{ route('IotHub') }}">IOT Hub</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle d-flex align-items-center justify-content-center" href="#"
+            <a class="nav-link  d-flex align-items-center justify-content-center" href="#"
               id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Explorer
-
             </a>
             <div class="dropdown-menu border-0 text-center" aria-labelledby="dropdownId">
               <a class="dropdown-item" href="{{ route('RelatedProducts') }}">Related product</a>
               <a class="dropdown-item" href="{{ route('Applications') }}">Application</a>
-              <a class="dropdown-item" href="{{ route('PressResources') }}s">Press resources</a>
+              <a class="dropdown-item" href="{{ route('PressResources') }}">Press resources</a>
               <a class="dropdown-item" href="{{ route('Careers') }}">Career</a>
             </div>
           </li>
@@ -220,7 +219,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-12 col-md-12 col-lg-3 col-xl-3 pr-0 ">
+        <div class="col-12 col-md-12 col-lg-3 col-xl-3 pr-0 " style="padding-left:5px">
           <!-- social network  -->
           <div class="social-network">
             <h4 class="text-uppercase d-none d-lg-block font-weight-bold text-white">{{session('lang') == 'en' ? 'Contact' : 'Liên hệ'}}</h4>

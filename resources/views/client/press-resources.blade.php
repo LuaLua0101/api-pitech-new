@@ -90,13 +90,12 @@
             @endforeach
             
         </div>
-        <!-- {{session('lang') == 'en' ? 'View more' : 'Xem thêm'}} BUTTON -->
             <div class="w-100">
                 <div class="text-uppercase mx-auto justify-content-center d-flex align-items-center"
                  id="press-load-more" name="press-load-more" 
                 style="cursor: pointer" onClick="pressLoadMore(skip)">
                     <div class="view-more-articles">
-                        <span>{{session('lang') == 'en' ? 'View more' : 'Xem thêm'}}</span>
+                        <span><b>{{session('lang') == 'en' ? 'View more' : 'Xem thêm'}}</b></span>
                         <span>
                             <img src="{{asset('public/assets/images/mobile/icons/icn-arrow-down-techseries.png')}}" alt="next">
                         </span>

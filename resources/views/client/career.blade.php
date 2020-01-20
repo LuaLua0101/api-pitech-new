@@ -54,15 +54,15 @@
     </div>
     <!-- Mobile style - toggle -->
     <div class="container d-block d-lg-none">
- @foreach($careers as $item)
+ @foreach($careers as $key=>$item)
         <!-- Toggle btn  -->
-        <button class="btn btn-primary toggle-mobile" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+        <button class="btn btn-primary toggle-mobile" type="button" data-toggle="collapse" data-target="#collapseExample{{$key}}" aria-expanded="false" aria-controls="collapseExample{{$key}}">
             <span class="title">{{$item->dep}}</span>
             <span class="pull-right"><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-down-blue.png')}}" alt=""></span>
             <div class="clear-float"></div>
         </button>
         <!-- Collapse content  -->
-        <div class="collapse toggle-content" id="collapseExample2">
+        <div class="collapse toggle-content" id="collapseExample{{$key}}">
             <div class="content text-center">
                 <div class="career-img">
                     <img class="img-fluid" src="{{asset('public/img/Career/' . $item->cover)}}" alt="career">

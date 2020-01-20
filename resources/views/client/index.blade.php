@@ -56,7 +56,7 @@
             <div class="col-6 d-none d-lg-block text-right">
                 <a href="{{ route('teachMeIndex') }}" class="text-center view-more-articles">
                     <span>
-                  {{session('lang') == 'en' ? 'View all post' : 'Xem tất cả'}}
+                  <b>{{session('lang') == 'en' ? 'View all post' : 'Xem tất cả'}}</b>
                 </span>
                     <span>
                   <img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}" alt="next">
@@ -71,7 +71,7 @@
                     <div class="row mx-0 article-detail align-items-center ">
                         <div class="col-md-6 col-xl-6 left-block pl-0">
                             <a href="#"  rel="noopener noreferrer">
-                                <div class="img-box">
+                                <div class="img-box" style="border-radius: 15px">
                                     <img src="{{asset('public/img/post/' . $teachmepinned->cover)}}" alt="feature article">
                                     @if($teachmepinned->video_url)
                                     <img class="play-btn" src="{{asset('public/assets/images/mobile/icons/icn-play.png')}}" alt="play">
@@ -125,7 +125,7 @@
                     <div class="article-detail secondary-article secondary-article--left">
                         <div class="row">
                             <div class="col-12 col-xl-7 left-block">
-                                <div class="img-box">
+                                <div class="img-box"  style="border-radius: 15px">
                                     <img class="img-fluid thumbnail" src="{{asset('public/img/post/' . $teachme[0]->cover)}}" alt="article">
                                     @if($teachme[0]->video_url)
                                     <img class="play-btn" src="{{asset('public/assets/images/mobile/icons/icn-play.png')}}" alt="play">
@@ -178,7 +178,7 @@
                     <div class="article-detail secondary-article secondary-article--right">
                         <div class="row">
                             <div class="col-12 col-xl-7 left-block">
-                                <div class="img-box">
+                                <div class="img-box"  style="border-radius: 15px">
                                     <img class="img-fluid thumbnail" src="{{asset('public/img/post/' . $teachme[1]->cover)}}" alt="article">
                                       @if($teachme[1]->video_url)
                                     <img class="play-btn" src="{{asset('public/assets/images/mobile/icons/icn-play.png')}}" alt="play">@endif
@@ -232,7 +232,7 @@
                     <div class="article-detail secondary-article secondary-article--left">
                         <div class="row">
                             <div class="col-12 col-xl-7 left-block">
-                                <div class="img-box">
+                                <div class="img-box"  style="border-radius: 15px">
                                     <img class="img-fluid thumbnail" src="{{asset('public/img/post/' . $teachme[2]->cover)}}" alt="article">
                                       @if($teachme[2]->video_url)
                                     <img class="play-btn" src="{{asset('public/assets/images/mobile/icons/icn-play.png')}}" alt="play">@endif
@@ -284,7 +284,7 @@
                     <div class="article-detail secondary-article secondary-article--right">
                         <div class="row">
                             <div class="col-12 col-xl-7 left-block">
-                                <div class="img-box">
+                                <div class="img-box"  style="border-radius: 15px">
                                     <img class="img-fluid thumbnail" src="{{asset('public/img/post/' . $teachme[3]->cover)}}" alt="article">
                                       @if($teachme[3]->video_url)
                                     <img class="play-btn" src="{{asset('public/assets/images/mobile/icons/icn-play.png')}}" alt="play">@endif
@@ -336,7 +336,7 @@
                     <div class="article-detail secondary-article secondary-article--left">
                         <div class="row">
                             <div class="col-12 col-xl-7 left-block">
-                                <div class="img-box">
+                                <div class="img-box"  style="border-radius: 15px">
                                     <img class="img-fluid thumbnail" src="{{asset('public/img/post/' . $teachme[4]->cover)}}" alt="article">
                                       @if($teachme[0]->video_url)
                                     <img class="play-btn" src="{{asset('public/assets/images/mobile/icons/icn-play.png')}}" alt="play">@endif
@@ -388,7 +388,7 @@
                     <div class="article-detail secondary-article secondary-article--right">
                         <div class="row">
                             <div class="col-12 col-xl-7 left-block">
-                                <div class="img-box">
+                                <div class="img-box"  style="border-radius: 15px">
                                     <img class="img-fluid thumbnail" src="{{asset('public/img/post/' . $teachme[5]->cover)}}" alt="article">
                                       @if($teachme[5]->video_url)
                                     <img class="play-btn" src="{{asset('public/assets/images/mobile/icons/icn-play.png')}}" alt="play">
@@ -417,11 +417,9 @@
             </div>
             @endif
             <!-- End item  -->
-
-            <!-- {{session('lang') == 'en' ? 'View more' : 'Xem thêm'}} - VISIBLE ON MOBILE ALSO -->
             <a href="{{ route('teachMeIndex') }}" class="text-uppercase text-center d-block d-lg-none view-more-articles">
                 <span>
-            {{session('lang') == 'en' ? 'View all post' : 'Xem tất cả'}}
+            <b>{{session('lang') == 'en' ? 'View all post' : 'Xem tất cả'}}</b>
           </span>
                 <span>
             <img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}" alt="next">
@@ -442,7 +440,7 @@
             <div class="col-6 d-none d-lg-block text-right">
                 <a href="{{ route('IotHub') }}" class="text-center view-more-articles">
                     <span>
-              {{session('lang') == 'en' ? 'View all post' : 'Xem tất cả'}}
+              <b>{{session('lang') == 'en' ? 'View all post' : 'Xem tất cả'}}</b>
             </span>
                     <span>
               <img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}" alt="next">
@@ -473,7 +471,7 @@
                     <!-- Feature img, title, description -->
                     <div class="article-detail">
                         <a href="{{route('iotHubDetail', ['id' => $iotpinned->pinned_id])}}"  rel="noopener noreferrer">
-                            <div class="img-box">
+                            <div class="img-box" style="border-radius: 10px">
                                 <img class="img-fluid thumbnail" src="{{asset('public/img/iothub/' . $iotpinned->cover)}}" alt="article">
                                   @if($iotpinned->video_url)
                                 <img class="play-btn" src="{{asset('public/assets/images/mobile/icons/icn-play.png')}}" alt="play">@endif
@@ -508,7 +506,7 @@
                             <!-- Details  -->
                             <div class="article-detail row mx-0 ">
                                 <div class="feature-img col-5 col-md-4 col-lg-4 col-xl-4 pl-0 img-box">
-                                    <div class="img-box">
+                                    <div class="img-box"  style="border-radius: 10px">
                                         <img src="{{asset('public/img/iothub/' . $item->cover)}}" class="img-fluid w-100" alt="article">
                                             @if($item->video_url)
                                         <img class="play-btn" src="{{asset('public/assets/images/mobile/icons/icn-play.png')}}" alt="play">
@@ -518,8 +516,8 @@
                                 <div class="article-info col-7 col-md-8 col-lg-8 col-xl-8 px-0">
                                     <!-- Title visible on laptop  -->
                                     <h3 class="d-none d-lg-block">{{$item->title}}</h3>
-                                    <p class="mb-0">
-                                        {{$item->short_desc}}...
+                                    <p class="mb-0" style="line-height: 1.5em;height: 4.5em;overflow: hidden;">
+                                        {{$item->short_desc}}
                                     </p>
                                     <div class="d-flex time-and-view align-items-center">
                                         <time>{{ \Carbon\Carbon::parse($item->created_at)->format('F j, Y') }}</time>
@@ -537,10 +535,9 @@
                 @endforeach
             </div>
 
-            <!-- {{session('lang') == 'en' ? 'View more' : 'Xem thêm'}} on mobile -->
             <a href="{{ route('IotHub') }}" class="text-uppercase text-center d-lg-none view-more-articles">
                 <span>
-            {{session('lang') == 'en' ? 'View all post' : 'Xem tất cả'}}
+            <b>{{session('lang') == 'en' ? 'View all post' : 'Xem tất cả'}}</b>
           </span>
                 <span>
             <img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}" alt="next">

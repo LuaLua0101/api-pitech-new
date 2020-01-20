@@ -38,7 +38,7 @@
       </article>
     </div>
   </section>
-  <!-- Sub articles: 5 on mobiles and {{session('lang') == 'en' ? 'View more' : 'Xem thêm'}}, 12 on laptop (3 articles/row)  -->
+  <!-- Sub articles: 5 on mobiles and , 12 on laptop (3 articles/row)  -->
   <section class="teach-series-sub-articles iot-hubs-sub-articles">
     <div class="container">
       <div class="row"  id="iothub-show-more" name="iothub-show-more">
@@ -62,7 +62,7 @@
                 <div class="article-info col-7 col-md-7 col-lg-12 col-xl-12 px-0">
                   <!-- Title visible on laptop  -->
                   <h3 class="d-none d-md-block">{{$item->title}}</h3>
-                  <p class="mb-0">
+                  <p class="mb-0"  style="line-height: 1.5em;height: 4.5em;overflow: hidden;">
                    {{$item->short_desc}}...
                   </p>
                   <div class="d-flex time-and-view align-items-center">
@@ -80,11 +80,10 @@
     <!-- End item style 2  -->
     @endforeach
       </div>
-      <!-- {{session('lang') == 'en' ? 'View more' : 'Xem thêm'}} button -->
       <div class="text-uppercase mx-auto justify-content-center d-flex align-items-center view-more-articles"
        id="iothub-load-more" name="iothub-load-more" style="cursor: pointer" onClick="iotHubLoadMore(skip)">
         <span>
-          {{session('lang') == 'en' ? 'View more' : 'Xem thêm'}}
+          <b>{{session('lang') == 'en' ? 'View more' : 'Xem thêm'}}</b>
         </span>
         <span>
           <img src="{{ asset('public/assets/images/mobile/icons/icn-arrow-down-techseries.png')}}" alt="next">
@@ -132,7 +131,7 @@
                                 + '<div class="col-12 col-xl-12 right-block">'
                                     + '<a href="teach-me-serie/' + item['id']+ '" rel="noopener noreferrer">'
                                         + '<h3 class="text-black">'+item['title']+ '</h3>'
-                                        + '<p>'+item['short_desc']+ '</p>'
+                                        + '<p style="line-height: 1.5em;height: 4.5em;overflow: hidden;">'+item['short_desc']+ '</p>'
                                     + '</a>'
                                     + '<div class="article-brief-info align-items-center d-none d-sm-none d-md-flex">'
                                         + '<time>' + moment(item['created_at']).format("MMMM D, YYYY") + '</time>'
