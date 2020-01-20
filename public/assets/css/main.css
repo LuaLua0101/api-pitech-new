@@ -97,6 +97,14 @@ ul li {
   font-size: 18px;
 }
 
+.view-more-articles {
+  margin: 7px 0;
+  font-family: "Geomanist Regular";
+  font-size: 14.37px;
+  line-height: 1.6;
+  color: #1261D6;
+}
+
 .dash-link a {
   position: relative;
 }
@@ -121,61 +129,19 @@ ul li {
   width: 100%;
 }
 
-.view-more-link {
-  color: #1261D6;
-}
-
-.view-more-btn {
-  border: 1px solid #1261D6;
-  width: 120px;
-  border-radius: 15px;
-  padding-top: 3px;
-  margin: 7px 0;
-  font-family: "Geomanist Medium";
-  font-size: 14.37px;
-  line-height: 1.6;
-  color: #1261D6;
-}
-.view-more-btn img {
-  margin-left: 10px;
-  height: 8px;
-}
-
 @media only screen and (min-width: 575.98px) {
-  .view-more-btn {
+  .view-more-articles {
     font-size: 27px;
-    width: 215px;
-    padding-top: 5px;
-    font-family: "Geomanist Medium";
-    font-size: 25.36px;
-  }
-  .view-more-btn img {
-    margin-left: 15px;
-    height: 18px;
   }
 }
 .mb-15px {
   margin-bottom: 15px;
 }
 
-.mb-10px {
-  margin-bottom: 10px;
-}
-
-@media only screen and (max-width: 992px) {
-  .pl-0-mobile {
-    padding-left: 0;
-  }
-}
 .grey-shadow {
   box-shadow: 1px 1px 1px 1px #cfcfcf;
 }
 
-@media only screen and (min-width: 992px) {
-  .grey-shadow {
-    box-shadow: 0px 2px 8px 3px #cfcfcf;
-  }
-}
 /****************   Header  ****************/
 .header .nav-head {
   box-shadow: 1px 1px 1px 1px #cfcfcf;
@@ -194,7 +160,12 @@ ul li {
   color: #939393;
 }
 .header .navbar .nav-item .dropdown-toggle::after {
-  display: none;
+  background-image: url(../images/mobile/icons/icn-arrow-down.png);
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
 }
 .header .navbar .dropdown-menu {
   font-family: "Geomanist Medium";
@@ -221,9 +192,6 @@ ul li {
 }
 
 @media only screen and (min-width: 992px) {
-  .header .container {
-    max-width: 1100px;
-  }
   .header .nav-head {
     box-shadow: none;
   }
@@ -234,12 +202,6 @@ ul li {
     font-family: "Geomanist Medium";
     font-size: 16.48px;
     line-height: 1.6;
-    padding: 25px 0 20px;
-  }
-  .header .navbar .logo-img {
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-right: 0;
   }
   .header .navbar .nav-item a {
     color: #000;
@@ -248,7 +210,7 @@ ul li {
     color: #000;
   }
   .header .navbar .nav-item .dropdown-toggle::after {
-    display: none;
+    background-image: url(../images/laptop/icn/icn-arrow-down.png);
   }
   .header .navbar .dropdown-item:hover {
     color: #0066F9;
@@ -318,13 +280,12 @@ ul li {
   font-family: "Geomanist Medium";
   font-size: 16px;
   line-height: 1.6;
-  margin-bottom: 0;
 }
 .article-box .article-detail .img-box {
   position: relative;
   overflow: hidden;
   border-radius: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .article-box .article-detail .img-box .play-btn {
   transform: translate(-50%, -50%);
@@ -341,7 +302,6 @@ ul li {
   display: block;
   z-index: 3;
   position: relative;
-  object-fit: cover;
 }
 .article-box .article-detail .img-box:hover img:first-child {
   transform: scale(1.1);
@@ -356,11 +316,6 @@ ul li {
   line-height: 1.6;
   color: #606060;
   margin-bottom: 23px;
-  display: -webkit-box !important;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  margin-bottom: 0;
-  overflow: hidden;
 }
 
 @media only screen and (min-width: 575.98px) {
@@ -378,7 +333,7 @@ ul li {
     font-family: "Geomanist Medium";
     font-size: 27px;
     overflow: hidden;
-    display: -webkit-box !important;
+    display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     margin-bottom: 0;
@@ -387,14 +342,14 @@ ul li {
     font-family: "Geomanist Regular";
     font-size: 18px;
     overflow: hidden;
-    display: -webkit-box !important;
+    display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     margin-bottom: 0;
   }
 }
 .article-box-2 {
-  padding: 20px 0 20px 0;
+  padding: 15px 0 25px 0;
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
 }
 .article-box-2 h3 {
@@ -451,7 +406,7 @@ ul li {
     font-family: "Geomanist Medium";
     font-size: 18px;
     overflow: hidden;
-    display: -webkit-box !important;
+    display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     margin-bottom: 0;
@@ -463,10 +418,6 @@ ul li {
     font-size: 14px;
   }
 }
-.last-article {
-  border-bottom: none;
-}
-
 .breadcum {
   padding: 30px 0 40px 0;
 }
@@ -618,7 +569,6 @@ ul li {
   font-family: "Geomanist Medium";
   font-size: 20px;
   line-height: 1.6;
-  margin-bottom: 0;
 }
 
 .teach-me {
@@ -631,9 +581,6 @@ ul li {
 .iot-hub {
   padding: 40px 0 35px 0;
 }
-.iot-hub .block-right {
-  padding: 0;
-}
 .iot-hub h2 {
   margin-bottom: 20px;
 }
@@ -642,245 +589,114 @@ ul li {
 }
 .iot-hub .view-more-articles {
   margin-top: 50px;
-  color: #1261D6;
-}
-.iot-hub .article-box .article-detail .img-box {
-  border-radius: 5px;
 }
 
 @media only screen and (min-width: 575.98px) {
   .intro {
     padding-top: 140px;
   }
-  .intro .container {
-    max-width: 1105px;
-  }
   .intro h2 {
     font-family: "Geomanist Book";
     font-size: 50px;
-    line-height: 1.2;
-    text-align: left;
-    margin-bottom: 0;
+    line-height: 1.6;
   }
   .intro p {
-    padding-bottom: 60px;
+    padding-bottom: 125px;
     margin-bottom: 0;
-    text-align: left;
   }
   .intro img {
     width: 100%;
-  }
-
-  .block-image {
-    margin-top: -15px;
   }
 }
 @media only screen and (min-width: 575.98px) {
   .application {
     padding-top: 30px;
   }
-  .application .container {
-    max-width: 1105px;
-  }
-  .application .block-heading {
-    padding-left: 1rem;
-  }
-  .application .mobile-sub-heading {
-    letter-spacing: 1px;
-    text-transform: none;
-  }
-  .application .mobile-sub-heading::after {
-    width: 90px;
-  }
   .application .application-content {
     position: relative;
   }
-  .application .application-content .feature-img {
-    margin-bottom: 10px;
-  }
-  .application .application-content .feature-img img {
-    padding: 0 10%;
+  .application .application-content img {
+    padding: 0 16%;
     margin-bottom: 0;
-    margin-top: -10px;
-    margin-left: 10px;
   }
   .application .application-content .card {
     box-shadow: none;
     border: none;
-    padding-top: 5rem;
+    padding-top: 90px;
     border-radius: 20px;
     padding-bottom: 55px;
     margin-bottom: 40px;
-    padding-left: 3rem;
-  }
-  .application .application-content .card .card-body {
-    padding-top: 0;
-    padding-bottom: 0;
   }
   .application .application-content .card .card-title {
     font-family: "Geomanist Medium";
     font-size: 27px;
     line-height: 1.6;
-    margin-bottom: 0;
   }
   .application .application-content .card p {
     font-family: "Geomanist Regular";
     font-size: 16px;
     font-weight: 400;
-    line-height: 1.2;
-    margin-bottom: 10px;
-  }
-  .application .application-content .card .learn-more {
-    text-transform: capitalize;
-    font-family: "Geomanist Medium";
-    font-size: 18px;
-    color: #0265F6;
+    line-height: 1.6;
   }
 }
 @media only screen and (min-width: 992px) {
   .teach-me {
     padding: 55px 0 95px 0;
   }
-  .teach-me .container {
-    max-width: 1105px;
-  }
-  .teach-me .block-heading {
-    padding-left: 2rem;
-    padding-top: 0.5rem;
-  }
-  .teach-me .d-none.d-lg-block.text-right .view-more-articles {
-    margin: 7px 0;
-    font-family: "Geomanist Regular";
-    font-size: 26.845px;
-    line-height: 1.6;
-    color: #1261D6;
-  }
   .teach-me h2 {
     margin-bottom: 45px;
   }
   .teach-me .feature-article-laptop {
-    margin-bottom: 65px;
+    margin-bottom: 32px;
   }
   .teach-me .feature-article-laptop .left-block {
-    padding-right: 3rem;
-    padding-top: 1rem;
-    padding-left: 1rem !important;
+    padding-right: 30px;
   }
   .teach-me .feature-article-laptop .right-block {
-    padding-left: 2rem;
-    padding-top: 2.5rem;
-  }
-  .teach-me .feature-article-laptop .article-box .article-brief-info {
-    margin-bottom: 0;
-  }
-  .teach-me .feature-article-laptop .article-box .article-detail p {
-    line-height: 1.2;
-    -webkit-line-clamp: 5;
-  }
-  .teach-me .article-box {
-    margin-bottom: 0;
+    padding-left: 30px;
   }
   .teach-me .secondary-article h3 {
     font-size: 18px;
-    line-height: 1.4;
   }
   .teach-me .secondary-article--left {
     padding-right: 35px;
   }
   .teach-me .secondary-article--left .left-block {
-    padding-top: 0;
     padding-right: 45px;
-    height: 120px;
-  }
-  .teach-me .secondary-article--left .left-block .img-box {
-    margin-bottom: 0;
-    height: 100%;
-  }
-  .teach-me .secondary-article--left .left-block .img-box img:first-child {
-    height: 100%;
   }
   .teach-me .secondary-article--left .right-block {
     padding-left: 0;
-    padding-top: 0;
     padding-right: 15px;
   }
-  .teach-me .secondary-article--left .right-block p {
-    line-height: 1.2;
-  }
   .teach-me .secondary-article--right {
-    padding-left: 35px;
+    padding-left: 60px;
+  }
+  .teach-me .secondary-article--right .left-block {
+    padding-right: 45px;
+  }
+  .teach-me .secondary-article--right .right-block {
+    padding-right: 0px;
+    padding-left: 0;
   }
 }
 @media only screen and (min-width: 992px) {
+  .iot-page-breadcum {
+    padding: 100px 0 50px;
+  }
+
   .iot-hub {
-    padding: 85px 0 100px 0;
-  }
-  .iot-hub .container {
-    max-width: 1105px;
-  }
-  .iot-hub .d-none.d-lg-block.text-right .view-more-articles {
-    margin: 7px 0;
-    font-family: "Geomanist Regular";
-    font-size: 26.845px;
-    line-height: 1.6;
-    color: #1261D6;
-  }
-  .iot-hub-title {
-    padding-left: 25px;
-  }
-  .iot-hub-title h2 {
-    letter-spacing: 1px;
-  }
-  .iot-hub-title h2::after {
-    width: 90px;
-  }
-  .iot-hub .pt-0-laptop {
-    padding-top: 0;
-  }
-  .iot-hub .article-box .article-detail .img-box {
-    border-radius: 10px;
+    padding: 70px 0 75px 0;
   }
   .iot-hub .laptop-row {
     padding-top: 40px;
     padding-bottom: 40px;
   }
-  .iot-hub .feature-iot-hub {
-    padding-right: 0;
-  }
-  .iot-hub .feature-iot-hub .article-detail {
-    padding-left: 15px;
-  }
-  .iot-hub .feature-iot-hub .article-detail h3 {
-    line-height: 1.2;
-    font-size: 18px;
-  }
-  .iot-hub .feature-iot-hub .article-detail .img-box {
+  .iot-hub .feature-iot-hub .img-box {
     height: 20rem;
-    margin-bottom: 35px;
   }
-  .iot-hub .feature-iot-hub .article-detail .img-box img:first-child {
+  .iot-hub .feature-iot-hub .img-box img:first-child {
     height: 100%;
     object-fit: cover;
-  }
-  .iot-hub .feature-iot-hub .article-detail p {
-    -webkit-line-clamp: 5;
-  }
-  .iot-hub .block-right {
-    padding-left: 2rem;
-  }
-  .iot-hub .block-right .article-box .feature-img {
-    height: 138px;
-    padding-right: 25px;
-  }
-  .iot-hub .block-right .article-box .feature-img .img-box {
-    padding-right: 0;
-    height: 100%;
-  }
-  .iot-hub .block-right .article-box .article-detail h3 {
-    line-height: 1.2;
-  }
-  .iot-hub .block-right .article-box-2 .article-info {
-    padding: 0;
   }
 }
 /****************  Teach series page  ****************/
@@ -905,17 +721,21 @@ ul li {
 .teach-series-sub-articles .article-box .article-detail h3 {
   font-size: 18px;
 }
-
-@media only screen and (min-width: 992px) {
-  .teach-series-page .container {
-    max-width: 1056px;
-    padding: 0;
-  }
+.teach-series-sub-articles .view-more-articles {
+  border: 1px solid #1261D6;
+  width: 120px;
+  border-radius: 15px;
+  padding-top: 3px;
 }
+.teach-series-sub-articles .view-more-articles img {
+  margin-left: 10px;
+  height: 7px;
+}
+
 @media only screen and (min-width: 575.98px) {
   .teach-series-articles {
     background: transparent;
-    padding: 0;
+    padding: 30px 0 35px;
   }
   .teach-series-articles .article-box {
     background: #6BBFFD;
@@ -936,57 +756,14 @@ ul li {
   .teach-series-sub-articles .article-box .img-box {
     height: 190px;
     display: inline-flex;
-    width: 335px;
   }
-}
-/******************** IOT Hub page ******************/
-.iot-page .feature-iot-hub .article-box .article-detail .img-box {
-  border-radius: 5px;
-}
-.iot-page .iot-sub-article .article-box .article-detail .img-box {
-  border-radius: 0;
-}
-.iot-page.iot-page-breadcum {
-  padding-bottom: 0;
-}
-.iot-page.iot-hubs-sub-articles {
-  margin-top: 20px;
-}
-
-@media only screen and (min-width: 992px) {
-  .iot-page .container {
-    max-width: 1055px;
+  .teach-series-sub-articles .view-more-articles {
+    width: 235px;
+    padding-top: 5px;
   }
-  .iot-page.iot-page-breadcum {
-    padding: 115px 0 30px;
-  }
-  .iot-page.iot-page-breadcum p {
-    padding: 0 25%;
-  }
-  .iot-page.teach-series-articles .article-box {
-    background: #4387f6;
-    padding: 40px 100px;
-  }
-  .iot-page.teach-series-sub-articles .article-box {
-    margin-bottom: 5px;
-  }
-  .iot-page.teach-series-sub-articles {
-    margin-top: 40px;
-  }
-  .iot-page .article-box .img-box {
-    padding-right: 0;
-  }
-  .iot-page .feature-iot-hub .article-box .article-detail .img-box {
-    border-radius: 15px;
-  }
-  .iot-page .iot-sub-article {
-    padding-right: 0;
-  }
-  .iot-page .iot-sub-article .article-box .article-detail .img-box {
-    border-radius: 10px;
-  }
-  .iot-page .view-more-btn {
-    margin-top: 40px;
+  .teach-series-sub-articles .view-more-articles img {
+    margin-left: 15px;
+    height: 15px;
   }
 }
 /****************  Teach me page (Article detail)  ****************/
@@ -1096,36 +873,14 @@ ul li {
 
 @media only screen and (min-width: 557px) {
   .application-intro {
-    padding: 30px 0 40px;
-  }
-  .application-intro .application-content .card {
-    padding-top: 170px;
+    padding: 55px 0 70px;
   }
   .application-intro .application-content .card p {
     font-size: 17px;
-    padding: 0 10%;
-    line-height: 1.2;
-    text-align: center;
-    margin-top: 2%;
-  }
-  .application-intro .application-content img {
-    padding: 0 13%;
-    margin-bottom: -30px;
-    padding-left: 25%;
-    padding-right: 0;
-    margin-left: -15px;
-  }
-
-  .application-page .breadcum-line {
-    max-width: 1045px;
-    border-width: 2px;
   }
 }
 .application-latest-updates {
   text-align: center;
-}
-.application-latest-updates .mobile-sub-heading {
-  text-transform: uppercase;
 }
 .application-latest-updates .update-block {
   margin-bottom: 20px;
@@ -1145,7 +900,6 @@ ul li {
 }
 .application-latest-updates .update-block .learn-more {
   font-size: 11.97px;
-  color: #0070C9;
 }
 .application-latest-updates .update-block .learn-more img {
   width: 7px;
@@ -1161,37 +915,26 @@ ul li {
 @media only screen and (min-width: 575.98px) {
   .application-latest-updates {
     text-align: left;
-    margin-bottom: 85px;
-  }
-  .application-latest-updates .mobile-sub-heading {
-    text-transform: none;
   }
   .application-latest-updates .sub-title {
     font-size: 30px;
-    line-height: 1.2;
+    line-height: 1.6;
     margin-top: 20px;
     margin-bottom: 90px;
   }
   .application-latest-updates .update-block {
-    margin-bottom: 20px;
+    margin-bottom: 45px;
     align-items: center;
     display: flex;
   }
-  .application-latest-updates .update-block .feature-box {
-    padding-left: 30px;
-    padding-top: 35px;
-  }
   .application-latest-updates .update-block .icn-summarize {
-    max-width: 200px;
     width: 100%;
   }
   .application-latest-updates .update-block p {
     font-size: 18px;
-    line-height: 1.3;
   }
   .application-latest-updates .update-block h3 {
     font-size: 30px;
-    text-transform: uppercase;
   }
   .application-latest-updates .update-block .learn-more {
     font-size: 21px;
@@ -1203,7 +946,7 @@ ul li {
     padding: 0 35px;
   }
   .application-latest-updates .mobile-sub-heading {
-    margin-top: 30px;
+    margin-top: 45px;
     font-family: "Geomanist Book";
     font-size: 49.5px;
     color: #000;
@@ -1211,10 +954,6 @@ ul li {
   }
   .application-latest-updates .mobile-sub-heading::after {
     display: none;
-  }
-
-  .mb-0-desktop {
-    margin-bottom: 0;
   }
 }
 .recent-updates {
@@ -1224,7 +963,6 @@ ul li {
 }
 .recent-updates .mobile-sub-heading {
   font-size: 20px;
-  text-transform: capitalize;
 }
 .recent-updates h5 {
   font-family: "Geomanist Medium";
@@ -1259,20 +997,13 @@ ul li {
 @media only screen and (min-width: 575.98px) {
   .recent-updates {
     background: transparent;
-    padding: 25px 0 80px;
-  }
-  .recent-updates .container {
-    max-width: 1105px;
+    padding: 25px 0 130px;
   }
   .recent-updates .sub-title {
     font-size: 30px;
     line-height: 1.6;
-    margin-top: 15px;
-    padding-left: 10px;
-    margin-bottom: 30px;
-  }
-  .recent-updates .caption {
-    padding-left: 15px;
+    margin-top: 20px;
+    margin-bottom: 90px;
   }
   .recent-updates .caption h5 {
     font-size: 29px;
@@ -1291,7 +1022,7 @@ ul li {
     display: none;
   }
   .recent-updates .version-container {
-    padding: 30px 0 60px;
+    padding: 30px 0 40px;
   }
   .recent-updates .version-container .box-version {
     width: 233px;
@@ -1306,65 +1037,51 @@ ul li {
 }
 
 @media only screen and (min-width: 992px) {
-  .press-resource-page .container {
-    max-width: 1055px;
-  }
-
   .press-list-breadcum {
-    padding-bottom: 10px;
+    padding-bottom: 45px;
   }
 
   .press-resources .col {
     flex: 1 0 0;
   }
   .press-resources .brands {
-    padding: 0 130px 10px 140px;
+    padding: 0 130px 45px 140px;
   }
 
   .press-resource-line {
-    max-width: 100%;
+    padding: 15px 0 60px;
   }
 }
+.press-list .active-page {
+  border: 1px solid #AFAFAF;
+  border-radius: 5px;
+  padding: 5px 20px;
+  display: inline-block;
+}
 .press-list .view-more-articles {
+  border: 1px solid #1261D6;
+  border-radius: 15px;
   padding: 7px 15px 5px;
   margin-bottom: 35px;
 }
+.press-list .view-more-articles > span:first-child {
+  margin-right: 10px;
+}
+.press-list .view-more-articles > span:last-child img {
+  width: 8px;
+  padding-bottom: 2px;
+}
 
 @media only screen and (min-width: 992px) {
-  .press-list {
-    margin-top: 45px;
-  }
-  .press-list .container {
-    padding: 0;
-  }
-  .press-list .article-wrapper {
-    padding-right: 5px;
-  }
   .press-list .article-box-2 {
     padding-top: 0;
     margin-bottom: 0;
   }
-  .press-list .article-box-2 .feature-img {
-    padding-right: 0;
-  }
   .press-list .article-box-2 .feature-img .img-box {
-    height: 125px;
-    margin-bottom: 0;
-  }
-  .press-list .article-box-2 .article-detail h3 {
-    line-height: 1.2;
-    display: -webkit-box !important;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-    overflow: hidden;
+    height: 135px;
   }
   .press-list .active-page {
     padding: 10px 30px;
-    border: 1px solid #afafaf;
-    border-radius: 5px;
-    padding: 5px 20px;
-    display: inline-block;
   }
   .press-list .view-more-articles {
     padding: 10px 15px 5px;
@@ -1387,7 +1104,7 @@ ul li {
 @media only screen and (min-width: 992px) {
   .building-page-breadcum {
     padding-top: 70px;
-    padding-bottom: 45px;
+    padding-bottom: 60px;
   }
 }
 .info-section .info-block {
@@ -1402,10 +1119,7 @@ ul li {
   margin: 20px 0 40px;
 }
 
-.asm h3,
-.cqa h3,
-.zooer h3,
-.crm h3 {
+.asm h3, .cqa h3, .zooer h3, .crm h3 {
   font-family: "Geomanist Medium";
   font-size: 20px;
 }
@@ -1426,25 +1140,6 @@ ul li {
 }
 
 @media only screen and (min-width: 992px) {
-  .building-page .container {
-    max-width: 1096px;
-  }
-  .building-page .breadcum-title {
-    margin-bottom: 0;
-  }
-  .building-page.breadcum p {
-    padding: 0 10rem;
-  }
-  .building-page .breadcum-line {
-    max-width: 1045px;
-  }
-  .building-page .learn-more {
-    text-transform: capitalize;
-    font-family: "Geomanist Medium";
-    font-size: 18px;
-    color: #0265f6;
-  }
-
   .info-section .info-block {
     text-align: left;
   }
@@ -1456,14 +1151,10 @@ ul li {
   .info-section .info-block h4 {
     font-family: "Geomanist Medium";
     font-size: 27px;
-    line-height: 1.2;
   }
   .info-section .info-block p {
     font-size: 18px;
     color: #787878;
-    line-height: 1.3;
-    margin-top: 20px;
-    margin-bottom: 0;
   }
   .info-section .img-block {
     margin: 20px 0 40px;
@@ -1474,89 +1165,43 @@ ul li {
   }
 
   .asm {
-    margin: 0px 0 40px;
+    margin: 75px 0 80px;
   }
   .asm .info-block {
     padding-right: 65px;
-    margin-top: 55px;
-    padding-left: 20px;
   }
   .asm .img-block {
     padding-left: 45px;
-    margin-top: 55px;
   }
 
   .crm {
-    margin: 15px 0 50px;
-  }
-  .crm .container {
-    padding: 0;
+    margin: 50px  0 65px;
   }
   .crm .img-block {
-    padding-right: 0;
-    padding-left: 35px;
-  }
-  .crm .info-block {
-    padding-left: 60px;
-    padding-right: 0;
-  }
-  .crm .info-block h3,
-  .crm .info-block h4 {
-    margin-bottom: 0;
-  }
-  .crm .info-block p {
-    margin-top: 10px;
-    padding-right: 40px;
-    line-height: 1.3;
+    padding-right: 45px;
   }
 
   .cqa {
-    margin: 50px 0 30px;
+    margin: 60px 0 70px;
   }
   .cqa .img-block {
-    padding-left: 205px;
-    padding-right: 25px;
-    margin-top: 0;
+    padding-left: 100px;
   }
   .cqa .info-block {
-    padding-left: 25px;
-    padding-right: 0;
-  }
-  .cqa .info-block h3,
-  .cqa .info-block h4 {
-    margin-bottom: 0;
-  }
-  .cqa .info-block h4 {
-    margin-top: 10px;
-    padding-right: 20px;
+    padding-right: 45px;
   }
 
   .zooer {
-    margin: 50px 0 25px;
-  }
-  .zooer .info-block {
-    padding-left: 115px;
-    margin-top: 30px;
-  }
-  .zooer .info-block p {
-    margin-top: 0;
+    margin: 50px 0 120px;
   }
 }
 /****************  Related products page ****************/
 .features-mobile .slick-active.slick-center {
   position: relative;
-  padding: 0;
 }
 .features-mobile .slick-active.slick-center img {
   margin-bottom: 20px;
   padding-bottom: 10px;
-  object-fit: contain;
-}
-.features-mobile .slick-active.slick-center .slider-item-bg {
-  height: 120px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 }
 .features-mobile .slick-active.slick-center::after {
   position: absolute;
@@ -1611,58 +1256,25 @@ ul li {
 .features-mobile .learn-more span:first-child {
   margin-right: 5px;
 }
-.features-mobile .slick-slide:focus {
-  outline-color: transparent;
-}
 
 @media only screen and (min-width: 992px) {
-  .related-products-page .container {
-    max-width: 1066px;
-    padding: 0;
-  }
-  .related-products-page.breadcum .breadcum-title {
-    margin-bottom: 0;
-  }
-  .related-products-page.breadcum p {
-    font-size: 28px;
-    padding: 0 4rem;
-  }
-
   .features {
     margin: 40px 0 0;
   }
   .features .block-feature {
-    padding: 0;
-    margin-bottom: 80px;
+    padding-right: 50px;
+    margin-bottom: 70px;
   }
   .features .block-feature figure {
-    height: 130px;
-    overflow: hidden;
-  }
-  .features .block-feature figure img {
     height: 116px;
-    object-fit: contain;
-  }
-  .features .block-feature .caption h3 {
-    margin-top: 10px;
-    font-size: 20px;
-    margin-bottom: 0;
-  }
-  .features .block-feature .caption p {
-    font-size: 18px;
-    padding-left: 30px;
-    line-height: 1.2;
-    margin-bottom: 0;
-  }
-  .features .learn-more {
-    padding-left: 30px;
+    overflow: hidden;
   }
   .features .learn-more span:first-child {
     margin-right: 5px;
   }
 
   .related-products-breadcum {
-    margin: 90px 0 60px;
+    margin: 90px 0 65px;
     padding: 0;
   }
 }
@@ -1778,7 +1390,7 @@ ul li {
     background: #F9A49E;
   }
 }
-/****************  Manual page ****************/
+/****************  Careers page ****************/
 .product-menu-collapse {
   margin: 50px 0 20px;
 }
@@ -1897,24 +1509,21 @@ ul li {
 /****************  Footer  ****************/
 .footer {
   background: #323232;
-  padding: 35px 0 20px 35px;
+  padding: 35px 0 25px 30px;
   font-size: 16px;
 }
-.footer .container {
-  padding-left: 0;
-}
 .footer .logo {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 .footer .logo img {
   width: 130px;
 }
 .footer .contact .address, .footer .contact .phone {
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 }
 .footer .contact .contact-icn {
   width: 20px;
-  margin: 0 15px 0 5px;
+  margin: 0 15px;
 }
 .footer .social-network a:first-child {
   margin-right: 25px;
@@ -1923,20 +1532,11 @@ ul li {
 .copyright {
   background: #FFFFFF;
   padding-top: 20px;
-  font-size: 16px;
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 575.98px) {
   .footer {
     background: #181C25;
-    padding: 140px 0 105px;
-  }
-  .footer .container {
-    max-width: 1105px;
-    padding-left: 35px;
-  }
-  .footer .logo-block {
-    padding: 0;
   }
   .footer ul li {
     list-style: none;
@@ -1946,24 +1546,10 @@ ul li {
     font-size: 25px;
     line-height: 1.6;
   }
-  .footer .logo {
-    margin-bottom: 0;
-  }
-  .footer .logo img {
-    width: auto;
-  }
   .footer .menu {
     font-family: "Geomanist Light";
     font-size: 20px;
     line-height: 1.6;
-    padding-right: 0;
-  }
-  .footer .menu ul {
-    padding-left: 5px;
-  }
-  .footer .menu ul li {
-    line-height: normal;
-    margin-top: 20px;
   }
   .footer .menu ul li a {
     color: #FFFFFF;
@@ -1972,37 +1558,22 @@ ul li {
   .footer .menu ul li a:hover {
     color: #78FFF0;
   }
+  .footer .logo img {
+    width: auto;
+  }
   .footer .contact {
     font-family: "Geomanist Light";
     font-size: 20px;
   }
-  .footer .contact h4 {
-    margin-bottom: 15px;
-  }
-  .footer .contact .address p {
-    line-height: 1.2;
-  }
-  .footer .contact ul li {
-    line-height: 1.4;
-  }
   .footer .contact .contact-icn {
     display: none;
-  }
-  .footer .social-network {
-    padding-left: 2.5rem;
-  }
-  .footer .social-network h4 {
-    margin-bottom: 20px;
-  }
-  .footer .social-network a:first-child {
-    margin-right: 15px;
   }
 
   .copyright {
     background: #000;
     color: #FFFFFF;
     font-family: "Geomanist Light";
-    font-size: 18px;
+    font-size: 20px;
     padding: 20px 0;
   }
   .copyright p {

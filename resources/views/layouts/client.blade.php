@@ -28,10 +28,9 @@
       <div class="container ">
         <nav class="navbar px-0 navbar-expand-md ">
   
-          <a class="navbar-brand logo-img" href="{{ route('home') }}">
+          <a class="navbar-brand" href="{{ route('home') }}">
             <h1 class="mb-0">
-              <img src="{{ asset('public/assets/images/mobile/logo_head.png')}}" alt="logo" class="d-block d-md-none">
-              <img src="{{ asset('public/assets/images/laptop/logo_head.png')}}" alt="logo" class="d-none d-md-block">
+              <img src="{{ asset('public/assets/images/mobile/logo_head.png')}}" alt="logo">
             </h1>
           </a>
           <button class="navbar-toggler d-md-block d-lg-none ml-auto" type="button" data-toggle="collapse"
@@ -110,7 +109,7 @@
             <div class="dropdown-menu border-0 text-center" aria-labelledby="dropdownId">
               <a class="dropdown-item" href="{{ route('RelatedProducts') }}">Related product</a>
               <a class="dropdown-item" href="{{ route('Applications') }}">Application</a>
-              <a class="dropdown-item" href="{{ route('PressResources') }}">Press resources</a>
+              <a class="dropdown-item" href="{{ route('PressResources') }}s">Press resources</a>
               <a class="dropdown-item" href="{{ route('Careers') }}">Career</a>
             </div>
           </li>
@@ -136,7 +135,7 @@
   <footer class="footer">
     <div class="container">
       <div class="row">
-        <div class="col-12 col-md-12 col-lg-3 col-xl-3 px-0 align-self-center logo-block">
+        <div class="col-12 col-md-12 col-lg-3 col-xl-3 px-0 align-self-center">
           <div class="logo ">
             <a href="#">
               <img src="{{asset('public/assets/images/mobile/logo-foot.png')}}" class="img-fluid d-block d-lg-none" alt="pitech">
@@ -144,7 +143,7 @@
             </a>
           </div>
         </div>
-        <div class="col-12 col-md-12 col-lg-3 col-xl-3 menu d-none d-lg-block">
+        <div class="col-12 col-md-12 col-lg-3 col-xl-3  px-0 menu d-none d-lg-block">
           <h4 class="text-uppercase d-none d-lg-block font-weight-bold text-white">Menu</h4>
           <ul class="px-0">
             <li>
@@ -174,7 +173,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-12 col-md-12 col-lg-3 col-xl-3  px-0 contact">
+        <div class="col-12 col-md-12 col-lg-3 col-xl-3  pl-0 contact">
           <h4 class="text-uppercase d-none d-lg-block font-weight-bold text-white">{{session('lang') == 'en' ? 'Address' : 'Văn phòng công ty'}}</h4>
           <ul class="pl-0">
             <li>
@@ -192,9 +191,9 @@
               </div>
             </li>
             <li>
-              <div class="email d-flex align-items-center mb-10px">
+              <div class="email d-flex align-items-center mb-15px">
                 <img class="contact-icn" src="{{ asset('public/assets/images/mobile/icons/icn-mail.png')}}" alt="email">
-                <p class="text-white mb-0 d-lg-none">
+                <p class="text-white mb-0 d-md-none">
                   <span>
                     contact@pitech.asia
                   </span>
@@ -221,7 +220,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-12 col-md-12 col-lg-3 col-xl-3 pr-0 pl-0-mobile ">
+        <div class="col-12 col-md-12 col-lg-3 col-xl-3 pr-0 ">
           <!-- social network  -->
           <div class="social-network">
             <h4 class="text-uppercase d-none d-lg-block font-weight-bold text-white">{{session('lang') == 'en' ? 'Contact' : 'Liên hệ'}}</h4>

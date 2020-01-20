@@ -12,7 +12,7 @@
                     {{$banner_home->content}}
                 </p>
             </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 px-0 block-image">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 px-0">
                 <img class="img-fluid d-none d-sm-block  " src="{{asset('public/assets/images/laptop/feature-img/intro-img-2.png')}}" alt="image">
                 <img class="img-fluid d-block d-sm-none w-100" src="{{asset('public/assets/images/mobile/feature-img/home-intro-bg.png')}}" alt="">
             </div>
@@ -23,12 +23,10 @@
 <!-- Application  -->
 <section class="application">
     <div class="container">
-        <div class="block-heading">
-            <h2 class="font-weight-bold text-uppercase mobile-sub-heading">Application</h2>
-          </div>
+        <h2 class="font-weight-bold text-uppercase mobile-sub-heading">Application</h2>
         <div class="application-content">
             <div class="row align-items-center">
-                <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 feature-img">
+                <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
                     <img class="img-fluid" src="{{asset('public/assets/images/laptop/feature-img/img-app.png')}}" alt="">
 
                 </div>
@@ -37,7 +35,7 @@
                         <div class="card-body">
                             <h4 class="card-title">{{$banner_app->title}}</h4>
                             <p class="card-text">{{$banner_app->content}}</p>
-                            <a href="{{ route('Applications') }}" class="text-uppercase text-center d-block d-lg-none view-more-articles view-more-link">
+                            <a href="{{ route('Applications') }}" class="text-capitalize d-none d-sm-block learn-more">
                   {{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}
                 </a>
                         </div>
@@ -52,7 +50,7 @@
 <section class="teach-me bg-pale-grey">
     <div class="container">
         <div class="row">
-            <div class="col-6 block-heading">
+            <div class="col-6">
                 <h2 class="font-weight-bold text-uppercase mobile-sub-heading">Teach me series</h2>
             </div>
             <div class="col-6 d-none d-lg-block text-right">
@@ -70,7 +68,7 @@
             <!-- Item feature laptop - won't display on mobile  -->
             <div class="col-12 col-lg-12 col-xl-12 d-none d-md-block feature-article-laptop">
                 <article class="article-box">
-                    <div class="row mx-0 article-detail ">
+                    <div class="row mx-0 article-detail align-items-center ">
                         <div class="col-md-6 col-xl-6 left-block pl-0">
                             <a href="#"  rel="noopener noreferrer">
                                 <div class="img-box">
@@ -126,7 +124,7 @@
                     <!-- Feature img, title, description -->
                     <div class="article-detail secondary-article secondary-article--left">
                         <div class="row">
-                            <div class="col-12 col-xl-6 left-block">
+                            <div class="col-12 col-xl-7 left-block">
                                 <div class="img-box">
                                     <img class="img-fluid thumbnail" src="{{asset('public/img/post/' . $teachme[0]->cover)}}" alt="article">
                                     @if($teachme[0]->video_url)
@@ -134,7 +132,7 @@
 @endif
                                 </div>
                             </div>
-                            <div class="col-12 col-xl-6 right-block">
+                            <div class="col-12 col-xl-5 right-block">
                                 <a href="{{route('teachMeDetail', ['id' => $teachme[0]->id])}}"  rel="noopener noreferrer">
                                     <h3 class="text-black">{{$teachme[0]->title}}</h3>
                                     <p>
@@ -159,7 +157,7 @@
             <!-- Item mobile -->
             @if(!empty($teachme[1]))
             <div class="col-12 col-md-6 col-lg-6 col-xl-6">
-                <article class="article-box last-article">
+                <article class="article-box">
                     <!-- Views, date, comments-->
                     <div class="article-brief-info d-flex align-items-center d-block d-md-none">
                         <time>{{ \Carbon\Carbon::parse($teachme[1]->created_at)->format('F j, Y') }}</time>
@@ -177,7 +175,7 @@
                         </div>
                     </div>
                     <!-- Feature img, title, description -->
-                    <div class="article-detail secondary-article secondary-article--left secondary-article--right">
+                    <div class="article-detail secondary-article secondary-article--right">
                         <div class="row">
                             <div class="col-12 col-xl-7 left-block">
                                 <div class="img-box">
@@ -283,7 +281,7 @@
                         </div>
                     </div>
                     <!-- Feature img, title, description -->
-                    <div class="article-detail secondary-article secondary-article--left secondary-article--right">
+                    <div class="article-detail secondary-article secondary-article--right">
                         <div class="row">
                             <div class="col-12 col-xl-7 left-block">
                                 <div class="img-box">
@@ -387,7 +385,7 @@
                         </div>
                     </div>
                     <!-- Feature img, title, description -->
-                    <div class="article-detail secondary-article secondary-article--left secondary-article--right">
+                    <div class="article-detail secondary-article secondary-article--right">
                         <div class="row">
                             <div class="col-12 col-xl-7 left-block">
                                 <div class="img-box">
@@ -421,7 +419,7 @@
             <!-- End item  -->
 
             <!-- {{session('lang') == 'en' ? 'View more' : 'Xem thêm'}} - VISIBLE ON MOBILE ALSO -->
-            <a href="{{ route('teachMeIndex') }}" class="text-uppercase text-center d-block d-lg-none view-more-articles view-more-link">
+            <a href="{{ route('teachMeIndex') }}" class="text-uppercase text-center d-block d-lg-none view-more-articles">
                 <span>
             {{session('lang') == 'en' ? 'View all post' : 'Xem tất cả'}}
           </span>
@@ -438,7 +436,7 @@
 <section class="iot-hub">
     <div class="container ">
         <div class="row">
-            <div class="col-6 iot-hub-title">
+            <div class="col-6">
                 <h2 class="font-weight-bold text-uppercase mobile-sub-heading">IOT HUB</h2>
             </div>
             <div class="col-6 d-none d-lg-block text-right">
@@ -499,21 +497,17 @@
 
             </div>
             <!-- End item  -->
-            <div class="col-12  col-md-12 col-lg-12 col-xl-7 px-0 block-right">
-                
-                 @foreach($iothub as $index=>$item)
-                 @php
-                   $iot_len = count($iothub);
-                 @endphp
-                <div class="col-12 col-md-12 col-lg-12 col-xl-12 "> 
-                    <article class="{{$index ==  $iot_len - 1 ? 'article-box-2 article-box mb-0 pt-0-laptop last-article' : 'article-box-2 article-box mb-0 pt-0-laptop' }} ">
+            <div class="col-12  col-md-12 col-lg-12 col-xl-7 px-0">
+                 @foreach($iothub as $item)
+                <div class="col-12 col-md-12 col-lg-12 col-xl-12 ">
+                    <article class="article-box-2 article-box mb-0 pt-0">
                         <a href="{{route('iotHubDetail', ['id' => $item->id])}}"  rel="noopener noreferrer">
                             <!-- Title visible on mobile  -->
                             <h3 class="d-block d-md-none">{{$item->title}}</h3>
 
                             <!-- Details  -->
                             <div class="article-detail row mx-0 ">
-                                <div class="feature-img col-5 col-md-4 col-lg-4 col-xl-5 pl-0 img-box">
+                                <div class="feature-img col-5 col-md-4 col-lg-4 col-xl-4 pl-0 img-box">
                                     <div class="img-box">
                                         <img src="{{asset('public/img/iothub/' . $item->cover)}}" class="img-fluid w-100" alt="article">
                                             @if($item->video_url)
@@ -521,7 +515,7 @@
                                         @endif
                                     </div>
                                 </div>
-                                <div class="article-info col-7 col-md-8 col-lg-8 col-xl-7 px-0">
+                                <div class="article-info col-7 col-md-8 col-lg-8 col-xl-8 px-0">
                                     <!-- Title visible on laptop  -->
                                     <h3 class="d-none d-lg-block">{{$item->title}}</h3>
                                     <p class="mb-0">
@@ -544,7 +538,7 @@
             </div>
 
             <!-- {{session('lang') == 'en' ? 'View more' : 'Xem thêm'}} on mobile -->
-            <a href="{{ route('IotHub') }}" class="text-uppercase text-center d-block d-lg-none view-more-articles view-more-link">
+            <a href="{{ route('IotHub') }}" class="text-uppercase text-center d-lg-none view-more-articles">
                 <span>
             {{session('lang') == 'en' ? 'View all post' : 'Xem tất cả'}}
           </span>

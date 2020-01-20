@@ -91,20 +91,7 @@
             
         </div>
         <!-- {{session('lang') == 'en' ? 'View more' : 'Xem thêm'}} BUTTON -->
-        <div class="view-more-articles w-100">
-            <!-- View more button -->
-            <div href="#"
-                class="text-uppercase mx-auto justify-content-center d-flex align-items-center view-more-btn">
-                <span>
-                    {{session('lang') == 'en' ? 'View more' : 'Xem thêm'}}
-                </span>
-                <span>
-                    <img src="{{ asset('public/assets/images/laptop/icn/icn-arrow-down-blue.png')}}" alt="next">
-                </span>
-            </div>
-        </div>
-
-            {{-- <div class="w-100 view-more-articles">
+            <div class="w-100">
                 <div class="text-uppercase mx-auto justify-content-center d-flex align-items-center"
                  id="press-load-more" name="press-load-more" 
                 style="cursor: pointer" onClick="pressLoadMore(skip)">
@@ -115,7 +102,7 @@
                         </span>
                     </div>
                 </div>
-            </div> --}}
+            </div>
         <!-- End List articles  -->
     </div>
 </section>
