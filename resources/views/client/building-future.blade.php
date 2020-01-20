@@ -4,21 +4,21 @@
 
 @section('content')
  <!-- Bread cum  -->
-    <section class="breadcum building-page-breadcum">
+    <section class="breadcum building-page-breadcum building-page">
         <div class="container text-center">
             <h2 class="breadcum-title">Building The Future</h2> 
             <p>{{ $banner->content}}</p>
         </div>
     </section>
    @foreach($buildings as $key => $item)
-     <div class="container">
-            <hr class="breadcum-line w-100"> 
+     <div class="container building-page">
+            <hr class="breadcum-line"> 
         </div>
       <!-- Section Zoooer -->
       <section class="cqa info-section">
             <div class="container">
                 <div class="{{$key % 2 ? 'row' : 'row reverse-laptop'}}">
-                    <div class="col-12 col-md-12 col-lg-7 col-xl-7 info-block">
+                    <div class="col-12 col-md-12 col-lg-6 col-xl-6 info-block">
                         <h3 class="d-none d-lg-block">{{ $item->dep}}</h3>
                         <h3 class="d-block d-lg-none ">{{ $item->dep}}</h3>
                         <h4>
@@ -33,7 +33,7 @@
                             <span><img src="./assets/images/mobile/icons/icn-arrow-down-blue.png" alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>
                         </a> --}}
                     </div>
-                    <div class="col-12 col-md-12 col-lg-5 col-xl-5 img-block text-center">
+                    <div class="col-12 col-md-12 col-lg-6 col-xl-6 img-block text-center">
                         <img class="img-fluid w-100" src="{{asset('public/img/Building/' . $item->cover)}}" alt="cms">
                     </div>
                 </div>

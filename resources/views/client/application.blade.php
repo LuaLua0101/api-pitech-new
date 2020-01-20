@@ -10,7 +10,8 @@
             <div class="application-content">
                 <div class="row align-items-center">
                     <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
-                        <img class="img-fluid" src="{{asset('public/assets/images/laptop/feature-img/img-app.png')}}" alt="">
+                        <img class="img-fluid img-fluid d-block d-lg-none" src="{{asset('public/assets/images/laptop/feature-img/img-app.png')}}" alt="">
+                        <img class="img-fluid d-none d-lg-block" src="{{asset('public/assets/images/laptop/feature-img/img-app-2.png')}}" alt="">
 
                     </div>
                     <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
@@ -26,8 +27,8 @@
         </div>
     </section>
     <!-- End application  -->
-    <div class="container d-none d-lg-block">
-        <hr class="breadcum-line w-100">
+    <div class="container d-none d-lg-block application-page">
+        <hr class="breadcum-line">
     </div>
     <!-- Latest update  -->
     <section class="application-latest-updates">
@@ -38,8 +39,8 @@
             <p class="d-none d-lg-block text-center sub-title">{{$banner_app->title}}</p>
             <!-- 1 ITEM / ROW  -->
             <div class="row update-block">
-                <div class="col-12 col-xl-9">
-                    <div class="d-none d-lg-block">
+                <div class="col-12 col-xl-9 ">
+                    <div class="d-none d-lg-block feature-box">
                         <h3 class="font-weight-bold">{{$application->feature1_title}}</h3>
                         <p>
                             {{$application->feature1_desc}}
@@ -53,7 +54,7 @@
                     <!-- Note. Paragraph intro laptop was longer  so this will be display in mobile -->
                     {{-- <p class="d-block d-lg-none">{{$application->feature1_desc}}</p> --}}
                 </div>
-                <div class="col-12 col-xl-3">
+                <div class="col-12 col-xl-3 text-center">
                     <img class="icn-summarize" src="{{asset('public/img/applications/' . $application->feature1_cover)}}" alt="refresh">
                     <div class="d-lg-none sub-text">
                         <h3>{{$application->feature1_title}}</h3>
@@ -69,9 +70,9 @@
                 </div>
             </div>
             <!-- 1 ITEM / ROW  -->
-            <div class="row update-block">
+            <div class="row update-block mb-0-desktop">
                 <div class="col-12 col-xl-9">
-                    <div class="d-none d-lg-block">
+                    <div class="d-none d-lg-block feature-box">
                         <h3 class="font-weight-bold">{{$application->feature2_title}}</h3>
                         <p>
                             {{$application->feature2_desc}}
@@ -86,7 +87,7 @@
                     {{-- <p class="d-block d-lg-none">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
                         nonummy nibh euis</p> --}}
                 </div>
-                <div class="col-12 col-xl-3">
+                <div class="col-12 col-xl-3 text-center">
                     <img class="icn-summarize" src="{{asset('public/img/applications/' . $application->feature2_cover)}}" alt="refresh">
                     <div class="d-lg-none sub-text">
                         <h3>{{$application->feature2_title}}</h3>
@@ -104,23 +105,23 @@
             <!-- 1 ITEM / ROW  -->
             <div class="row update-block">
                 <div class="col-12 col-xl-9">
-                    <div class="d-none d-lg-block">
+                    <div class="d-none d-lg-block feature-box">
                         <h3 class="font-weight-bold">{{$application->feature3_title}}</h3>
                         <p>
                             {{$application->feature3_desc}}
                         </p>
                         <div class="learn-more" style="cursor:pointer" onclick="showDetailPane()">
                             <span>{{session('lang') == 'en' ? 'View more' : 'Xem thêm'}}</span>
-                            {{-- <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-down-blue.png')}}"
-                                    alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span> --}}
+                            <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-down-blue.png')}}"
+                                    alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"/></span>
                         </div>
                     </div>
                     <!-- Note. Paragraph intro laptop was longer  so this will be display in mobile -->
                     {{-- <p class="d-block d-lg-none">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
                         nonummy nibh euis</p> --}}
                 </div>
-                <div class="col-12 col-xl-3">
-                    <img class="icn-summarize" src="{{asset('public/img/applications/' . $application->feature3_cover)}}" alt="refresh">
+                <div class="col-12 col-xl-3 text-center">
+                    <img class="icn-summarize text-center" src="{{asset('public/img/applications/' . $application->feature3_cover)}}" alt="refresh">
                     <div class="d-lg-none sub-text">
                         <h3>{{$application->feature3_title}}</h3>
                         <p>
@@ -139,7 +140,7 @@
             <!-- 1 ITEM / ROW  -->
             <div class="row update-block" id="detail-pane" name="detail-pane" style="display: none">
                 <div class="col-12 col-xl-9">
-                    <div class="d-none d-lg-block">
+                    <div class="d-none d-lg-block feature-box">
                         <p>
                             {!!$application->detail !!}
                         </p>
@@ -153,7 +154,7 @@
                         <a href="#" class="learn-more">
                             <span>{{session('lang') == 'en' ? 'View more' : 'Xem thêm'}}</span>
                             <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-down-blue.png')}}"
-                                    alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>
+                                    alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"/></span>
                         </a>
                     </div>
                 </div>
@@ -161,8 +162,8 @@
         </div>
     </section>
     <!-- End latest update  -->
-    <div class="container d-none d-lg-block">
-            <hr class="breadcum-line w-100">
+    <div class="container d-none d-lg-block application-page">
+            <hr class="breadcum-line">
         </div>
     <!-- Recent updates  -->
     <section class="recent-updates">

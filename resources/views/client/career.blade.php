@@ -6,7 +6,7 @@
 
 <!-- End banner  -->
 <!-- Bread cum  -->
-<section class="breadcum building-page-breadcum career-breadcum">
+<section class="breadcum building-page-breadcum career-breadcum career-page">
     <div class="container text-center">
         <h2 class="breadcum-title">Career</h2>
         <p>
@@ -14,12 +14,14 @@
         </p>
     </div>
 </section>
-<div class="container d-none d-lg-block">
-    <hr class="breadcum-line">
+<div class="career-page">
+    <div class="container px-0 d-none d-lg-block">
+        <hr class="breadcum-line">
+    </div>
 </div>
 <!-- // Bread cum  -->
 <!-- Careers opened  -->
-<section class="careers ">
+<section class="careers career-page">
     <!-- Laptop style  -->
     <div class="container d-none d-lg-block laptop-main-content">
         @foreach($careers as $key=>$item) @if($key % 2)
@@ -83,7 +85,7 @@
 @endforeach
     </div>
 </section>
-<section class="quote">
+<section class="quote career-page">
     <div class="container quote-content">
         <div class="quote-line mx-auto"></div>
         <div class="quote-contain text-center">

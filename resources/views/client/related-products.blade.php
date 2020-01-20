@@ -4,7 +4,7 @@
 
 @section('content')
 <!-- Bread cum  -->
-    <section class="breadcum related-products-breadcum">
+    <section class="breadcum related-products-breadcum related-products-page">
         <div class="container text-center">
             <h2 class="breadcum-title">Related products</h2>
             <p>
@@ -17,7 +17,7 @@
         <div class="container">
             <div class="slider-nav slider-nav-1">
                 <div class="text-center slider-nav-item-mobile">
-                    <img class="mx-auto" src="{{asset('public/assets/images/laptop/carousel/carousel-fox.png')}}" alt="fox">
+                    <img class="mx-auto" src="{{asset('public/assets/images/laptop/carousel/carousel-1.png')}}" alt="fox">
                 </div>
                 <div class="text-center slider-nav-item-mobile">
                     <img class="mx-auto" src="{{asset('public/assets/images/laptop/carousel/carousel-rhino.png')}}" alt="fox">
@@ -148,12 +148,12 @@
     </section>
 
     <!-- Features laptop  -->
-    <section class="d-none d-lg-block features">
+    <section class="d-none d-lg-block features related-products-page">
         <div class="container">
             <div class="row">
                 <div class="col-xl-3 text-center block-feature">
                     <figure>
-                        <img src="{{asset('public/assets/images/laptop/carousel/carousel-fox.png')}}" alt="">
+                        <img src="{{asset('public/assets/images/laptop/carousel/carousel-fox-2x.png')}}" alt="">
                     </figure>
                     <div class="caption">
                         <h3 class="font-weight-bold">{{$products[0]->name}}</h3>
@@ -271,7 +271,7 @@
                 </div>
                 <div class="col-xl-3 text-center block-feature">
                         <figure>
-                            <img src="{{asset('public/assets/images/laptop/carousel/carousel-bird.png')}}" alt="">
+                            <img src="{{asset('public/assets/images/laptop/carousel/carousel-bird-2x.png')}}" alt="">
                         </figure>
                         <div class="caption">
                             <h3 class="font-weight-bold">{{$products[7]->name}}</h3>

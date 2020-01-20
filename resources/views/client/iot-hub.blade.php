@@ -4,7 +4,7 @@
 
 @section('content')
  <!-- Bread cum  -->
-  <section class="breadcum iot-page-breadcum">
+  <section class="breadcum iot-page-breadcum iot-page">
     <div class="container text-center">
       <h2 class="breadcum-title">IOT Hub</h2>
       <p>
@@ -13,7 +13,7 @@
     </div>
   </section>
   <!-- Intro  -->
-  <section class="teach-series-articles d-none d-lg-block pb-0">
+  <section class="teach-series-articles d-none d-lg-block pb-0 iot-page">
     <div class="container">
       <article class="article-box ">
         <div class="row article-detail">
@@ -39,12 +39,12 @@
     </div>
   </section>
   <!-- Sub articles: 5 on mobiles and {{session('lang') == 'en' ? 'View more' : 'Xem thêm'}}, 12 on laptop (3 articles/row)  -->
-  <section class="teach-series-sub-articles iot-hubs-sub-articles">
+  <section class="teach-series-sub-articles iot-hubs-sub-articles iot-page">
     <div class="container">
       <div class="row"  id="iothub-show-more" name="iothub-show-more">
      @foreach($iothub as $item)          
         <!-- Item style 2  -->
-        <div class="col-12 col-md-12 col-lg-4 col-xl-4 ">
+        <div class="col-12 col-md-12 col-lg-4 col-xl-4 iot-sub-article">
           <article class="article-box-2 article-box mb-15px ">
             <a href="{{route('iotHubDetail', ['id' => $item->id])}}" rel="noopener noreferrer">
               <!-- Title visible on mobile  -->
@@ -81,14 +81,14 @@
     @endforeach
       </div>
       <!-- {{session('lang') == 'en' ? 'View more' : 'Xem thêm'}} button -->
-      <div class="text-uppercase mx-auto justify-content-center d-flex align-items-center view-more-articles"
+      <div class="text-uppercase mx-auto justify-content-center d-flex align-items-center view-more-btn"
        id="iothub-load-more" name="iothub-load-more" style="cursor: pointer" onClick="iotHubLoadMore(skip)">
         <span>
           {{session('lang') == 'en' ? 'View more' : 'Xem thêm'}}
         </span>
         <span>
-          <img src="{{ asset('public/assets/images/mobile/icons/icn-arrow-down-techseries.png')}}" alt="next">
-        </span>
+          <img src="{{ asset('public/assets/images/laptop/icn/icn-arrow-down-blue.png')}}" alt="next">
+      </span>
       </div>
     </div>
   </section>

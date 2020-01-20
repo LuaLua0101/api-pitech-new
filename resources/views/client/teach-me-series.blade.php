@@ -5,7 +5,7 @@
 @section('content')
 
   <!-- Bread cum  -->
-    <section class="breadcum">
+    <section class="breadcum teach-series-page">
         <div class="container text-center">
             <h2 class="breadcum-title">Teach me series</h2>
             <h3 class="breadcum-subtitle">{{$banner->title}}</h3>
@@ -16,7 +16,7 @@
     </section>
     <!-- // Bread cum  -->
     <!-- Feature article -->
-    <section class="teach-series-articles">
+    <section class="teach-series-articles teach-series-page">
         <div class="container">
             <article class="article-box ">
                 <div class="row article-detail">
@@ -43,7 +43,7 @@
         </div>
     </section>
     <!-- Sub articles: 5 on mobiles and {{session('lang') == 'en' ? 'View more' : 'Xem thêm'}}, 12 on laptop (3 articles/row)  -->
-    <section class="teach-series-sub-articles">
+    <section class="teach-series-sub-articles teach-series-page">
         <div class="container">
             <div class="row" id="teachme-show-more" name="teachme-show-more">
              @foreach($teachme as $item)  
@@ -105,14 +105,14 @@
             @endforeach
             </div>
             <!-- {{session('lang') == 'en' ? 'View more' : 'Xem thêm'}} button -->
-            <div class="text-uppercase mx-auto justify-content-center d-flex align-items-center view-more-articles"
+            <div class="text-uppercase mx-auto justify-content-center d-flex align-items-center view-more-btn"
             id="teach-me-load-more" name="teach-me-load-more" style="cursor: pointer" onClick="teachmeLoadMore(skip)">
                 <span>
                     {{session('lang') == 'en' ? 'View more' : 'Xem thêm'}}
                 </span>
-                <span>
-                    <img src="{{ asset('public/assets/images/mobile/icons/icn-arrow-down-techseries.png')}}" alt="next">
-                </span>
+        <span>
+            <img src="{{ asset('public/assets/images/laptop/icn/icn-arrow-down-blue.png')}}" alt="next">
+        </span>
             </div>
         </div>
     </section>
