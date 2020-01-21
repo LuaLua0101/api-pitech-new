@@ -4,7 +4,7 @@
 
 @section('content')
  <!-- Bread cum  -->
-  <section class="breadcum iot-page-breadcum">
+  <section class="breadcum iot-page-breadcum" style="padding-bottom:0">
     <div class="container text-center">
       <h2 class="breadcum-title">IOT Hub</h2>
       <p>
