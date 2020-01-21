@@ -56,11 +56,11 @@
             <div class="col-6 d-none d-lg-block text-right">
                 <a href="{{ route('teachMeIndex') }}" class="text-center view-more-articles">
                     <span>
-                  <b>{{session('lang') == 'en' ? 'View all post' : 'Xem tất cả'}}</b>
+                  <b>{{session('lang') == 'en' ? 'View all post' : 'Xem tất cả'}} ></b>
                 </span>
-                    <span>
+                    <!-- <span>
                   <img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}" alt="next">
-                </span>
+                </span> -->
                 </a>
             </div>
         </div>
@@ -419,11 +419,11 @@
             <!-- End item  -->
             <a href="{{ route('teachMeIndex') }}" class="text-uppercase text-center d-block d-lg-none view-more-articles">
                 <span>
-            <b>{{session('lang') == 'en' ? 'View all post' : 'Xem tất cả'}}</b>
+            <b>{{session('lang') == 'en' ? 'View all post' : 'Xem tất cả'}} ></b>
           </span>
-                <span>
+                <!-- <span>
             <img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}" alt="next">
-          </span>
+          </span> -->
             </a>
         </div>
     </div>
@@ -440,11 +440,11 @@
             <div class="col-6 d-none d-lg-block text-right">
                 <a href="{{ route('IotHub') }}" class="text-center view-more-articles">
                     <span>
-              <b>{{session('lang') == 'en' ? 'View all post' : 'Xem tất cả'}}</b>
+              <b>{{session('lang') == 'en' ? 'View all post' : 'Xem tất cả'}} ></b>
             </span>
-                    <span>
+                    <!-- <span>
               <img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}" alt="next">
-            </span>
+            </span> -->
                 </a>
             </div>
         </div>
@@ -496,13 +496,12 @@
             </div>
             <!-- End item  -->
             <div class="col-12  col-md-12 col-lg-12 col-xl-7 px-0">
-                 @foreach($iothub as $item)
-                <div class="col-12 col-md-12 col-lg-12 col-xl-12 ">
-                    <article class="article-box-2 article-box mb-0 pt-0">
+                 @foreach($iothub as $key=>$item)
+                <div class="col-12 col-md-12 col-lg-12 col-xl-12" @if($key > 0)style="margin-top:20px" @endif>
+                    <article class="article-box-2 article-box mb-0 pt-0" style="padding: 0">
                         <a href="{{route('iotHubDetail', ['id' => $item->id])}}"  rel="noopener noreferrer">
                             <!-- Title visible on mobile  -->
                             <h3 class="d-block d-md-none">{{$item->title}}</h3>
-
                             <!-- Details  -->
                             <div class="article-detail row mx-0 ">
                                 <div class="feature-img col-5 col-md-4 col-lg-4 col-xl-4 pl-0 img-box">
@@ -530,18 +529,17 @@
                             </div>
                         </a>
                     </article>
-
                 </div>
                 @endforeach
             </div>
 
-            <a href="{{ route('IotHub') }}" class="text-uppercase text-center d-lg-none view-more-articles">
+            <a href="{{ route('IotHub') }}" class="text-uppercase text-center d-lg-none view-more-articles" style="margin-top:40px">
                 <span>
-            <b>{{session('lang') == 'en' ? 'View all post' : 'Xem tất cả'}}</b>
+            <b>{{session('lang') == 'en' ? 'View all post' : 'Xem tất cả'}} ></b>
           </span>
-                <span>
+                <!-- <span>
             <img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}" alt="next">
-          </span>
+          </span> -->
             </a>
         </div>
     </div>

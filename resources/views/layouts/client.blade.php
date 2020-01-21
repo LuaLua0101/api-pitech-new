@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="{{ asset('public/assets/css/vendor/bootstrap.min.css')}}">
   <link rel="stylesheet" href="{{ asset('public/assets/fonts/fonts.css')}}">
   <link rel="stylesheet" href="{{ asset('public/assets/css/main.css')}}">
- 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ asset('public/assets/css/vendor/slick-theme.css')}}">
   <script src="{{ asset('public/admin/vendor/jquery/jquery.min.js')}}"></script>
 </head>
@@ -281,6 +281,22 @@
 });
 
         }); 
+
+        function detectmob() { 
+ if( navigator.userAgent.match(/Android/i)
+ || navigator.userAgent.match(/webOS/i)
+ || navigator.userAgent.match(/iPhone/i)
+ || navigator.userAgent.match(/iPad/i)
+ || navigator.userAgent.match(/iPod/i)
+ || navigator.userAgent.match(/BlackBerry/i)
+ || navigator.userAgent.match(/Windows Phone/i)
+ ){
+    return true;
+  }
+ else {
+    return false;
+  }
+}
     </script>
 </body>
 

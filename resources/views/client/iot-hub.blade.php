@@ -83,11 +83,11 @@
       <div class="text-uppercase mx-auto justify-content-center d-flex align-items-center view-more-articles"
        id="iothub-load-more" name="iothub-load-more" style="cursor: pointer" onClick="iotHubLoadMore(skip)">
         <span>
-          <b>{{session('lang') == 'en' ? 'View more' : 'Xem thêm'}}</b>
+          <b>{{session('lang') == 'en' ? 'View more' : 'Xem thêm'}} <i class="fa fa-angle-down" style="color: #1261D6"></i></b>
         </span>
-        <span>
+        <!-- <span>
           <img src="{{ asset('public/assets/images/mobile/icons/icn-arrow-down-techseries.png')}}" alt="next">
-        </span>
+        </span> -->
       </div>
     </div>
   </section>
