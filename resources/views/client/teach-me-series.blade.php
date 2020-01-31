@@ -18,7 +18,7 @@
     <!-- Feature article -->
     <section class="teach-series-articles">
         <div class="container">
-            <article class="article-box ">
+            <article class="article-box border-bottom-0">
                 <div class="row article-detail">
                     <div class="col-12 col-xl-6 align-self-center">
                      <a href="{{route('teachMeDetail', ['id' => $teachmepinned->pinned_id])}}"  rel="noopener noreferrer">

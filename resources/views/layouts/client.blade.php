@@ -88,19 +88,19 @@
     <div class="container navbar py-0">
       <nav class="collapse navbar-collapse" id="collapsibleNavMobile">
         <ul class="navbar-nav ml-auto mt-2 mt-lg-0 text-center">
-          <li class="nav-item active">
+          <li class="nav-item  @yield('index')">
             <a class="nav-link" href="{{ route('home') }}">Home</span></a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item  @yield('teachme')">
             <a class="nav-link" href="{{ route('teachMeIndex') }}">Teach me series</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item @yield('building')">
             <a class="nav-link" href="{{ route('BuildingFuture') }}">Building the future</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item @yield('iothub')">
             <a class="nav-link" href="{{ route('IotHub') }}">IOT Hub</a>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown   @yield('explorer')">
             <a class="nav-link  d-flex align-items-center justify-content-center" href="#"
               id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Explorer

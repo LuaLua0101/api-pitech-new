@@ -495,7 +495,7 @@
 
             </div>
             <!-- End item  -->
-            <div class="col-12  col-md-12 col-lg-12 col-xl-7 px-0">
+            <div class="col-12  col-md-12 col-lg-12 col-xl-7 px-0 block-right">
                  @foreach($iothub as $key=>$item)
                 <div class="col-12 col-md-12 col-lg-12 col-xl-12" @if($key > 0)style="margin-top:20px" @endif>
                     <article class="article-box-2 article-box mb-0 pt-0" style="padding: 0">
