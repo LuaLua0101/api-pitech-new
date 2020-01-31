@@ -55,7 +55,7 @@
                     <p>
                         {{$products[2]->desc}}
                     </p>
-                      <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}...</span>
+                      <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}</span>
                     {{-- <a href={{$products[2]->url}}  target="_blank" class="learn-more d-flex align-items-center justify-content-center">
                         <span>{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</span>
                         <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}" alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>
@@ -66,7 +66,7 @@
                     <p>
                       {{$products[3]->desc}}
                     </p>
-                     <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}...</span>
+                     <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}</span>
                     {{-- <a href={{$products[3]->url}} target="_blank"  class="learn-more d-flex align-items-center justify-content-center">
                         <span>{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</span>
                         <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}" alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>
@@ -103,7 +103,7 @@
                     <p>
                         {{$products[4]->desc}}
                     </p>
-                     <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}...</span>
+                     <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}</span>
                     {{-- <a href={{$products[0]->url}}  target="_blank" class="learn-more d-flex align-items-center justify-content-center">
                         <span>{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</span>
                         <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}" alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>
@@ -114,7 +114,7 @@
                     <p>
                       {{$products[5]->desc}}
                     </p>
-                      <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}...</span>
+                      <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}</span>
                     {{-- <a href={{$products[0]->url}} target="_blank"  class="learn-more d-flex align-items-center justify-content-center">
                         <span>{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</span>
                         <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}" alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>
@@ -125,7 +125,7 @@
                     <p>
                       {{$products[6]->desc}}
                     </p>
-                      <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}...</span>
+                      <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}</span>
                     {{-- <a href={{$products[0]->url}}  target="_blank" class="learn-more d-flex align-items-center justify-content-center">
                         <span>{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</span>
                         <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}" alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>
@@ -136,7 +136,7 @@
                     <p>
                       {{$products[7]->desc}}
                     </p>
-                      <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}...</span>
+                      <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}</span>
                     {{-- <a href={{$products[0]->url}}  target="_blank" class="learn-more d-flex align-items-center justify-content-center">
                         <span>{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</span>
                         <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}" alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span>
@@ -193,7 +193,7 @@
                         <p>
                          {{$products[2]->desc}}
                         </p>
-                        <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}...</span>
+                        <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}</span>
                         {{-- <a href={{$products[2]->url}} target="_blank" class="learn-more d-flex align-items-center justify-content-center">
                             <span>{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</span>
                             <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}"
@@ -210,7 +210,7 @@
                         <p>
                             {{$products[3]->desc}}
                         </p>
-                          <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}...</span>
+                          <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}</span>
                             {{-- <a href={{$products[3]->url}} target="_blank" class="learn-more d-flex align-items-center justify-content-center">
                                 <span>{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</span>
                                 <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}"
@@ -227,7 +227,7 @@
                         <p>
                             {{$products[4]->desc}}
                         </p>
-                          <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}...</span>
+                          <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}</span>
                         {{-- <a href={{$products[4]->url}} target="_blank" class="learn-more d-flex align-items-center justify-content-center">
                             <span>{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</span>
                             <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}"
@@ -244,7 +244,7 @@
                         <p>
                           {{$products[5]->desc}}
                         </p>
-                          <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}...</span>
+                          <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}</span>
                         {{-- <a href={{$products[5]->url}} target="_blank" class="learn-more d-flex align-items-center justify-content-center">
                             <span>{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</span>
                             <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}"
@@ -261,7 +261,7 @@
                         <p>
                           {{$products[6]->desc}}
                         </p>
-                          <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}...</span>
+                          <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}</span>
                         {{-- <a href={{$products[6]->url}} target="_blank" class="learn-more d-flex align-items-center justify-content-center">
                             <span>{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</span>
                             <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}"
@@ -278,7 +278,7 @@
                             <p>
                                {{$products[7]->desc}}
                             </p>
-                              <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}...</span>
+                              <span class="learn-more d-flex align-items-center justify-content-center">{{session('lang') == 'en' ? 'Coming soon' : 'Sắp ra mắt'}}</span>
                             {{-- <a href= {{$products[7]->url}} target="_blank" class="learn-more d-flex align-items-center justify-content-center">
                                 <span>{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}</span>
                                 <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-next-blue.png')}}"

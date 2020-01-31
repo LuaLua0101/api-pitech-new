@@ -46,7 +46,7 @@ ul li {
   bottom: 0;
   left: 0;
   width: 32px;
-  background: #0166F4;
+  background: #0166f4;
   height: 3px;
 }
 
@@ -59,39 +59,89 @@ ul li {
 @media only screen and (min-width: 575.98px) {
   .mobile-sub-heading {
     font-size: 27px;
-    color: #0166F4;
+    color: #0166f4;
   }
   .mobile-sub-heading::after {
     bottom: -10px;
     left: 0;
     width: 78px;
-    background: #0166F4;
+    background: #0166f4;
     height: 5px;
   }
 }
 .submit-btn {
-  background: #1261D6;
+  background: #1261d6;
   width: 131px;
   height: 30px;
-  color: #FFFFFF;
+  color: #ffffff;
   border-radius: 15px;
   font-family: "Geomanist Book";
   font-size: 12.12px;
 }
 
 .gradient-bg {
-  background: -moz-linear-gradient(-15.92% 93.12% 46.22deg, #27e6d7 0%, #24dfda 8.79%, #0066f3 34.29%, #0066f3 35.91%, #0066f3 45.8%, #0066f3 100%);
-  background: -webkit-linear-gradient(46.22deg, #27e6d7 0%, #24dfda 8.79%, #0066f3 34.29%, #0066f3 35.91%, #0066f3 45.8%, #0066f3 100%);
-  background: -webkit-gradient(linear, -15.92% 93.12%, 295.66% -110.68%, color-stop(0, #27e6d7), color-stop(0.0879, #24dfda), color-stop(0.3429, #0066f3), color-stop(0.3591, #0066f3), color-stop(0.458, #0066f3), color-stop(1, #0066f3));
-  background: -o-linear-gradient(46.22deg, #27e6d7 0%, #24dfda 8.79%, #0066f3 34.29%, #0066f3 35.91%, #0066f3 45.8%, #0066f3 100%);
-  background: -ms-linear-gradient(46.22deg, #27e6d7 0%, #24dfda 8.79%, #0066f3 34.29%, #0066f3 35.91%, #0066f3 45.8%, #0066f3 100%);
+  background: -moz-linear-gradient(
+    -15.92% 93.12% 46.22deg,
+    #27e6d7 0%,
+    #24dfda 8.79%,
+    #0066f3 34.29%,
+    #0066f3 35.91%,
+    #0066f3 45.8%,
+    #0066f3 100%
+  );
+  background: -webkit-linear-gradient(
+    46.22deg,
+    #27e6d7 0%,
+    #24dfda 8.79%,
+    #0066f3 34.29%,
+    #0066f3 35.91%,
+    #0066f3 45.8%,
+    #0066f3 100%
+  );
+  background: -webkit-gradient(
+    linear,
+    -15.92% 93.12%,
+    295.66% -110.68%,
+    color-stop(0, #27e6d7),
+    color-stop(0.0879, #24dfda),
+    color-stop(0.3429, #0066f3),
+    color-stop(0.3591, #0066f3),
+    color-stop(0.458, #0066f3),
+    color-stop(1, #0066f3)
+  );
+  background: -o-linear-gradient(
+    46.22deg,
+    #27e6d7 0%,
+    #24dfda 8.79%,
+    #0066f3 34.29%,
+    #0066f3 35.91%,
+    #0066f3 45.8%,
+    #0066f3 100%
+  );
+  background: -ms-linear-gradient(
+    46.22deg,
+    #27e6d7 0%,
+    #24dfda 8.79%,
+    #0066f3 34.29%,
+    #0066f3 35.91%,
+    #0066f3 45.8%,
+    #0066f3 100%
+  );
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#27E6D7', endColorstr='#0066F3' ,GradientType=0)";
-  background: linear-gradient(43.78deg, #27e6d7 0%, #24dfda 8.79%, #0066f3 50.29%, #0066f3 35.91%, #0066f3 45.8%, #0066f3 100%);
+  background: linear-gradient(
+    43.78deg,
+    #27e6d7 0%,
+    #24dfda 8.79%,
+    #0066f3 50.29%,
+    #0066f3 35.91%,
+    #0066f3 45.8%,
+    #0066f3 100%
+  );
   opacity: 0.87;
 }
 
 .bg-pale-grey {
-  background: #F2F2F2;
+  background: #f2f2f2;
 }
 
 .learn-more {
@@ -103,7 +153,7 @@ ul li {
   font-family: "Geomanist Regular";
   font-size: 14.37px;
   line-height: 1.6;
-  color: #1261D6;
+  color: #1261d6;
 }
 
 .dash-link a {
@@ -215,11 +265,11 @@ ul li {
     background-image: url(../images/laptop/icn/icn-arrow-down.png);
   }
   .header .navbar .dropdown-item:hover {
-    color: #0066F9;
+    color: #0066f9;
   }
   .header .navbar .dropdown-item:active {
     background: transparent;
-    color: #0066F9;
+    color: #0066f9;
   }
   .header .search-mobile {
     display: none;
@@ -260,15 +310,17 @@ ul li {
   font-size: 11px;
   margin-right: 15px;
 }
-.article-box .article-brief-info .view, .article-box .article-brief-info .comments,
+.article-box .article-brief-info .view,
+.article-box .article-brief-info .comments,
 .article-box .article-brief-info .share {
   font-size: 9.5px;
   margin-right: 10px;
   border-radius: 15px;
-  background: #ECEFF4;
+  background: #eceff4;
   padding: 3px 10px;
 }
-.article-box .article-brief-info .view img, .article-box .article-brief-info .comments img,
+.article-box .article-brief-info .view img,
+.article-box .article-brief-info .comments img,
 .article-box .article-brief-info .share img {
   margin-right: 5px;
 }
@@ -327,7 +379,8 @@ ul li {
   .article-box .article-brief-info time {
     font-size: 14px;
   }
-  .article-box .article-brief-info .view, .article-box .article-brief-info .comments,
+  .article-box .article-brief-info .view,
+  .article-box .article-brief-info .comments,
   .article-box .article-brief-info .share {
     font-size: 14px;
   }
@@ -393,9 +446,35 @@ ul li {
   line-height: 1.6;
   color: #606060;
 }
-.article-box-2 .article-info .time-and-view .view > img, .article-box-2 .article-info .time-and-view .article-box .article-brief-info .comments > img, .article-box .article-brief-info .article-box-2 .article-info .time-and-view .comments > img,
-.article-box-2 .article-info .time-and-view .article-box .article-brief-info .share > img,
-.article-box .article-brief-info .article-box-2 .article-info .time-and-view .share > img {
+.article-box-2 .article-info .time-and-view .view > img,
+.article-box-2
+  .article-info
+  .time-and-view
+  .article-box
+  .article-brief-info
+  .comments
+  > img,
+.article-box
+  .article-brief-info
+  .article-box-2
+  .article-info
+  .time-and-view
+  .comments
+  > img,
+.article-box-2
+  .article-info
+  .time-and-view
+  .article-box
+  .article-brief-info
+  .share
+  > img,
+.article-box
+  .article-brief-info
+  .article-box-2
+  .article-info
+  .time-and-view
+  .share
+  > img {
   margin: 0 10px;
 }
 
@@ -489,7 +568,7 @@ ul li {
 @media only screen and (min-width: 992px) {
   .article-breadcum {
     background-image: none;
-    background-color: #6BBFFD;
+    background-color: #6bbffd;
   }
   .article-breadcum .overlay-bg {
     display: none;
@@ -497,7 +576,7 @@ ul li {
   .article-breadcum .breadcum-title {
     font-family: "Geomanist Medium";
     font-size: 28px;
-    color: #FFFFFF;
+    color: #ffffff;
     padding: 80px 135px 105px 120px;
   }
 }
@@ -527,7 +606,7 @@ ul li {
   width: 100%;
 }
 .video-background .video-breadcum-text {
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 50px 15px;
 }
 
@@ -661,20 +740,20 @@ ul li {
     font-size: 18px;
   }
   .teach-me .secondary-article--left {
-    padding-right: 35px;
+    padding-right: 40px;
   }
   .teach-me .secondary-article--left .left-block {
-    padding-right: 45px;
+    padding-right: 60px;
   }
   .teach-me .secondary-article--left .right-block {
     padding-left: 0;
     padding-right: 15px;
   }
   .teach-me .secondary-article--right {
-    padding-left: 60px;
+    padding-left: 40px;
   }
   .teach-me .secondary-article--right .left-block {
-    padding-right: 45px;
+    padding-right: 60px;
   }
   .teach-me .secondary-article--right .right-block {
     padding-right: 0px;
@@ -703,7 +782,7 @@ ul li {
 }
 /****************  Teach series page  ****************/
 .teach-series-articles {
-  background: #0066F9;
+  background: #0066f9;
   padding: 30px 0 35px;
 }
 .teach-series-articles h3 {
@@ -724,7 +803,7 @@ ul li {
   font-size: 18px;
 }
 .teach-series-sub-articles .view-more-articles {
-  border: 1px solid #1261D6;
+  border: 1px solid #1261d6;
   width: 120px;
   border-radius: 15px;
   padding-top: 3px;
@@ -740,7 +819,7 @@ ul li {
     padding: 30px 0 35px;
   }
   .teach-series-articles .article-box {
-    background: #6BBFFD;
+    background: #6bbffd;
     border-radius: 15px;
     padding: 30px 100px;
   }
@@ -782,7 +861,7 @@ ul li {
   margin-bottom: 35px;
 }
 .comment-box .custom-input {
-  background: #F9F9F9;
+  background: #f9f9f9;
   border: none;
   border-radius: 0;
   padding: 12px 8px;
@@ -808,17 +887,21 @@ ul li {
   .main-article .article-box .article-brief-info {
     margin-bottom: 15px;
   }
-  .main-article .article-box .article-brief-info time, .main-article .article-box .article-brief-info .view, .main-article .article-box .article-brief-info .comments,
-  .main-article .article-box .article-brief-info .share, .main-article .article-box .article-brief-info .comments, .main-article .article-box .article-brief-info .share {
+  .main-article .article-box .article-brief-info time,
+  .main-article .article-box .article-brief-info .view,
+  .main-article .article-box .article-brief-info .comments,
+  .main-article .article-box .article-brief-info .share,
+  .main-article .article-box .article-brief-info .comments,
+  .main-article .article-box .article-brief-info .share {
     font-size: 19px;
-    color: #4B4F56;
+    color: #4b4f56;
   }
   .main-article .article-box .article-brief-info time {
     color: #000;
   }
   .main-article .article-box .article-detail p {
     font-size: 19px;
-    color: #4C4C4C;
+    color: #4c4c4c;
   }
   .main-article .article-box .article-detail .img-box {
     margin: 40px 0 35px;
@@ -844,7 +927,8 @@ ul li {
     font-size: 31px;
     margin-bottom: 20px;
   }
-  .comment-box .custom-input, .comment-box textarea {
+  .comment-box .custom-input,
+  .comment-box textarea {
     font-family: "Geomanist Book";
     font-size: 21px;
   }
@@ -959,7 +1043,7 @@ ul li {
   }
 }
 .recent-updates {
-  background: #F2F2F2;
+  background: #f2f2f2;
   text-align: center;
   padding: 55px 0 30px;
 }
@@ -974,15 +1058,15 @@ ul li {
   padding: 30px 0 40px;
 }
 .recent-updates .version-container .box-version {
-  color: #FFFFFF;
+  color: #ffffff;
   width: 90px;
   height: 90px;
-  background: #A4A4A5;
+  background: #a4a4a5;
   font-family: "Geomanist Medium";
   font-size: 33.98px;
 }
 .recent-updates .version-container .box-version.active {
-  background: #00468B;
+  background: #00468b;
   position: relative;
 }
 .recent-updates .version-container .box-version.active::after {
@@ -1055,13 +1139,13 @@ ul li {
   }
 }
 .press-list .active-page {
-  border: 1px solid #AFAFAF;
+  border: 1px solid #afafaf;
   border-radius: 5px;
   padding: 5px 20px;
   display: inline-block;
 }
 .press-list .view-more-articles {
-  border: 1px solid #1261D6;
+  border: 1px solid #1261d6;
   border-radius: 15px;
   padding: 7px 15px 5px;
   margin-bottom: 35px;
@@ -1121,7 +1205,10 @@ ul li {
   margin: 20px 0 40px;
 }
 
-.asm h3, .cqa h3, .zooer h3, .crm h3 {
+.asm h3,
+.cqa h3,
+.zooer h3,
+.crm h3 {
   font-family: "Geomanist Medium";
   font-size: 20px;
 }
@@ -1148,7 +1235,7 @@ ul li {
   .info-section .info-block h3 {
     font-family: "Geomanist Medium";
     font-size: 35px;
-    color: #1261D6;
+    color: #1261d6;
   }
   .info-section .info-block h4 {
     font-family: "Geomanist Medium";
@@ -1177,7 +1264,7 @@ ul li {
   }
 
   .crm {
-    margin: 50px  0 65px;
+    margin: 50px 0 65px;
   }
   .crm .img-block {
     padding-right: 45px;
@@ -1192,7 +1279,6 @@ ul li {
   .cqa .info-block {
     padding-right: 45px;
   }
-
   .zooer {
     margin: 50px 0 120px;
   }
@@ -1209,7 +1295,7 @@ ul li {
   position: absolute;
   content: "";
   width: 32px;
-  background: #0166F4;
+  background: #0166f4;
   bottom: 20px;
   height: 3px;
   margin: 0 auto;
@@ -1301,7 +1387,7 @@ ul li {
 .careers .toggle-mobile {
   width: 100%;
   background: transparent;
-  border: 1px solid #D2EAFF;
+  border: 1px solid #d2eaff;
   color: #000;
   margin-bottom: 15px;
   border-radius: 10px;
@@ -1363,7 +1449,7 @@ ul li {
   .careers .mobile-sub-heading {
     font-family: "Geomanist Medium";
     font-size: 35px;
-    color: #1261D6;
+    color: #1261d6;
   }
 }
 .quote {
@@ -1376,7 +1462,7 @@ ul li {
     margin-bottom: 50px;
   }
   .quote .quote-content {
-    background: #F7F7F7;
+    background: #f7f7f7;
     padding: 85px 135px 55px;
     font-family: "Geomanist Book";
     font-size: 18px;
@@ -1389,7 +1475,7 @@ ul li {
     width: 78px;
     height: 4px;
     margin-bottom: 30px;
-    background: #F9A49E;
+    background: #f9a49e;
   }
 }
 /****************  Careers page ****************/
@@ -1419,7 +1505,7 @@ ul li {
 }
 .product-menu-collapse .collapse-btn[aria-expanded="true"] {
   background: black;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .product-menu-collapse .collapse-btn[aria-expanded="true"] .visible-on-toggle {
   display: block;
@@ -1456,9 +1542,11 @@ ul li {
   }
   .product-menu-collapse .collapse-btn[aria-expanded="true"] {
     background: black;
-    color: #FFFFFF;
+    color: #ffffff;
   }
-  .product-menu-collapse .collapse-btn[aria-expanded="true"] .visible-on-toggle {
+  .product-menu-collapse
+    .collapse-btn[aria-expanded="true"]
+    .visible-on-toggle {
     display: block;
   }
   .product-menu-collapse .collapse-btn[aria-expanded="true"] .hidden-on-toggle {
@@ -1505,7 +1593,7 @@ ul li {
 }
 @media only screen and (min-width: 992px) {
   .manual-breadcum {
-    background: #C1DAF2;
+    background: #c1daf2;
   }
 }
 /****************  Footer  ****************/
@@ -1520,7 +1608,8 @@ ul li {
 .footer .logo img {
   width: 130px;
 }
-.footer .contact .address, .footer .contact .phone {
+.footer .contact .address,
+.footer .contact .phone {
   margin-bottom: 20px;
 }
 .footer .contact .contact-icn {
@@ -1534,13 +1623,13 @@ ul li {
 }
 
 .copyright {
-  background: #FFFFFF;
+  background: #ffffff;
   padding-top: 20px;
 }
 
 @media only screen and (min-width: 575.98px) {
   .footer {
-    background: #181C25;
+    background: #181c25;
   }
   .footer ul li {
     list-style: none;
@@ -1556,11 +1645,11 @@ ul li {
     line-height: 1.6;
   }
   .footer .menu ul li a {
-    color: #FFFFFF;
+    color: #ffffff;
     transition: all 0.5s;
   }
   .footer .menu ul li a:hover {
-    color: #78FFF0;
+    color: #78fff0;
   }
   .footer .logo img {
     width: auto;
@@ -1575,13 +1664,21 @@ ul li {
 
   .copyright {
     background: #000;
-    color: #FFFFFF;
+    color: #ffffff;
     font-family: "Geomanist Light";
     font-size: 20px;
     padding: 20px 0;
   }
   .copyright p {
     margin-bottom: 0;
+  }
+
+  .img-hover {
+    border-radius: 10px;
+  }
+
+  .img-hover:hover {
+    border-radius: 10px;
   }
 }
 
