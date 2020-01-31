@@ -1,4 +1,4 @@
-@extends('layouts.client') @section('index', 'active') @section('content')
+@extends('layouts.client') @section('explorer', 'active') @section('content')
 <!-- Banner  -->
 <div class="banner">
 

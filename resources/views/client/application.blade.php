@@ -1,6 +1,6 @@
 @extends('layouts.client')
 
-@section('index', 'active')
+@section('explorer', 'active')
 
 @section('content')
  <!-- Application  -->

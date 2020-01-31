@@ -264,7 +264,7 @@ ul li {
   .header .navbar .nav-item .dropdown-toggle::after {
     background-image: url(../images/laptop/icn/icn-arrow-down.png);
   }
-  .header .navbar .dropdown-item:hover {
+  .header .navbar a.dropdown-item:hover {
     color: #0066f9;
   }
   .header .navbar .dropdown-item:active {
@@ -289,6 +289,9 @@ ul li {
   .header .navbar-laptop .nav-item:nth-child(3) {
     margin-right: 35px;
   }
+}
+.header .dropdown-menu .dropdown-item::after {
+  display: none;
 }
 .fixed-header {
   position: fixed;
@@ -1286,17 +1289,25 @@ ul li {
 /****************  Related products page ****************/
 .features-mobile .slick-active.slick-center {
   position: relative;
+  /**/
+  /* overflow: hidden; */
+  height: 140px;
 }
 .features-mobile .slick-active.slick-center img {
+  /* margin-bottom: 20px;
+  padding-bottom: 10px; */
   margin-bottom: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
+  object-fit: contain;
+  height: 100%;
 }
 .features-mobile .slick-active.slick-center::after {
   position: absolute;
   content: "";
   width: 32px;
   background: #0166f4;
-  bottom: 20px;
+  /* bottom: 20px; */
+  bottom: 10px;
   height: 3px;
   margin: 0 auto;
   left: 50%;
@@ -1313,6 +1324,7 @@ ul li {
   background-size: contain;
   background-repeat: no-repeat;
   left: 0;
+  z-index: 99999;
 }
 .features-mobile .slick-prev::before {
   content: "";
@@ -1324,6 +1336,7 @@ ul li {
   height: 15px;
   background-size: contain;
   background-repeat: no-repeat;
+  z-index: 99999;
 }
 .features-mobile .slick-next::before {
   content: "";
@@ -1333,18 +1346,70 @@ ul li {
 }
 .features-mobile .slider-nav-item-mobile.slick-slide:not(.slick-current) img {
   height: 70px;
+  margin-top: 0;
 }
+
 .features-mobile .slider-for {
   margin-bottom: 40px;
 }
 .features-mobile .slider-for .learn-more {
   font-family: "Geomanist Book";
   font-size: 12px;
+  text-transform: capitalize;
+  color: #0070c9;
 }
+/******** Bo sung them ************/
+.features-mobile .slider-for .item-caption {
+  margin-top: 20px;
+}
+.features-mobile .slider-for .item-caption h3 {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+.features-mobile .slider-for .item-caption p {
+  line-height: 1.3;
+  padding: 0 35px;
+  font-size: 13px;
+}
+
+.features-mobile .slick-slide:focus {
+  outline-color: transparent;
+}
+.wide-image.slick-current {
+  width: 180px !important;
+}
+.wide-image.slick-current img {
+  margin: 0 auto 0 0;
+  width: 100%;
+}
+.features-mobile .wide-image.slick-active:not(.slick-current) img {
+  height: 60px;
+}
+.features-mobile .slick-active.slick-center.dashed-bull::after,
+.features-mobile .slick-active.slick-center.dashed-rhino::after {
+  left: 40%;
+  transform: translateX(-50%);
+}
+.features-mobile .slick-active.slick-center.dashed-fox::after {
+  left: 45%;
+  transform: translateX(-50%);
+}
+.features-mobile .slick-active.slick-center.dashed-deer::after {
+  left: 57%;
+  transform: translateX(-50%);
+}
+.features-mobile .slick-active.slick-center.dashed-bear::after {
+  left: 55%;
+  transform: translateX(-50%);
+}
+/* .slider-nav-item-mobile.slick-slide.slick-cloned[aria-hidden="true"] img{ */
+.slider-nav-item-mobile.wide-image.slick-slide[aria-hidden="true"] img {
+  margin-left: -20px;
+}
+/************/
 .features-mobile .learn-more span:first-child {
   margin-right: 5px;
 }
-
 @media only screen and (min-width: 992px) {
   .features {
     margin: 40px 0 0;
@@ -1356,6 +1421,9 @@ ul li {
   .features .block-feature figure {
     height: 116px;
     overflow: hidden;
+  }
+  .features .block-feature figure img {
+    height: 100%;
   }
   .features .learn-more span:first-child {
     margin-right: 5px;

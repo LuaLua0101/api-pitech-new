@@ -14,9 +14,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
   <link rel="stylesheet" href="{{ asset('public/assets/css/vendor/bootstrap.min.css')}}">
   <link rel="stylesheet" href="{{ asset('public/assets/fonts/fonts.css')}}">
+  <link rel="stylesheet" href="{{ asset('public/assets/css/vendor/slick-theme.css')}}">
   <link rel="stylesheet" href="{{ asset('public/assets/css/main.css')}}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{ asset('public/assets/css/vendor/slick-theme.css')}}">
   <script src="{{ asset('public/admin/vendor/jquery/jquery.min.js')}}"></script>
 </head>
 
@@ -56,8 +56,8 @@
                 <li class="nav-item dash-link @yield('iothub')">
                   <a class="nav-link px-0" href="{{ route('IotHub') }}">IOT Hub</a>
                 </li>
-                <li class="nav-item dropdown d-flex align-items-center">
-                  <a class="nav-link  d-flex align-items-center" href="#" id="exploreLaptop" data-toggle="dropdown"
+                <li class="nav-item dropdown d-flex align-items-center dash-link @yield('explorer')">
+                  <a class="nav-link d-flex align-items-center" href="#" id="exploreLaptop" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">Explorer</a>
                   <div class="dropdown-menu" aria-labelledby="exploreLaptop">
                     <a class="dropdown-item" href="{{ route('RelatedProducts') }}">Related product</a>
