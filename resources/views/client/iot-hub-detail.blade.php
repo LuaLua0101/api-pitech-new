@@ -31,7 +31,9 @@
         </div>
     </div>
 @else
-<div class="article-breadcum breadcum">
+<div class="article-breadcum breadcum" @if ($data->cover)
+    style="background-image: url({{asset("public/img/iothub/" .$data->cover)}}); background-size: cover; background-repeat: no-repeat"
+@endif >
         <div class="overlay-bg"></div>
         <div class="article-breadcum-text">
             <div class="container text-center ">

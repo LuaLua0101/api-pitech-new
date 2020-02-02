@@ -580,7 +580,7 @@ ul li {
     background-color: #6bbffd;
   }
   .article-breadcum .overlay-bg {
-    display: none;
+    background: rgba(0, 0, 0, 0.2);
   }
   .article-breadcum .breadcum-title {
     font-family: "Geomanist Medium";
@@ -826,8 +826,37 @@ ul li {
 }
 /****************  Teach series page  ****************/
 .teach-series-articles {
-  background: #0066f9;
   padding: 30px 0 35px;
+  position: relative;
+}
+.teach-series-articles .article-box {
+  position: relative;
+}
+.teach-series-articles .overlay-bg-desktop,
+.teach-series-articles .overlay-bg-mobile {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2px);
+}
+@media only screen and (min-width: 992px) {
+  .teach-series-articles.bg-mobile {
+    background: none !important;
+  }
+  .teach-series-articles .overlay-bg-mobile {
+    display: none;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .teach-series-articles .bg-desktop {
+    background: none !important;
+  }
+  .teach-series-articles .overlay-bg-desktop {
+    display: none;
+  }
 }
 .teach-series-articles h3 {
   font-family: "Geomanist Medium";
@@ -877,7 +906,7 @@ ul li {
     padding: 30px 0 35px;
   }
   .teach-series-articles .article-box {
-    background: #6bbffd;
+    /* background: #6bbffd; */
     border-radius: 15px;
     padding: 30px 100px;
   }
@@ -912,7 +941,9 @@ ul li {
 .main-article {
   margin: 15px 0 40px;
 }
-
+.main-article .article-detail img {
+  max-width: 100%;
+}
 .sharing {
   margin-top: 20px;
   text-align: left;
