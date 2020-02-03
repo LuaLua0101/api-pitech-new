@@ -1,5 +1,5 @@
 @extends('layouts.client')
-
+@section('title', 'Teach Me Series')
 @section('teachme', 'active')
 
 @section('content')

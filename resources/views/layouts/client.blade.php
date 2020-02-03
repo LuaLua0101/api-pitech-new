@@ -4,13 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Pitech</title>
+    <title>@yield('title') - Pitech</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
-    <meta property="og:title" content="title here" />
-<meta property="og:image" content="image url here" />
-<meta property="og:type" content="website" />
+    <meta property="og:title" content="Pitech" />
+    <meta property="og:image" content="https://pitech.asia/img/pi-logo-simple.svg" />
+    <meta property="og:type" content="website" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
   <link rel="stylesheet" href="{{ asset('public/assets/css/vendor/bootstrap.min.css')}}">
   <link rel="stylesheet" href="{{ asset('public/assets/fonts/fonts.css')}}">
@@ -69,11 +69,11 @@
                 </li>
                 @if(session('lang') == 'en')
                 <li class="nav-item dash-link">
-                  <a class="nav-link px-0" href="{{ route('change2Vi') }}">VI</a>
+                  <a class="nav-link px-0"  style="color: #787878" href="{{ route('change2Vi') }}">VI</a>
                 </li>
                 @else
                 <li class="nav-item dash-link">
-                  <a class="nav-link px-0" href="{{ route('change2En') }}">EN</a>
+                  <a class="nav-link px-0"   style="color: #787878" href="{{ route('change2En') }}">EN</a>
                 </li>
                 @endif
               </ul>
@@ -114,11 +114,11 @@
           </li>
            @if(session('lang') == 'en')
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('change2Vi') }}">VI</a>
+            <a class="nav-link" href="{{ route('change2Vi') }}"  style="color: #787878">VI</a>
           </li>
           @else
            <li class="nav-item">
-            <a class="nav-link" href="{{ route('change2En') }}">EN</a>
+            <a class="nav-link" href="{{ route('change2En') }}"  style="color: #787878">EN</a>
           </li>
           @endif
         </ul>

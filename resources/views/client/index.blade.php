@@ -1,5 +1,6 @@
 @extends('layouts.client') 
 @section('index', 'active')
+@section('title', 'Homepage')
 @section('teachmeLength', count($teachme))
 @section('content')
 <!-- Intro  -->

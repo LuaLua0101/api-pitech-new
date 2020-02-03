@@ -1,5 +1,5 @@
 @extends('layouts.client')
-
+@section('title', 'Iot Hub')
 @section('iothub', 'active')
 
 @section('content')

@@ -1,5 +1,5 @@
 @extends('layouts.client')
-
+@section('title', 'Application')
 @section('explorer', 'active')
 
 @section('content')
@@ -150,14 +150,9 @@
                 </div>
                 <div class="col-12 col-xl-3">
                     <div class="d-lg-none sub-text">
-                        <p>
+                        <p style="font-size: 13.16px;color: #515151">
                     {!!$application->detail !!}
                         </p>
-                        <a href="#" class="learn-more">
-                            <b><span>{{session('lang') == 'en' ? 'View more' : 'Xem thêm'}} <i class="fa fa-angle-down" style="color: #1261D6"></i></span></b>
-                            <!-- <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-down-blue.png')}}"
-                                    alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span> -->
-                        </a>
                     </div>
                 </div>
             </div>

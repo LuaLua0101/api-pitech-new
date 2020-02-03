@@ -1,5 +1,5 @@
 @extends('layouts.client')
-
+@section('title', 'Related Product')
 @section('explorer', 'active')
 
 @section('content')

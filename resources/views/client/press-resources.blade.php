@@ -1,4 +1,6 @@
-@extends('layouts.client') @section('explorer', 'active') @section('content')
+@extends('layouts.client') 
+@section('title', 'Press Resources')
+@section('explorer', 'active') @section('content')
 <!-- Bread cum  -->
 <section class="breadcum press-list-breadcum">
     <div class="container text-center">
