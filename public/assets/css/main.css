@@ -342,7 +342,7 @@ ul li {
   position: relative;
   overflow: hidden;
   /* border-radius: 15px; */
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
 }
 .article-box .article-detail .img-box .play-btn {
   transform: translate(-50%, -50%);
@@ -1846,6 +1846,18 @@ ul li {
   .img-hover:hover {
     border-radius: 10px;
   }
+
+  article.article-box.bg-desktop {
+    position: relative;
+}
+.overlay-bg-desktop:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #000;
+    opacity: 0.6;
+}
 }
 
 /*# sourceMappingURL=main.css.map */
