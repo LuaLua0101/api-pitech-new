@@ -865,9 +865,9 @@ ul li {
 .teach-series-articles .article-detail {
   text-align: center;
 }
-.teach-series-articles .article-detail .img-box > img:first-child {
+/* .teach-series-articles .article-detail .img-box > img:first-child {
   padding: 0 5rem 0 4rem;
-}
+} */
 
 .teach-series-sub-articles {
   margin: 30px 0 35px;
