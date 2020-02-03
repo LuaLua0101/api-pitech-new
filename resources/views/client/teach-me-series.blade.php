@@ -16,9 +16,11 @@
     </section>
     <!-- // Bread cum  -->
     <!-- Feature article -->
-    <section class="teach-series-articles">
+    <section class="teach-series-articles bg-mobile" style="background-image: url({{asset('public/img/post/' . $teachmepinned->cover)}}); background-repeat: no-repeat; background-size:cover;">
+        <div class="overlay-bg-mobile"></div>
         <div class="container">
-            <article class="article-box border-bottom-0">
+            <article class="article-box border-bottom-0 bg-desktop" style="background-image: url({{asset('public/img/post/' . $teachmepinned->cover)}}); background-repeat: no-repeat; background-size:cover;">
+                <div class="overlay-bg-desktop"></div>
                 <div class="row article-detail">
                     <div class="col-12 col-xl-6 align-self-center">
                      <a href="{{route('teachMeDetail', ['id' => $teachmepinned->pinned_id])}}"  rel="noopener noreferrer">
@@ -125,7 +127,7 @@
                 success: function (res) {
                     skip += res.length
                   let htmlTeachMe = '';
-                  res.forEach(item => htmlTeachMe += '<div class="col-12 col-md-4 col-lg-6 col-xl-4">'
+                  res.forEach(item => htmlTeachMe += item['video_url'] ? '<div class="col-12 col-md-4 col-lg-6 col-xl-4">'
                     + '<article class="article-box">'
                      + '<div class="article-brief-info d-flex align-items-center d-block d-md-none">'
                         + '<time>' + moment(item['created_at']).format("MMMM D, YYYY") + '</time>'
@@ -151,6 +153,50 @@
                                             + '" alt="article">'
                                         + '<img class="play-btn" src="./public/assets/images/mobile/icons/icn-play.png"'
                                             + 'alt="play">'
+                                    + '</div>'
+                                + '</div>'
+                                + '<div class="col-12 col-xl-12 right-block">'
+                                    + '<a href="teach-me-serie/' + item['id']+ '"  rel="noopener noreferrer">'
+                                        + '<h3 class="text-black">'+item['title']+ '</h3>'
+                                        + '<p>'+item['short_desc']+ '</p>'
+                                    + '</a>'
+                                    + '<div class="article-brief-info align-items-center d-none d-sm-none d-md-flex">'
+                                        + '<time>' + moment(item['created_at']).format("MMMM D, YYYY") + '</time>'
+                                        + '<div class="view d-flex align-items-center">'
+                                            + '<img src="./public/assets/images/mobile/icons/icn-eye.png" alt="views"'
+                                                + 'class="img-fluid">'
+                                            + '<span class="text-uppercase">' +item['view_count']+ '</span>'
+                                        + '</div>'
+                                    + '</div>'
+                                + '</div>'
+                            + '</div>'
+                        + '</div>'
+                    + '</article>'
+                + '</div>' : 
+                '<div class="col-12 col-md-4 col-lg-6 col-xl-4">'
+                    + '<article class="article-box">'
+                     + '<div class="article-brief-info d-flex align-items-center d-block d-md-none">'
+                        + '<time>' + moment(item['created_at']).format("MMMM D, YYYY") + '</time>'
+                          + '<div class="view d-flex align-items-center">'
+                            + '<img src="./public/assets/images/mobile/icons/icn-eye.png" alt="views" class="img-fluid">'
+                              + '<span class="text-uppercase">' +item['view_count']+ '</span>'
+                            + '</div>'
+                            + '<div class="comments d-flex align-items-center">'
+                              + '<img src="./public/assets/images/mobile/icons/icn-chat.png" alt="comment" class="img-fluid">'
+                             + '<span>' +item['chat_count']+ '</span>'
+                            + '</div>'
+                           + '<div class="share d-flex align-items-center">'
+                             + '<img src="./assets/images/mobile/icons/icn-share.png" alt="share" class="img-fluid">'
+                               + '<span>' +item['share_count']+ '</span>'
+                          + '</div>'
+                        + '</div>'
+                        + '<div class="article-detail secondary-article secondary-article--left">'
+                            + '<div class="row align-items-center">'
+                                + '<div class="col-12 col-xl-12 left-block">'
+                                    + '<div class="img-box">'
+                                        + '<img class="img-fluid thumbnail"'
+                                            + 'src="./public/img/post/' + item['cover']
+                                            + '" alt="article">'
                                     + '</div>'
                                 + '</div>'
                                 + '<div class="col-12 col-xl-12 right-block">'
