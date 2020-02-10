@@ -59,7 +59,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-12 col-lg-12 col-xl-12 feature-iot-hub">
-                    <article class="article-box border-bottom-0">
+                    <article class="article-box border-bottom-0 single-article">
                         <!-- Views, date, comments VISIBLE ON MOBILE -->
                         <div class="article-brief-info d-flex align-items-center">
                             <time>{{ \Carbon\Carbon::parse($data->created_at)->format('F j, Y') }}</time>

@@ -891,13 +891,13 @@ ul li {
     height: 170px;
   }
   .teach-series-articles .article-box .img-box {
-    height: 167px;
+    height: 100%;
   }
   .teach-series-sub-articles.iot-hubs-sub-articles .article-box .img-box {
     height: 95px;
   }
   .teach-series-articles .article-detail .img-box > img:first-child {
-    margin-top: 40px;
+    margin-top: 20px;
   }
 }
 @media only screen and (min-width: 575.98px) {
@@ -1858,6 +1858,12 @@ ul li {
     background-color: #000;
     opacity: 0.6;
 }
+
+.main-article .article-box.single-article p {  overflow: unset;
+  display: -webkit-box !important;
+  -webkit-line-clamp: unset;
+  -webkit-box-orient: unset;
+  margin-bottom: 0; }
 }
 
 /*# sourceMappingURL=main.css.map */
