@@ -4,8 +4,8 @@
 @section('teachmeLength', count($teachme))
 @section('content')
 <!-- Intro  -->
-<section class="intro gradient-bg text-white">
-    <div class="container text-center">
+<section class="intro gradient-bg text-white" style="padding-top: 5px">
+    {{-- <div class="container text-center">
         <div class="row">
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <h2 class="text-uppercase font-weight-bold">{{$banner_home->title}}</h2>
@@ -13,12 +13,13 @@
                     {{$banner_home->content}}
                 </p>
             </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 px-0">
-                <img class="img-fluid d-none d-sm-block  " src="{{asset('public/assets/images/laptop/feature-img/intro-img-2.png')}}" alt="image">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 px-0">
+                <img class="img-fluid d-none d-sm-block" src="{{asset('public/assets/images/banner.jpg')}}" alt="image">
                 <img class="img-fluid d-block d-sm-none w-100" src="{{asset('public/assets/images/mobile/feature-img/home-intro-bg.png')}}" alt="">
             </div>
         </div>
-    </div>
+    </div> --}}
+    <img class="img-fluid d-none d-sm-block" src="{{asset('public/assets/images/banner.jpg')}}" alt="image">
 </section>
 <!-- End intro  -->
 <!-- Application  -->
@@ -65,7 +66,7 @@
                 </a>
             </div>
         </div>
-        <div class="row justify-content-center">
+        <div class="row">
             <!-- Item feature laptop - won't display on mobile  -->
             <div class="col-12 col-lg-12 col-xl-12 d-none d-md-block feature-article-laptop">
                 <article class="article-box">
@@ -105,7 +106,7 @@
             <!-- Item mobile -->
             @if(!empty($teachme[0]))
             <div class="col-12 col-md-6 col-lg-6 col-xl-6">
-                <article class="article-box">
+                <article class="article-box normal-box">
                     <!-- Views, date, comments-->
                     <div class="article-brief-info d-flex align-items-center d-block d-md-none">
                         <time>{{ \Carbon\Carbon::parse($teachme[0]->created_at)->format('F j, Y') }}</time>
@@ -158,7 +159,7 @@
             <!-- Item mobile -->
             @if(!empty($teachme[1]))
             <div class="col-12 col-md-6 col-lg-6 col-xl-6">
-                <article class="article-box">
+                <article class="article-box normal-box">
                     <!-- Views, date, comments-->
                     <div class="article-brief-info d-flex align-items-center d-block d-md-none">
                         <time>{{ \Carbon\Carbon::parse($teachme[1]->created_at)->format('F j, Y') }}</time>
@@ -212,7 +213,7 @@
             <!-- Item mobile -->
             @if(!empty($teachme[2]))
             <div class="col-12 col-md-6 col-lg-6 col-xl-6 d-none d-lg-block">
-                <article class="article-box">
+                <article class="article-box normal-box">
                     <!-- Views, date, comments-->
                     <div class="article-brief-info d-flex align-items-center d-block d-md-none">
                         <time>{{ \Carbon\Carbon::parse($teachme[2]->created_at)->format('F j, Y') }}</time>
@@ -264,7 +265,7 @@
             <!-- Item mobile -->
             @if(!empty($teachme[3]))
             <div class="col-12 col-md-6 col-lg-6 col-xl-6 d-none d-lg-block">
-                <article class="article-box">
+                <article class="article-box normal-box">
                     <!-- Views, date, comments-->
                     <div class="article-brief-info d-flex align-items-center d-block d-md-none">
                         <time>{{ \Carbon\Carbon::parse($teachme[3]->created_at)->format('F j, Y') }}</time>
@@ -316,7 +317,7 @@
             <!-- Item mobile -->
             @if(!empty($teachme[4]))
             <div class="col-12 col-md-6 col-lg-6 col-xl-6 d-none d-lg-block">
-                <article class="article-box">
+                <article class="article-box normal-box">
                     <!-- Views, date, comments-->
                     <div class="article-brief-info d-flex align-items-center d-block d-md-none">
                         <time>{{ \Carbon\Carbon::parse($teachme[4]->created_at)->format('F j, Y') }}</time>
@@ -368,7 +369,7 @@
             <!-- Item mobile -->
             @if(!empty($teachme[5]))
             <div class="col-12 col-md-6 col-lg-6 col-xl-6 d-none d-lg-block">
-                <article class="article-box">
+                <article class="article-box normal-box">
                     <!-- Views, date, comments-->
                     <div class="article-brief-info d-flex align-items-center d-block d-md-none">
                         <time>{{ \Carbon\Carbon::parse($teachme[5]->created_at)->format('F j, Y') }}</time>
@@ -418,7 +419,7 @@
             </div>
             @endif
             <!-- End item  -->
-            <a href="{{ route('teachMeIndex') }}" class="text-uppercase text-center d-block d-lg-none view-more-articles">
+            <a href="{{ route('teachMeIndex') }}" class="text-uppercase text-center mx-auto d-block d-lg-none view-more-articles">
                 <span>
             <b>{{session('lang') == 'en' ? 'View all post' : 'Xem tất cả'}} ></b>
           </span>

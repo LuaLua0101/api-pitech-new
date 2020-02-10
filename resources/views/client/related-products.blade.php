@@ -7,9 +7,9 @@
     <section class="breadcum related-products-breadcum">
         <div class="container text-center">
             <h2 class="breadcum-title">Related products</h2>
-            <p>
+            {{-- <p>
                 {{$banner->content}}
-            </p>
+            </p> --}}
         </div>
     </section>
     <!-- Carousel  MOBILE -->

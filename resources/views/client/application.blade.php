@@ -109,11 +109,7 @@
                         <p>
                             {{$application->feature3_desc}}
                         </p>
-                        <div class="learn-more" style="cursor:pointer; color: #1261D6" onclick="showDetailPane()">
-                            <b><span>{{session('lang') == 'en' ? 'View more' : 'Xem thêm'}} <i class="fa fa-angle-down" style="color: #1261D6"></i></span></b>
-                            <!-- <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-down-blue.png')}}"
-                                    alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span> -->
-                        </div>
+                        
                     </div>
                     <!-- Note. Paragraph intro laptop was longer  so this will be display in mobile -->
                     {{-- <p class="d-block d-lg-none">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
@@ -155,6 +151,12 @@
                         </p>
                     </div>
                 </div>
+            </div>
+            {{----------- VIEW MORE ----- --}}
+            <div class="learn-more d-none d-lg-block" style="cursor:pointer; text-align:center; color: #1261D6; margin-bottom: 45px;" onclick="showDetailPane()">
+                <b><span>{{session('lang') == 'en' ? 'View more' : 'Xem thêm'}} <i class="fa fa-angle-down" style="color: #1261D6"></i></span></b>
+                <!-- <span><img src="{{asset('public/assets/images/mobile/icons/icn-arrow-down-blue.png')}}"
+                        alt="{{session('lang') == 'en' ? 'Learn more' : 'Xem chi tiết'}}"></span> -->
             </div>
         </div>
     </section>
